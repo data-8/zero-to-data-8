@@ -1,5 +1,12 @@
 # Connector courses
 
+Connector courses give an in-depth introduction to the ways in which data science
+and the concepts covered in Data 8 are applied to a specific field. They
+are not an official part of Data 8, though they play a crucial role in the data
+science education ecosystem with the DSEP.
+
+The following is a brief description of how Connector Courses are structured.
+
 ## General course structure
 TODO: section still needs structuring
 * Course has associated github repository (ex: https://github.com/data-8/summer)
