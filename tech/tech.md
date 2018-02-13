@@ -24,12 +24,14 @@ In Data 8, *students can work entirely from the DataHub*, running in the cloud.
 Managing these resources primarily utilizes the following pieces of open-source technology:
 
 * **Managing cloud resources** - [Kubernetes](https://kubernetes.io/) is the underlying technology that manages the resources on our cloud provider. It is open-source, and is supported by most major cloud providers (it also works on your own hardware). By relying on Kubernetes, Data 8 has been able to switch cloud providers nearly each semester with minimal disruption to the class.
+
 * **Managing user sessions** - [JupyterHub](https://github.com/jupyterhub/jupyterhub) is used to manage user sessions in the cloud. It manages user authentication and serves them an environment in which they can do their work. JupyterHub also integrates nicely with Kubernetes via the **JupyterHub Helm Chart**. To learn more about deploying JupyterHub on Kubernetes, see the [Zero to JupyterHub Guide](https://z2jh.jupyter.org)
+
 * **Authentication** - **Google OAuth** is used by **JupyterHub** to handle the actual authentication process. JupyterHub supports a number of options for authentication, and because Berkeley uses Google's "GSuite" of tools, this was the simplest way to authenticate users.
 
 * **Providing cloud resources** - All kinds of providers! A primary goal of Data 8 is to be flexible with respect to the actual computers running student sessions. This means not depending on any one particular cloud provider for the class. To date, Data 8 has been run on: Microsoft Azure, Google Cloud, as well as our own local hardware.
 
-* **Managing the user's software** - We use **Docker images** created specifically for Data 8. They contain all of the software dependencies needed to run all of the course material as well as to interact with JupyterHub. JupyterHub can be configured to serve users a Docker image from the cloud, and any updates to this image will automatically propagate to new user sessions.
+* **Managing the user's software** - We use **Docker images** created specifically for Data 8. They contain all of the software dependencies needed to run all of the course material as well as to interact with JupyterHub. JupyterHub can be configured to serve users a Docker image from the cloud, and any updates to this image will automatically propagate to new user sessions. [Here is a list of all DSEP Docker Images](https://hub.docker.com/u/berkeleydsep/).
 
 * **Distributing files and course materials** - Distributing lectures (in the form of Jupyter Notebooks), homeworks, and other data files are primarily done with [nbgitpuller](https://github.com/data-8/nbgitpuller), a package that integrates with Jupyter, and allows you to automatically download the contents of a git repository into a JupyterHub session. It accomplishes this with "interact links", which connect to the DataHub and instruct it to synchronize a git repository with the student's local filesystem. When students click an interact link, the latest version of the repository's contents are downloaded and the user is directed to the file that the interact link points to.
 
