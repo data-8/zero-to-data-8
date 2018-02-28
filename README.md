@@ -18,21 +18,35 @@ of the material.
 ## Structure of this guide
 
 The Data 8 project has several components, all of which are freely-available and open-source.
-This guide details many of these components. Note that the course material in full can be accessed
+
+### Deploying your own Data 8 course from scratch
+
+The first section of this guide is a step-by-step guide that teaches you how to deploy your
+own version of Data 8. It explains how to create a JupyterHub running in the cloud that students
+can access, how to connect this JupyterHub with the coding environment that Data 8 students use,
+and how to incorporate course materials into your class. Check it out here:
+
+* [Zero to Data 8](https://choldgraf.gitbooks.io/the-dsep-data-8-stack/content/z2d8/) describes
+  how to set up your own Data 8 JupyterHub from scratch. It also contains suggestions and guidelines
+  for running a Data 8 course at your own institution.
+  
+### Technical and pedagogical decisions for Data 8
+
+These sections cove the high-level reasoning behind the Data 8 course, including an overview of
+the technical and pedagogical pieces that make up the course. It should be treated as a reference
+for running your own Data 8 course, or for taking a similar technical approach to teaching data science.
+
+* [Teaching and Pedagogy](https://choldgraf.gitbooks.io/the-dsep-data-8-stack/content/teaching/) covers
+  the unique blend of computational, coding, and conceptual information taught in Data 8.
+* [The Data 8 Tech Stack](https://choldgraf.gitbooks.io/the-dsep-data-8-stack/content/tech/) describes
+  the technical pieces of Data 8, including hosting student environments, grading, and managing the course.
+
+## Other Data 8 information
+
+All Data 8 materials are freely available online. The course material in full can be accessed
 at the following online resources:
 
 * [The Data 8 Course Site](https://www.data8.org)
 * [The Data 8 Course Textbook](https://www.inferentialthinking.com/)
-
-The DSEP Data 8 guide is broken up into several main sections:
-
-1. Course structure and pedagogy
-    * Logistical / university structure of the course (e.g., course credit, classes, staffing)
-    * High-level pedagogical goals and inspiration
-    * General topics covered in the course syllabus, and reasons for doing so
-2. Operationalizing the course with technology
-    * List the major things that "need to happen" in the course
-    * What pieces of technology did we use / build / contribute to?
-    * What people and skills are needed to manage this process?
     
 To explore the guide, select a section to the left!
