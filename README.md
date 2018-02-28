@@ -15,11 +15,9 @@ the class.
 See the chapters to the left to navigate this book. Below is a general structure
 of the material.
 
-## Structure of this guide
-
 The Data 8 project has several components, all of which are freely-available and open-source.
 
-### Deploying your own Data 8 course from scratch
+## Deploying your own Data 8 course from scratch
 
 The first section of this guide is a step-by-step guide that teaches you how to deploy your
 own version of Data 8. It explains how to create a JupyterHub running in the cloud that students
@@ -30,7 +28,7 @@ and how to incorporate course materials into your class. Check it out here:
   how to set up your own Data 8 JupyterHub from scratch. It also contains suggestions and guidelines
   for running a Data 8 course at your own institution.
   
-### Technical and pedagogical decisions for Data 8
+## Technical and pedagogical decisions for Data 8
 
 These sections cove the high-level reasoning behind the Data 8 course, including an overview of
 the technical and pedagogical pieces that make up the course. It should be treated as a reference
