@@ -1,4 +1,4 @@
-# Zero to Data 8
+## Chapter topics
 
 * [Creating your Kubernetes cluster](z2d8/setup_k8s.md)
 * [Customzing the JupyterHub environment for Data 8](z2d8/customize_hub_environment.md)

@@ -1,4 +1,4 @@
-# Pedagogy and course topics in Data 8
+## Chapter topics
 
 * [General course and personnel structure](teaching/structure.md)
 * [Inspiration for Data 8 Pedagogy](teaching/inspiration.md)

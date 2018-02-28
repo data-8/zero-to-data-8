@@ -1,4 +1,4 @@
-# The Data 8 Technology Stack
+## Chapter topics
 
 * [General Technical Considerations](tech/considerations.md)
 * [Technical Needs and the Tools that Do Them](tech/tech.md)
