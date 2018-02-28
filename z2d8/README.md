@@ -5,4 +5,4 @@ of technical pieces at play, but focuses on being to-the-point in terms of setti
 things up. For information about the motivations and decisions surrounding the
 Data 8 class, see the other components of this guide.
 
-{% include "SUMMARY.md %}
+{% include "SUMMARY.md" %}
