@@ -14,3 +14,5 @@ This section covers many of the pedagogical decisions that were made in Data 8.
 It should be seen as a reference and background for the
 [Data 8 textbook](https://www.inferentialthinking.com/), which is freely-available
 online.
+
+{% include "SUMMARY.md %}

@@ -8,3 +8,5 @@ tools that are broadly useful.
 This section describes some of the technical
 infrastructure underlying the class, and provides a path forward for people who
 are considering using these tools for their own teaching purposes.
+
+{% include "SUMMARY.md %}
