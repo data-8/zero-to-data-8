@@ -31,7 +31,7 @@ gcloud container clusters create data-8 \
 ```
 kubectl create clusterrolebinding cluster-admin-binding \
     --clusterrole=cluster-admin \
-    --user=choldgraf@berkeley.edu
+    --user=<YOUR EMAIL ADDRESS HERE>
 ```
 
 
