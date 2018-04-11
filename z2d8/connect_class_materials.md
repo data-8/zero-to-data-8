@@ -1,16 +1,25 @@
 # Connect your hub with the course materials
 
-> My hub IP: 104.197.203.241
-
 Now that our JupyterHub has the Data 8 computing environment, it's time to
 connect it with the course materials for the class (e.g., lectures, labs, and homeworks).
 
-## Course materials
+## Interact links
 
-This section covers the location and structure of all course materials
-used in Data 8
+The primary way that material is distributed in Data 8 is via "interact links". These are links that,
+when clicked, will automatically pull new material into a students' file system on the DataHub, and then
+direct them to this new content in a live session.
 
-### The Data 8 textbook
+The tool that you use to do this is called [nbgitpuller](https://github.com/data-8/nbgitpuller),
+which is pre-installed in the Docker image for the course. This means you can create interact links
+without needing to install anything new. For example, clicking the following link should pull in
+the [Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook/tree/master/notebooks) from Jake van der Plas:
+
+`http://{{ your-hub-ip }}/hub/user-redirect/git-pull?repo=https://github.com/jakevdp/PythonDataScienceHandbook&branch=master&subPath=notebooks`
+
+In the following sections we'll cover how interact links can be used with each type of Data 8
+content in order to distribute materials to your students.
+
+## The textbook
 
 The entire Data 8 textbook is available freely online. It is hosted
 at https://inferentialthinking.com, and the raw materials can be found at https://github.com/data-8/textbook.
@@ -23,43 +32,6 @@ materials surrounding it such as labs and homeworks. There is some
 cleanup you'll need to do in order to adapt the materials for your course
 (such as pointing links to your JupyterHub instead of the Berkeley hub).
 We'll cover these below.
-
-### Data 8 labs
-
-Alongside the textbook are several computational labs that operationalize the
-ideas covered in class and give students a chance to explore on their own.
-They can all be run interactively in the Data 8 environment (the same
-environment that we've used in your JupyterHub).
-
-The latest links to the labs can be found in the course page for the current
-semester. For example, the Spring 2018 course is found here:
-
-http://data8.org/sp18/
-
-These materials are freely available on the semester course repository.
-There is a new one created for each semester of the course, as the materials
-tend to evolve over time. Here is the repository for the Spring 2018 course:
-
-https://github.com/data-8/materials-sp18
-
-### Homeworks
-
-- **TODO: add homework section, need to figure out how to handle grading**
-
-
-
-## Interact links
-
-The primary way that material is distributed in Data 8 is via "interact links". These are links that,
-when clicked, will automatically pull new material into a students' file system on the DataHub, and then
-direct them to this new content in a live session.
-
-The tool that you'll use to do this is called [nbgitpuller](https://github.com/data-8/nbgitpuller),
-which is pre-installed in the Docker image for the course. This means you can create interact links
-without needing to install anything new. For example, clicking the following link should pull in
-the [Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook/tree/master/notebooks) from Jake van der Plas:
-
-`http://{{ your-hub-ip }}/hub/user-redirect/git-pull?repo=https://github.com/jakevdp/PythonDataScienceHandbook&branch=master&subPath=notebooks`
 
 ### Interact links for the Data 8 textbook
 
@@ -82,31 +54,99 @@ it, follow these steps:
 
 * Fork the [data 8 textbook](https://github.com/data-8/textbook).
 * Clone this fork to your computer
-* Run the interact link renaming script (which is in *this* repository):
+* Open to the `convert_notebooks_partial.py` script
+* Navigate to the section of code titled "**Using custom interact links**"
+* Follow the instructions to add the URLs for your JupyterHub
+* Run `make notebooks` to generate HTML you can use with your course site.
 
-  `python rename_interact_links.py <new-hub-ip>`
+This HTML can be used with whatever platform you wish to host your textbook.
 
-  The value in `<new-hub-ip>` should be the full URL (including `http://`)
-  of your JupyterHub.
-* This will over-write all links in the textbook. Confirm that this has
-  worked by clicking on one of the renamed links. It should direct you
-  to the content on **your JupyterHub**.
-* Commit the changes that have been made in your fork.
+## Labs
 
-### Interact links for the Data 8 labs
+Alongside the textbook are several computational labs that operationalize the
+ideas covered in class and give students a chance to explore on their own.
+They can all be run interactively in the Data 8 environment (the same
+environment that we've used in your JupyterHub).
 
-Creating interact links for the Data 8 labs works the same way as it
-does for the textbook. All labs should already be runnable on the
-environment that the Data 8 Docker image serves.
+The latest links to the labs can be found in the course page for the current
+semester. For example, the Spring 2018 course is found here:
 
-In this case, you simply need to look up the links that are hosted on
-the [Data 8 semester materials page](http://data8.org/sp18/) and
-replace the Berkeley DataHub address with the address for your
-hub. For example, the following interact link should open a lab from
-week 2 on **your JupyterHub**:
+http://data8.org/sp18/
 
-`http://{{ your-hub-ip }}/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-sp18&subPath=materials/sp18/lab/lab02/lab02.ipynb`
+These materials are freely available on the semester course repository.
+There is a new one created for each semester of the course, as the materials
+tend to evolve over time. For example, here is the repository for the Spring 2018 course:
 
-### Interact links for homeworks
+https://github.com/data-8/materials-sp18
 
-* **TODO: Add section on scraping the OKpy server stuff out of the homeworks. We can either add a helper script, or create a public versions of the homeworks with this stuff scraped out.**
+you can find the labs for this repository here:
+
+https://github.com/data-8/materials-sp18/tree/master/materials/sp18/lab
+
+
+### Customizing your own copies of the labs
+
+All labs should already be runnable on the environment that the Data 8 Docker image serves.
+You can share the URLs for various Data 8 course materials (homeworks, labs, etc)
+with whatever method you prefer. For example, the Data 8 materials are shared with updates
+to the following page:
+
+We recommend forking and creating your own version of the labs, so that you can ensure the
+content is the right match for your course. To do this, perform the following steps:
+
+* Fork the repository for the course you want to run. (e.g., `https://github.com/data-8/materials-sp18/`)
+* Clone your repository to your machine (e.g., `git clone https://github.com/<YOUR-USERNAME>/materials-sp18/`)
+* Make modifications to the labs as you see fit
+* Ensure that you have a JupyterHub running the Data 8 environment (if not, [follow these instructions](customize_hub_environment.html))
+* Create your interact links so they point to *your* version of the labs. For example,
+  
+  `http://{{ YOUR-HUB-URL }}/hub/user-redirect/git-sync?repo=https://github.com/{{YOUR-USERNAME}}/materials-sp18&subPath=materials/sp18/lab/lab02/lab02.ipynb`
+
+
+## Homework
+
+Homework in Data 8 is used both for course grading, as well as to guide students through the
+material. The homework uses a package called OKpy for auto-grading student homework. This can be
+used in two primary ways:
+
+1. Grading is performed locally (on the students own computer) in order to give live feedback
+   to the code that students write.
+2. Grading is performed with the OKpy servers. This requires an account with OKpy, and is
+   used by Data 8 to handle "official" grades for the course.
+   
+At the moment, we recommend using only #1 for your course.
+
+The latest links to the homeworks can be found in the course page for the current
+semester. For example, the Spring 2018 course is found here:
+
+http://data8.org/sp18/
+
+These materials are freely available on the semester course repository.
+There is a new one created for each semester of the course, as the materials
+tend to evolve over time. For example, here is the repository for the Spring 2018 course:
+
+https://github.com/data-8/materials-sp18
+
+you can find the homeworks for this repository here:
+
+https://github.com/data-8/materials-sp18/tree/master/materials/sp18/hw
+
+### Customizing your own copies of the labs
+
+To customize the Data 8 homework for your course, take the following steps:
+
+* Fork and clone the Data 8 materials for the semester of your choice (see above section on labs).
+* In the homeworks, remove all references to OKpy **server**. This means removing a
+  particular line from homeworks before sharing them with your students.
+
+  We have provided a script to do this automatically. To do so, you can run:
+  
+  `python remove_okpy_server_references.py path/to/homework/folders`
+
+  This will modify homeworks *in place*, removing the relevant reference to the OKpy servers in each one.
+* Ensure that you have a JupyterHub running the Data 8 environment (if not, [follow these instructions](customize_hub_environment.html))
+* Create your interact links so they point to *your* version of the homeworks. For example,
+  
+  `http://{{ YOUR-HUB-URL }}/hub/user-redirect/git-sync?repo=https://github.com/{{YOUR-USERNAME}}/materials/sp18/hw/hw07/hw07.ipynb`
+
+

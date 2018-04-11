@@ -10,8 +10,13 @@ free to take a different approach!
 
 * **TODO: figure out a grading suggestion**
 
-## Other stuff
+## Maintaining the JupyterHub
 
-* **TODO: think of some other logistical considerations. e.g.:
-  * GSIs / student helpers
-  * Technical support / maintenance
+* Tips on how to keep the JupyterHub running / links to resources for more
+  information. Here we should discuss more general tips rather than a complete
+  guide.
+
+## Contributing back to Data 8 materials
+
+If you feel that there are changes / improvements that should be made to
+the Data 8 material, feel free to open an issue at <TODO INSERT PROPER CHANNEL HERE>.
