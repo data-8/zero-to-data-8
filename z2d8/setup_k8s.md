@@ -1,90 +1,27 @@
 # Setting up your Kubernetes Cluster
 
-The JupyterHub for Data 8 uses an open-source technology called Kubernetes
+The JupyterHub for Data 8 uses an open-source technology called
+[Kubernetes](https://kubernetes.io/)
 to manage all of the resources in the cloud. Kubernetes is rapidly gaining
-popularity, and will soon be easily-deployable
+popularity, and should soon be easily-deployable
 on all of the major cloud providers.
 
-This section describes how to set up a bare-bones Kubernetes cluster on
-the Google Kubernetes Engine.
+There are a few resources out there for setting up Kubernetes on most major
+cloud providers. The JupyterHub team has provided one-such resource,
+called [Zero to JupyterHub](https://z2jh.jupyter.org).
 
-Many of these steps are slightly modified versions of the [Zero to JupyterHub](https://z2jh.jupyter.org) guide.
+Before you move on to any of the next steps in _Zero to Data 8_, you should
+follow the section of Zero to JupyterHub that is relevant to the cloud
+provider you're using. You'll need to complete the following steps (which are linked
+in the Z2JH guide, but listed below for clarity):
 
-## Prepare your Google account
+* [Initialize Kubernetes on your cloud provider](https://zero-to-jupyterhub.readthedocs.io/en/latest/create-k8s-cluster.html)
+  so that we can run kubernetes to set up JupyterHub.
+* [Set up Helm](https://zero-to-jupyterhub.readthedocs.io/en/latest/setup-helm.html), a way to quickly install applications (like JupyterHub) using Kubernetes.
+* [Install JupyterHub](https://zero-to-jupyterhub.readthedocs.io/en/latest/setup-jupyterhub.html),
+  which gives us a fully-functional (though bare-bones) JupyterHub installation!
 
-* **TODO: Discuss setting up the Google account / tools. Can we just link to Z2JH here?**
-
-## Create your Cluster
-
-Now it's time to create your cluster.
-
-* **TODO: Can we just link to Z2JH here? Or alternatively provide a helper script.**
-
-```
-gcloud container clusters create data-8 \
-    --num-nodes=3 \
-    --machine-type=n1-standard-2 \
-    --zone=us-central1-b \
-    --cluster-version=1.8.7-gke.1
-```
-
-```
-kubectl create clusterrolebinding cluster-admin-binding \
-    --clusterrole=cluster-admin \
-    --user={{YOUR-EMAIL-ADDRESS-HERE}}
-```
-
-
-```
-curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > install-helm.bash
-bash install-helm.bash --version v2.6.2
-```
-
-```
-kubectl --namespace kube-system create serviceaccount tiller
-```
-
-```
-kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
-```
-
-### Install helm
-
-```
-helm init --service-account tiller
-```
-
-```
-helm version
-```
-
-```
-kubectl --namespace=kube-system patch deployment tiller-deploy --type=json --patch='[{"op": "add", "path": "/spec/template/spec/containers/0/command", "value": ["/tiller", "--listen=localhost:44134"]}]'
-```
-
-
-### Set up JupyterHub
-
-```
-openssl rand -hex 32
-```
-
-Add the above to the `config.yaml` file
-
-```
-helm repo add jupyterhub https://jupyterhub.github.io/helm-chart/
-helm repo update
-```
-
-```
-helm install jupyterhub/jupyterhub \
-    --version=v0.6 \
-    --name=data8 \
-    --namespace=data8 \
-    -f config.yaml
-```
-
-
-```
-kubectl --namespace=data8 get svc
-```
+Once you've followed these steps, you should have a JupyterHub available at a
+public address. The remainder of this guide will focus on customizing the
+environment that this JupyterHub serves in order to work with the Data 8
+course materials.

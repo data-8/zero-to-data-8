@@ -8,7 +8,7 @@ free to take a different approach!
 
 ## Grading
 
-* **TODO: figure out a grading suggestion**
+* <TODO: figure out a grading suggestion>
 
 ## Maintaining the JupyterHub
 
