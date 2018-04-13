@@ -131,7 +131,7 @@ you can find the homeworks for this repository here:
 
 https://github.com/data-8/materials-sp18/tree/master/materials/sp18/hw
 
-### Customizing your own copies of the labs
+### Customizing your own copies of the homework
 
 To customize the Data 8 homework for your course, take the following steps:
 
@@ -139,11 +139,13 @@ To customize the Data 8 homework for your course, take the following steps:
 * In the homeworks, remove all references to OKpy **server**. This means removing a
   particular line from homeworks before sharing them with your students.
 
-  We have provided a script to do this automatically. To do so, you can run:
+  We have provided a script to do this automatically. It is located in
+  `dsep_stack/z2d8/scripts`. To use it, navigate to this folder, then run:
   
-  `python remove_okpy_server_references.py path/to/homework/folders`
+  `python remove_okpy_server_code.py path/to/input_notebook.ipynb path/to/output_notebook.ipynb`
 
-  This will modify homeworks *in place*, removing the relevant reference to the OKpy servers in each one.
+  This will create a notebook at the output path after removing the relevant references
+  to the OKpy servers.
 * Ensure that you have a JupyterHub running the Data 8 environment (if not, [follow these instructions](customize_hub_environment.html))
 * Create your interact links so they point to *your* version of the homeworks. For example,
   
