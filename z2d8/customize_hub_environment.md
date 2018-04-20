@@ -130,9 +130,9 @@ prePuller:
 auth:
   type: github
   github:
-    clientId: "<YOUR-CLIENT-ID>"
-    clientSecret: "<YOUR-CLIENT-SECRET>"
-    callbackUrl: "http://<YOUR-HUB-IP-ADDRESS>/hub/oauth_callback"
+    clientId: "{{ YOUR-CLIENT-ID }}"
+    clientSecret: "{{ YOUR-CLIENT-SECRET }}"
+    callbackUrl: "http://{{ YOUR-HUB-IP-ADDRESS }}/hub/oauth_callback"
   admin:
     users:
         - <LIST>
