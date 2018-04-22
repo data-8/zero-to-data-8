@@ -14,7 +14,7 @@ which is pre-installed in the Docker image for the course. This means you can cr
 without needing to install anything new. For example, clicking the following link should pull in
 the [Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook/tree/master/notebooks) from Jake van der Plas:
 
-`http://{{ your-hub-ip }}/hub/user-redirect/git-pull?repo=https://github.com/jakevdp/PythonDataScienceHandbook&branch=master&subPath=notebooks`
+`http://{{ YOUR-HUB-IP }}/hub/user-redirect/git-pull?repo=https://github.com/jakevdp/PythonDataScienceHandbook&branch=master&subPath=notebooks`
 
 In the following sections we'll cover how interact links can be used with each type of Data 8
 content in order to distribute materials to your students.
@@ -25,7 +25,7 @@ The entire Data 8 textbook is available freely online. It is hosted
 at https://inferentialthinking.com, and the raw materials can be found at https://github.com/data-8/textbook.
 The textbook contains a combination of narrative and computational material,
 and is meant to teach students the ideas surrounding data science while
-getting their hands dirty and learning interactively.
+learning interactively.
 
 You may use this textbook in your own version of Data 8, as well as the
 materials surrounding it such as labs and homeworks. There is some

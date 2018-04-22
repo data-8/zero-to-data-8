@@ -10,6 +10,8 @@ There are a few resources out there for setting up Kubernetes on most major
 cloud providers. The JupyterHub team has provided one-such resource,
 called [Zero to JupyterHub](https://z2jh.jupyter.org).
 
+## Instructions to set up Kubernetes
+
 Before you move on to any of the next steps in _Zero to Data 8_, you should
 follow the section of Zero to JupyterHub that is relevant to the cloud
 provider you're using. You'll need to complete the following steps (which are linked
@@ -25,3 +27,5 @@ Once you've followed these steps, you should have a JupyterHub available at a
 public address. The remainder of this guide will focus on customizing the
 environment that this JupyterHub serves in order to work with the Data 8
 course materials.
+
+The next step is to [customize your JupyterHub environment](customize_hub_environment.md).
