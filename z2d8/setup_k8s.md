@@ -10,6 +10,19 @@ There are a few resources out there for setting up Kubernetes on most major
 cloud providers. The JupyterHub team has provided one-such resource,
 called [Zero to JupyterHub](https://z2jh.jupyter.org).
 
+## What kind of hardware should I use?
+
+One of the first things you'll need to do when setting up Kubernetes is to choose the kind
+of machines on which you'll run the course infrastructure. There are a lot of choices here -
+do you want fewer machines with a lot of RAM? Do you want machines with really fast CPUs? For
+example, here's a list of [all google cloud machine types](https://cloud.google.com/compute/docs/machine-types)
+that you could pick from.
+
+There is no single correct answer to what kind of machines you need for your class. However,
+we've found that RAM is often the biggest bottleneck for a course like Data 8. We recommend
+choosing machines that have a larger amount of RAM (and using fewer of them in the course, since
+each machine will be able to fit more students on it).
+
 ## Instructions to set up Kubernetes
 
 Before you move on to any of the next steps in _Zero to Data 8_, you should
