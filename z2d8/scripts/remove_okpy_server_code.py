@@ -44,14 +44,14 @@ def remove_okpy_server(inpath, outpath, overwrite=False):
 def main():
     # Parse args
     args = parser.parse_args()
-    in_path = args.path_in
-    out_path = args.path_out
+    in_path = args.path_in.strip('\'"')
+    out_path = args.path_out.strip('\'"')
     overwrite = args.overwrite
     
     # Do the OKpy scraping
-    assert in_path.endswith('.ipynb'), 'Not a notebook: ' + in_path
+    assert in_path.endswith('.ipynb'), 'In path not a notebook: ' + in_path
     assert os.path.exists(in_path), 'File not found: ' + in_path
-    assert out_path.endswith('.ipynb'), 'Not a notebook: ' + out_path
+    assert out_path.endswith('.ipynb'), 'Out path not a notebook: ' + out_path
     remove_okpy_server(in_path, out_path, overwrite=overwrite)
 
 if __name__ == '__main__':
