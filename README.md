@@ -1,4 +1,4 @@
-# The DSEP Data 8 Stack
+# An Educator's Guide to Data 8
 
 Data 8 is a "Foundations in Data Science" course taught for first year students at
 UC Berkeley. It combines principles/skills in statistics, programming, inference, modeling,

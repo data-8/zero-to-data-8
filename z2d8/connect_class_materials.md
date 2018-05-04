@@ -44,6 +44,7 @@ To create your own version of the data 8 textbook, take the following steps:
 
 * Fork the [data 8 textbook](https://github.com/data-8/textbook).
 * Clone this fork to your computer
+* Create a new branch for your edits. Call it something like `myuni_textbook`.
 * Make any edits you wish to the textbook. If you'd like to make large edits
   or derivatives of the content, please reach out to the Data 8 team first.
 
@@ -68,16 +69,61 @@ To use it, follow these steps:
 When you build the HTML for your textbook (see next section), the interact buttons
 will now point to your JupyterHub.
 
-### Generating the HTML to host your textbook online
+### Building the HTML for the textbook
 
-After your content and interact links are finalized, you must finally convert
-your notebooks into HTML files that can be hosted online. To do this, take the following
-steps:
+The Data 8 textbook is designed to be hosted online with [GitBook](https://www.gitbook.com/),
+a service for hosting book-like files that exist in GitHub repositories. This section
+covers how to prepare the HTML for your version of the textbook.
 
+* After you have forked the textbook, cloned it to your computer, and made the
+  necessary changes to it, then:
 * Navigate to the root of the repository for your version of the Data 8 textbook
 * Run `make notebooks` to generate HTML you can use with your course site.
-* An HTML version will be created for each notebook, and placed in `notebooks-html`
-* These are meant to be hosted online with GitBook.
+* An HTML version will be created for each notebook, and placed in the folder `notebooks-html`
+* Commit these changed notebooks (and any other changes you've made) to the git repository.
+* Push the changes up to your GitHub repository, e.g.:
+
+      git push origin <BRANCH-NAME>
+
+The HTML pages we generated are referred to by the course content, which is written in Markdown.
+GitBook will use these files to generate your textbook. Now that our course content is live on
+GitHub, it's time to connect a GitBook account with our repository. We'll cover how to set
+this up in the next section.
+
+### Hosting your textbook online
+
+**NOTE: Currently, the instructions to host the course content on GitBook may not work. GitBook
+recently updated their deployment and dropped support for some of the features that the data 8
+textbook was using. You can embed the HTML generated above into whatever online content host you
+wish. Stay tuned for a new method for hosting course content online.**
+
+Now that we've created an HTML version of the course notebooks, we'll prepare GitBook so that
+it can host your modified version of the textbook.
+
+GitBook files are written in Markdown. In your forked textbook repository, they're located in folders
+named `chapter<N>`. These Markdown files reference the HTML we automatically generated
+above. In this section, we'll upload this content to GitHub, then connect it with a GitBook account.
+
+_Note - GitBook recently upgrade to a new interface and deployment. If you have a pre-existing
+account, make sure you upgrade it to the new deployment._
+
+* [Create an account at GitBook](https://www.gitbook.com/join). This is a free service (so long as
+  your textbook is available to the public). If possible use your GitHub credential to create the
+  account. Your GitBook account will be automatically connected to GitHub.
+* If you did *not* create a GitBook account using your GitHub account, go to
+  [your account page](https://www.gitbook.com/account/), navigate to the **GitHub** section, and
+  click on **Link Account**. This will let you connect your GitHub and GitBook accounts.
+* [Create an organization and project](https://www.gitbook.com/new) for your GitBook.
+  Call them whatever you like, e.g. `myuni` and `data8-textbook`. Click through the menu to
+  confirm the new organization.
+* From the new project's page, click the **Settings button** in the bottom left (it looks like
+  three horizontal bars).
+* Click Integrations -> GitHub -> Link your repository. Follow the subsequent menus to point it
+  to **your fork of the data 8 textbook**. Make sure you tell GitBook that you will _edit from GitHub_.
+  If you've created a new branch, make sure to tell GitBook to build from this branch name!
+  
+This will take a moment to bring new changes into your GitBook. When it is finished, your version
+of the textbook should now be hosted at your project's URL!
 
 ## Labs
 
@@ -160,7 +206,7 @@ To customize the Data 8 homework for your course, take the following steps:
   We have provided a [script to do this automatically](https://github.com/choldgraf/dsep_stack/blob/master/z2d8/scripts/remove_okpy_from_data8.py).
   To use it, download the script and navigate to its folder, then run:
   
-  `python remove_okpy_from_data8.py path/to/course_materials/folder path/to/output/folder`
+  `python remove_okpy_from_data8.py path/to/course_materials/folder`
 
   This will create a new version of the homeworks in the output folder
   after removing the relevant references to the OKpy servers.
