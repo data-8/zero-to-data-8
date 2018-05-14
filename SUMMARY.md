@@ -3,7 +3,9 @@
 * [Zero to Data 8](z2d8/README.md)
     * [Creating your Kubernetes cluster](z2d8/setup_k8s.md)
     * [Customizing the JupyterHub environment for Data 8](z2d8/customize_hub_environment.md)
-    * [Connecting your JupyterHub to Data 8 material](z2d8/connect_class_materials.md)
+    * [Set up your course website and textbook](z2d8/connect_website_and_textbook.md)
+    * [Set up your course labs and homework](z2d8/connect_labs_and_homework.md)
+    * [Customize your course content](z2d8/customize_course_materials.md)
     * [Wisdom and tips for course logistics](z2d8/course_logistics.md)
 * [Teaching and topics](teaching/README.md)
     * [General course and personnel structure](teaching/structure.md)
@@ -17,4 +19,3 @@
 * [Extra and miscellaneous information](misc/README.md)
     * [Connector Courses and Extending Beyond Data 8](misc/connectors.md)
     * [Useful Links for Learning More](misc/links.md)
-
