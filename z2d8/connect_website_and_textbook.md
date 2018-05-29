@@ -75,7 +75,7 @@ You should now have all of the dependencies needed to build your course site.
 
      * `hub-url` is the URL for your JupyterHub. It should be a string.
      * `textbook-url` is the URL for the textbook you'll be using. Generally,
-       this is the address of your fork of the textbook. E.g., `https://github.com/<YOUR-USERNAME>/textbook`
+       you should leave it as the default value (`https://github.com/data-8/textbook`)
 
 Update these fields, and you should then be ready to build the site.
 
@@ -117,3 +117,21 @@ following steps:
 
 Congratulations, you should now have a fully-functioning course website
 hosting your version of the textbook! See the sections to the left for next steps.
+
+### The textbook repository structure
+
+The raw materials for the textbook can be found at
+https://github.com/data-8/textbook. This sections details the information that
+is found in the repository:
+
+* `notebooks/` contains the Jupyter Notebooks that contain all the course
+  material. These are what students are directed to with interact links.
+* `chapters/` contains a collection of Markdown files that define the
+  page title and structure of the textbook. These embed the HTML that is
+  generated from `notebooks/`.
+* `notebooks-html/` contains HTML that is *generated* from the Jupyter Notebooks
+  in the textbook.
+* `notebooks-images/` contains images *generated* for the content in `notebooks-html/`.
+
+The in your `data8-template` repository, the `notebooks-html` section has
+been generated from the latest release of the Data 8 textbook.

@@ -5,7 +5,6 @@
     * [Customizing the JupyterHub environment for Data 8](z2d8/customize_hub_environment.md)
     * [Set up your course website and textbook](z2d8/connect_website_and_textbook.md)
     * [Set up your course labs and homework](z2d8/connect_labs_and_homework.md)
-    * [Customize your course content](z2d8/customize_course_materials.md)
     * [Wisdom and tips for course logistics](z2d8/course_logistics.md)
 * [Teaching and topics](teaching/README.md)
     * [General course and personnel structure](teaching/structure.md)
