@@ -8,7 +8,7 @@ free to take a different approach!
 
 ## Grading
 
-* <TODO: figure out a grading suggestion>
+* <TODO: link to gradememaybe when it's ready for use>
 
 ## Maintaining the JupyterHub
 
@@ -26,7 +26,7 @@ the Data 8 material, feel free to open an issue at <TODO INSERT PROPER CHANNEL H
 
 The following sections contain some frequently asked questions around deploying
 Data 8 with JupyterHub. If you've got a question that isn't answered, feel free
-to ping us at <XXX TODO>.
+to [open an issue on the z2d8 github repository](https://github.com/data-8/zero-to-data-8/issues).
 
 ## How can I deploy a JupyterHub on hardware that isn't listed in this guide?
 
@@ -50,5 +50,6 @@ out to the Data 8 team so that we can discuss how to do this most effectively.
 
 For a more in-depth guide on customizing a JupyterHub (e.g. to install an environment
 that isn't covered by the Data 8 Docker image), see the [Zero to JupterHub](https://z2jh.jupyter.org)
-guide.
- 
+guide. For a more generic jekyll-based textbook template, see the
+[Textbooks with Jekyll](https://github.com/choldgraf/textbook-jekyll-template)
+template repository.
