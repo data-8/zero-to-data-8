@@ -103,17 +103,7 @@ https://github.com/data-8/materials-sp18/tree/master/materials/sp18/hw
 To customize the Data 8 homework for your course, take the following steps:
 
 1. Fork and clone the Data 8 materials for the semester of your choice (see above section on labs).
-2. In the homeworks, remove all references to OKpy **server**. This means removing a
-   particular line from homeworks before sharing them with your students.
-
-   We have provided a [script to do this automatically](https://github.com/choldgraf/dsep_stack/blob/master/z2d8/scripts/remove_okpy_from_data8.py).
-   To use it, download the script and navigate to its folder, then run:
-
-       python remove_okpy_from_data8.py path/to/course_materials/folder`
-
-   This will create a new version of the homeworks in the output folder
-   after removing the relevant references to the OKpy servers.
-
+2. **XXX TODO**: Include steps that use gradememaybe.
 3. Ensure that you have a JupyterHub running the Data 8 environment (if not, [follow these instructions](customize_hub_environment.html))
 4. Create your interact links so they point to *your* version of the homeworks. For example,
 
