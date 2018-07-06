@@ -4,9 +4,21 @@ Now that our JupyterHub has the Data 8 computing environment, it's time to
 connect it with the course materials for the class (e.g., lectures, labs, and homeworks).
 
 You'll create your own versions of the course materials used in Data 8, then
-host them all in one place using a Jekyll website. We'll cover each step below.
+host them all in one place using a Jekyll website. We'll cover the textbook
+in this section, and the homeworks/labs in the next section.
 
-## Prepare your computer
+## The Data 8 Textbook
+
+The [online Data 8 textbook](https://www.inferentialthinking.com/) is
+built using a site generation engine called [Jekyll](https://jekyllrb.com/),
+and hosted online with the free [GitHub Pages](https://pages.github.com/) service.
+
+For a short explanation of the structure / relevant files / etc of the
+Data 8 textbook, see the [Data 8 textbook readme](https://github.com/data-8/textbook/blob/gh-pages/README.md).
+
+The following sections show you how to set up your course website.
+
+### Prepare your computer
 
 First off, take these step to prepare your computer for adapting the Data 8
 materials:
@@ -23,15 +35,7 @@ materials:
 
 Now you're ready to set up your course material!
 
-## The Data 8 Textbook
-
-The [online Data 8 textbook](https://www.inferentialthinking.com/) is
-built using a site generation engine called [Jekyll](https://jekyllrb.com/),
-and hosted online with the free [GitHub Pages](https://pages.github.com/) service.
-
-The following sections show you how to set up your course website.
-
-### Prepare your course rextbook repository
+### Prepare your course textbook repository
 
 You'll use a tool called Jekyll to host your course content. Jekyll is a static
 website generator - meaning that you can use static files (like markdown) to
@@ -66,7 +70,7 @@ You should now have all of the dependencies needed to build your course site.
    following fields:
 
      * `hub_url` is the URL for your JupyterHub. It should be a string.
-     * `textbook_repo__org` is the organization for the textbook you'll be using. You should
+     * `textbook_repo_org` is the organization for the textbook you'll be using. You should
        update this to `<YOUR-USERNAME>`.
      * `hub_type` determines whether interact links point to `mybinder.org`, a free web
        service to host temporary user sessions, or to the URL of a JupyterHub.
@@ -74,7 +78,7 @@ You should now have all of the dependencies needed to build your course site.
 
 Update these fields, and you should then be ready to build the site.
 
-**Optional fields**
+#### Optional configuration fields
 
 You may optionally change the following fields:
 
@@ -96,7 +100,7 @@ Now that you've configured the site, take the following steps to see your change
    `GitHub Pages` section. You should see the message `Your site is published at <YOUR-URL>`.
 3. Go to the URL listed at `<YOUR-URL>` and you should see your live site.
 
-## To preview your built site
+## Preview your built site (optional)
 
 You can also preview your built site using Jekyll on your computer.
 To do this, take the following steps:
@@ -117,7 +121,7 @@ This is the location of your local demo for the course. Go to that URL in the
 browser, and you should see a functioning course website. The textbook interact
 links should point to the JupyterHub URL you've specified in `_config.yml`.
 
-## To update your textbook
+## Update your textbook with the latest version
 
 If you believe that the Data 8 textbook has been modified, and you'd like to incorporate
 these changes into your own version of the textbook, take the following steps:
@@ -126,50 +130,38 @@ these changes into your own version of the textbook, take the following steps:
 
        git remote add upstream https://github.com/data-8/textbook
 
-2. Pull in the latest changes from the remote repository into your local `gh-pages` branch:
+   This will fetch the latest version of the `data-8` copy of the textbook.
+   To update your local copy, you have two options:
+  * **Pull in the latest changes from the remote repository** into your local `gh-pages` branch:
 
-       git pull upstream gh-pages
+         git pull upstream gh-pages
 
-3. Resolve any merge conflicts that may arise. In general, the only files that you should need
-   to update are those in `_chapters/` and `notebooks/`.
-4. Push changes to your github repository:
+    This will attempt to pull in all changes from the remote repository, and shouldn't be
+    a problem as long as you haven't changed too much in your local repo.
+
+    You might get merge conflicts, in which case you should address them if possible!
+    In general, the only files that you should need
+    to update are those in `_chapters/` and `notebooks/`.  If there is too much
+    in the merge conflict, try the following step:
+
+  * **`git cherry-pick` new changes**. If you know exactly which changes you want to
+    incorporate from the "master" version of the textbook, you can use `git cherry-pick` to
+    only apply the changes from a specific commit into your repo.
+
+    Once you know the commit hash that you want to apply, simply run the following command:
+
+        git cherry-pick <COMMIT-HASH>
+
+    [Here's a list of the latest commits in the textbook](https://github.com/data-8/textbook/commits/gh-pages) for reference.
+
+2. Push changes to your github repository:
 
        git push
 
 Note that the branch on which the textbook exists is `gh-pages`, not `master`. This should
 be the same for your copy of the textbook as well.
 
-### The textbook repository structure
+## Next step
 
-While you shouldn't need to modify any of the textbook files outside of
-`_config.yml`, the following is a semi-complete list of relevant course
-materials in this repository. All of the textbook's content is in
-Jupyter Notebooks. This is then converted to markdown with a "build" script
-that the Data 8 team uses to host the textbook on Jekyll. You shouldn't ever
-run this script yourself.
-
-#### Website materials
-
-* `_posts` contains a collection of posts that are displayed chronologically
-  with Jekyll's `posts` page. Only relevant if `textbook_only` is "false".
-* `<XXX>.md` all files in the site's room ending in `.md` will be built into HTML
-  and available as pages on the final website. Only relevant if `textbook_only` is "false".
-
-#### Course materials
-
-* `notebooks/` contains all course content in Jupyter notebook form
-* `data/` contains the CSV data files used in the course textbook
-* `images/` contains images referenced in the course
-* `SUMMARY.md` contains a markdown list of chapters / paths to your textbook files.
-
-#### Auto-generated folders and files
-* `images/chapters` contains images *generated* during the notebook conversion
-* `_chapters/` contain notebooks automatically converted to markdown in the build process
-* `_site/` contains the HTML for the built site. It is created by Jekyll, and should only exist if you build the site locally
-* `_data/textbook.yml` contains information generated in the textbook build process.
-
-#### Repository configuration and build files
-* `_config.yml` contains all site configuration.
-* `_data/navigation.yml` contains site navigation as well as auto-generated sidebar yaml
-* `assets/css` contains CSS for the textbook and website
-* `environment.yml` contains the environment needed to build the textbook
+Now that you've got your own working version of the textbook, it's time to
+[connect your course with the homeworks, labs, and other course material in Data 8](connect_labs_and_homework.md).

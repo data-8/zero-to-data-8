@@ -1,55 +1,63 @@
 # Customizing the JupyterHub environment for Data 8
 
 The Data 8 course uses a collection of Python modules and open-source
-technology for both course infrastructure as well as teaching. We've
+technology for course infrastructure as well as teaching. We've
 provided all of these materials as a Docker image that you can connect
 to your JupyterHub so that all users will have the environment needed
 for the class. This page describes how to set up your JupyterHub
-environment so that it serves the same environment that the Data 8
-students have.
+environment so that it serves the environment used in Data 8.
 
 ## Deploying a change to your JupyterHub configuration
 
+First things first, to make changes to your JupyterHub configuration, you
+need to know how to **deploy** those changes. This section covers how to deploy
+a change to your configuration file ``config.yml`` in Kubernetes.
+
 All modifications to the base JupyterHub deployment are made with
-changes to your `config.yaml` file. When we first [created our JupyterHub](setup_k8s.md),
+changes to your `config.yaml` file. When we first [created our JupyterHub](setup_jupyterhub.md),
 we created this file with a single value inside that contained our secret token.
-This section shows how you can customize your JupyterHub for Data 8 by modifying
-your `config.yaml` file.
 
 **Once you've made a change to `config.yaml`** you can deploy it with the following
 steps:
 
-1. **Check that your `config.yaml` has no duplicate headers.** For example, you may have
+1. **Double-check the syntax of your `config.yaml` file.** For example, you may have
    copy/pasted two code snippets that both had
-   
+
    ```
    singleuser:
    ```
-   
-   As the top header. Make sure that these are merged under a *single header*.
+
+   as the top header, and should be merged under a single header.
+   YAML is picky about how whitespaces/indentation are used,
+   and can throw cryptic errors if you have small errors like type-os.
+
 2. **Deploy your change to the JupyterHub.** Use the following command:
 
     ```
     helm upgrade {{ YOUR-HUB-NAMESPACE }} jupyterhub/jupyterhub --version=v0.6 -f config.yaml
     ```
 
-
     This runs a "Helm Upgrade", which tells Kubernetes to update its deployment to match
     the values that you've placed in `config.yaml`. The value in `{{ YOUR-HUB-NAMESPACE }}` should
-    be whatever you chose when [creating the JupyterHub](setup_k8s.md).
-    
+    be whatever you chose when [creating the JupyterHub](setup_jupyterhub.md).
+
     Most hardware modifications to your
     Kubernetes deployment will be done in this way.
 
-**If you get a "time out waiting for the condition" error** then it took too long to
+### Common errors
+
+**"time out waiting for the condition"**. It took too long to
 pull the Docker image onto the JupyterHub. You can generally resolve this by including
 a `--timeout=9999999` flag to your `helm upgrade` command. This will prevent Helm
 from stopping too early.
 
-The following sections cover some common things that need to be done to prepare your
-deployment for Data 8.
+## Customizing your Hub environment
 
-## Using the Data 8 Docker image
+The environment provided to your students is defined by a Docker image
+that JupyterHub serves to new user sessions. Which image to use is configured
+in your `config.yml` file.
+
+### Using the Data 8 Docker image
 
 First, we'll tell the JupyterHub to connect user sessions with the
 Docker image used by Data 8. This is done by adding the following to your
@@ -71,8 +79,13 @@ helm upgrade data8 jupyterhub/jupyterhub --version=v0.6 -f config.yaml
 Note that this will take a while if you're using the data8 image, perhaps
 upwards of 10 minutes, as it pulls the image into your Kubernetes deployment.
 
+### Extending each user's environment
 
-## Define the resources available to your users
+If you need to extend the base Docker image, you can do so interactively from
+a JupyterHub session. For example students can `pip` or `conda` install packages
+into their own user directories, and these will persist over time.
+
+## Modify the resources available to your users
 
 In this section we'll define what kind of resources your students have. For example,
 how much RAM / CPU / etc. See the [Data 8 user resource configuration](https://github.com/berkeley-dsep-infra/datahub/blob/staging/datahub/config.yaml#L140)
@@ -118,7 +131,7 @@ authentication options and how to enable them.
 
 For this guide, we'll show you how to authenticate using GitHub usernames,
 as this is a free service that is more widely-accessible than the particular
-authentication system that Berkeley uses.
+authentication system that any one university uses.
 
 ### Authenticating with GitHub
 To authenticate with GitHub, take the following the steps outlined
@@ -143,7 +156,7 @@ auth:
       - <USERNAMES>
 ```
 
-## The final `config.yaml` file
+## An example `config.yaml` file
 
 If you've followed all of the instructions on this page
 (including authenticating with GitHub), your `config.yaml` file should now
@@ -162,7 +175,7 @@ singleuser:  # This defines the user environment
     limit: 2G
   storage:
     capacity: 2Gi
-    
+
 auth:
   type: github
   github:
@@ -176,13 +189,6 @@ auth:
         - <ADMIN>
         - <USERNAMES>
 ```
-
-## Deploy your changes
-
-Once you've configured `config.yaml` properly, you can upgrade your
-JupyterHub with a Helm upgrade:
-
-`helm upgrade data8 jupyterhub/jupyterhub --version=v0.6 -f config.yaml`
 
 ## Confirm that your environment works
 
@@ -212,4 +218,4 @@ If this worked, then congratulations! Your JupyterHub is ready to go.
 
 Now that we've customized our environment to work with Data 8, it's time
 to connect with the course materials such as the textbook, labs, and homeworks.
-To do so, [go to the next section](connect_class_materials.md).
+To do so, [go to the next section](connect_website_and_textbook.md).

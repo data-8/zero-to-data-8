@@ -8,7 +8,7 @@ science education ecosystem with the DSEP.
 The following is a brief description of how Connector Courses are structured.
 
 ## General course structure
-TODO: section still needs structuring
+* **TODO**: section still needs structuring
 * Course has associated github repository (ex: https://github.com/data-8/summer)
 * Instructor pushes content into `gh-pages` branch
 * Instructor embeds interact link in course web page (ex: http:data-8.github.io/summer)

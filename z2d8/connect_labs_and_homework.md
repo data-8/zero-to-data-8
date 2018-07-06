@@ -10,12 +10,12 @@ in order to provide links to new homeworks and labs.
 ## Interact links
 
 The primary way that material is distributed in Data 8 is via "interact links". These are links that,
-when clicked, will automatically pull new material into a students' file system on the DataHub, and then
+when clicked, will automatically pull new material into a students' file system on your JupyterHub, and then
 direct them to this new content in a live session.
 
 The tool that you use to do this is called [nbgitpuller](https://github.com/data-8/nbgitpuller),
 which is pre-installed in the Docker image for the course. This means you can create interact links
-without needing to install anything new. For example, clicking the following link should pull in
+without needing to install anything new. For example, the following link should pull in
 the [Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook/tree/master/notebooks) from Jake van der Plas:
 
 `http://{{ YOUR-HUB-IP }}/hub/user-redirect/git-pull?repo=https://github.com/jakevdp/PythonDataScienceHandbook&branch=master&subPath=notebooks`
@@ -97,6 +97,11 @@ https://github.com/data-8/materials-sp18
 you can find the homeworks for this repository here:
 
 https://github.com/data-8/materials-sp18/tree/master/materials/sp18/hw
+
+
+### Grading course homework
+
+* <TODO: link to gradememaybe when it's ready for use>
 
 ### Customizing your own copies of the homework
 
