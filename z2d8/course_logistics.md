@@ -6,10 +6,6 @@ some strategies that have worked well for Data 8. They should not be
 taken as strict rules, but as guidelines that worked well for us. Feel
 free to take a different approach!
 
-## Grading
-
-* <TODO: link to gradememaybe when it's ready for use>
-
 ## Maintaining the JupyterHub
 
 * Tips on how to keep the JupyterHub running / links to resources for more
