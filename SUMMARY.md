@@ -1,11 +1,11 @@
 # Summary
 
-* [Zero to Data 8](z2d8/README.md)
-    * [Deploy your JupyterHub](z2d8/setup_jupyterhub.md)
-    * [Customize the JupyterHub environment for Data 8](z2d8/customize_hub_environment.md)
-    * [Set up your course website and textbook](z2d8/connect_website_and_textbook.md)
-    * [Set up your course labs and homework](z2d8/connect_labs_and_homework.md)
-    * [Wisdom and tips for course logistics](z2d8/course_logistics.md)
+* [Zero to Data 8](deploy/README.md)
+    * [Deploy your JupyterHub](deploy/setup_jupyterhub.md)
+    * [Customize the JupyterHub environment for Data 8](deploy/customize_hub_environment.md)
+    * [Set up your course website and textbook](deploy/connect_website_and_textbook.md)
+    * [Set up your course labs and homework](deploy/connect_labs_and_homework.md)
+    * [Wisdom and tips for course logistics](deploy/course_logistics.md)
 * [Teaching and topics](teaching/README.md)
     * [General course and personnel structure](teaching/structure.md)
     * [Inspiration for Data 8 Pedagogy](teaching/inspiration.md)
