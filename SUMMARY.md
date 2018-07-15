@@ -1,6 +1,6 @@
 # Summary
 
-* [Zero to Data 8](deploy/README.md)
+* [Deploying Data 8](deploy/README.md)
     * [Deploy your JupyterHub](deploy/setup_jupyterhub.md)
     * [Customize the JupyterHub environment for Data 8](deploy/customize_hub_environment.md)
     * [Set up your course website and textbook](deploy/connect_website_and_textbook.md)
