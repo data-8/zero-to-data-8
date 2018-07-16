@@ -18,3 +18,4 @@
 * [Extra and miscellaneous information](misc/README.md)
     * [Connector Courses and Extending Beyond Data 8](misc/connectors.md)
     * [Useful Links for Learning More](misc/links.md)
+    * [Frequently Asked Questions (FAQ)](misc/faq.md)

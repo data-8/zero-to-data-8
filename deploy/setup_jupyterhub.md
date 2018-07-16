@@ -57,6 +57,17 @@ we've found that RAM is often the biggest bottleneck for a course like Data 8. W
 choosing machines that have a larger amount of RAM (and using fewer of them in the course, since
 each machine will be able to fit more students on it).
 
+## How much will this cost?
+
+There are many factors that go into assessing how much it will cost to deploy
+Data 8 for your course. The biggest of these are CPU and RAM that each student
+has available.  For details on how choices of hardware affect the cost of the
+deployment, we recommend checking out the [Zero to JupyterHub deployment costs guide](https://zero-to-jupyterhub.readthedocs.io/en/latest/cost.html).
+
+If you follow the recommendations for CPU and RAM that we'll cover in the next
+section of this guide, then a reasonable estimate for cost is
+**TODO: XXX per student**.
+
 ## A note on the rest of this guide
 
 Note that while we're shown two options for deploying JupyterHub above,

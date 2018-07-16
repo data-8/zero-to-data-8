@@ -1,13 +1,17 @@
 # Connecting Data 8 Labs and Homework
 
+Now that our JupyterHub has the Data 8 computing environment, it's time to
+connect it with the course materials for the class (e.g., lectures, labs, and homeworks).
 This section covers how to get your own copies of the course labs and
-homeworks, so that you can modify them and distribute as you wish.
+homeworks, so that you can modify them and distribute as you wish. We'll
+cover how to connect with the Data 8 textbook in the next section.
 
-Note that the course website template has a section for the course syllabus
-in the file `syllabus.md`. You can update the markdown table in this file
-in order to provide links to new homeworks and labs.
+## Distributing course content
 
-## Interact links
+This section covers a few tips on how to distribute content for your Data 8
+course.
+
+### Interact links
 
 The primary way that material is distributed in Data 8 is via "interact links". These are links that,
 when clicked, will automatically pull new material into a students' file system on your JupyterHub, and then
@@ -22,6 +26,28 @@ the [Data Science Handbook](https://github.com/jakevdp/PythonDataScienceHandbook
 
 In the following sections we'll cover how interact links can be used with each type of Data 8
 content in order to distribute materials to your students.
+
+### Course syllabus page
+
+You may use whatever technology you prefer for managing your course and
+distributing content. However, we recommend setting up a syllabus page that
+is used for distributing interact links and course materials. For an example,
+see the structure of the Spring 2018 course syllabus:
+
+http://data8.org/sp18/
+
+It has a structure like this:
+
+| Date          | Topic | Lecture  | Reading | Assignment
+| ------------- | ----- | -------  | ------- | ----------
+| 2018-01-09 | Cause and Effect | [Slides](http://data8.org/materials-sp18/lec/lec02PDF.pdf), [Video](https://www.youtube.com/watch?v=oF9rA2PYG6A) | [Chapter 2](https://www.inferentialthinking.com/chapters/02/causality-and-experiments.html) | [Homework 01](http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-sp18&subPath=materials/sp18/hw/hw01/hw01.ipynb)
+| 2018-01-22 | Tables | [Demos](http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-sp18&subPath=lec/lec03.ipynb), [Slides](http://data8.org/materials-sp18/lec/lec03PDF.pdf), [Video](https://www.youtube.com/watch?v=NLw4egmXBHM) | [Chapter 3](https://www.inferentialthinking.com/chapters/03/programming-in-python.html)| |
+| 2018-01-24 | Data Types | [Demos](http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-sp18&subPath=lec/lec04.ipynb), [Slides](http://data8.org/materials-sp18/lec/lec04PDF.pdf), [Video](https://www.youtube.com/watch?v=O3AAJs7dx-c) | [Chapters 4](https://www.inferentialthinking.com/chapters/04/data-types.html), [5](https://www.inferentialthinking.com/chapters/05/sequences.html)| [Lab 02: Types and Sequences](http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-sp18&subPath=materials/sp18/lab/lab02/lab02.ipynb)
+
+Each row is a class, and each column is a type of material you can distribute.
+Links either point to pages on the course textbook (at inferentialthinking.com)
+or interact links that connect students with the course JupyterHub to
+distribute homeworks and labs.
 
 ## Labs
 
@@ -52,9 +78,6 @@ The Data 8 materials are shared by adding
 "interact links" to the following syllabus page:
 
 http://data8.org/sp18/
-
-We have created a similar page in `syllabus.md` that you can use to append new
-links to for your course.
 
 We recommend forking and customizing your own version of the labs, so that you can ensure the
 content is the right match for your course. To do this, perform the following steps:
@@ -112,4 +135,9 @@ To customize the Data 8 homework for your course, take the following steps:
 3. Ensure that you have a JupyterHub running the Data 8 environment (if not, [follow these instructions](customize_hub_environment.html))
 4. Create your interact links so they point to *your* version of the homeworks. For example,
 
-       http://{{ YOUR-HUB-URL }}/hub/user-redirect/git-sync?repo=https://github.com/{{ YOUR-USERNAME }}/materials/sp18/hw/hw07/hw07.ipynb
+       http://{{ YOUR-HUB-URL }}/hub/user-redirect/git-sync?repo=https://github.com/{{ YOUR-USERNAME }}/materials-sp18/materials/sp18/hw/hw07/hw07.ipynb
+
+## Next step
+
+Now that you've prepared materials for your course and JupyterHub, it's
+time to [connect with the course textbook](connect_website_and_textbook.md)
