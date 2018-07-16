@@ -40,8 +40,6 @@ Managing these resources primarily utilizes the following pieces of open-source 
 ## Administering and managing the cluster
 * **Admin access to the DataHub** - The Data 8 team often required access to a high-level view of the DataHub, as well as access to commands that created/destroyed user sessions. This is provided by the **Admin Panel** of JupyterHub, which allows a subset of users to control operations of the DataHub resources.
 * **Deploying and updating the DataHub** - While the DataHub is a complicated piece of technology, running it, maintaining it, and updating it should be doable by people without strong technical operations skills. Data 8 uses GitHub repositories to store all configuration scripts for the DataHub, and uses Travis Continuous Integration to automatically-deploy changes to the configuration. As a result, updating the cluster is as simple as changing a configuration file and waiting for the changes to propagate.
-* **Student communication and troubleshooting** - All inter-student and class communication is
-handled with Piazza, a service for managing communication for courses. Students report technical or course problems in a dedicated Piazza room, and instructors / assistants / staff report technical problems to the infrastructure team.
 * **Scaling cloud resources** - An **autoscaler** is used to ensure that Data 8 is only requesting the cloud resources that it needs. Kubernetes makes it easy to scale up/down relatively quickly. This is configured with a script that is cloud-specific for now, but will become possible using only Kubernetes in the future.
 * **Versioning and reproducibility** - It is important that we know the *exact* state of the DataHub at any moment in time, and can recreate that state in the future. We use Git and best-practices in package management (e.g., explicitly versioning all components) to ensure that the DataHub configuration can be deployed elsewhere without difficulty.
 
@@ -56,6 +54,10 @@ handled with Piazza, a service for managing communication for courses. Students 
 ## Course management
 * **Grading** - Grading in Data 8 is carried out with a service called [OKpy](https://okpy.org/). This is a collection of scripts and services that allow students to check their work within the Jupyter Notebook and submit it to a centralized server for grading.
 * **Course syllabus and outline** - The general course structure is written in Markdown, and hosted online with GitHub Pages, a free service for hosting websites that exist on GitHub repositories. You can find the code repository for the Data 8 website [here](https://github.com/data-8/data-8.github.io).
+* **Student communication and troubleshooting** - All inter-student and class communication is
+handled with Piazza, a service for managing communication for courses. Students report technical or course problems in a dedicated Piazza room, and instructors / assistants / staff report technical problems to the infrastructure team.
+* **Managing course staff and instructors communication** - Data 8 uses a separate Piazza channel as well as a Slack channel for all inter-team communication throughout the course.
+* **Attendance and student requests** - Data 8 uses [Google Forms](https://www.google.com/forms/about/) to send small questionnaires to students, including a daily attendance link.
 
 ## Software used in code
 * **Programming language** - The programming language of choice for Data 8 is Python 3. This is because Python is a generic, user-friendly, and well-designed language that is broadly useful in data science. It is the most popular language for high-level data analytics, and has a rich ecosystem of packages for interactive data analysis.

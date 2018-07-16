@@ -34,6 +34,7 @@ take long to load).
 
 While some data is small enough that it can be downloaded
 interactively, other data sets are large enough that they
-are better-off shared between students.
-
-TODO: Fill this in
+are better-off shared between students. Data 8 shares these datasets on a
+folder that all students have read-only access to. It is slower to update
+and modify this data, but much more efficient than requiring students to
+download it and store their own copy.

@@ -92,16 +92,16 @@ how much RAM / CPU / etc. See the [Data 8 user resource configuration](https://g
 for example.
 
 ### Memory (RAM)
-The following snippet will give each user 1 gig of ram, and 2 gigs of storage,
-which is the amount given to Data 8 students at Berkeley.
+The following snippet will give each user 1 gig of ram,
+which is the amount given to Data 8 students at Berkeley. Students will
+always have at least the amount specified in `guarantee` and their Jupyter
+server will restart if they use more than `limit`.
 
 ```
 singleuser:
   memory:
     guarantee: 1G
     limit: 1G
-  storage:
-    capacity: 2Gi
 ```
 
 ### Disk Storage
@@ -216,6 +216,5 @@ If this worked, then congratulations! Your JupyterHub is ready to go.
 
 ## Next: connect with course materials
 
-Now that we've customized our environment to work with Data 8, it's time
-to connect with the course materials such as the textbook, labs, and homeworks.
-To do so, [go to the next section](connect_website_and_textbook.md).
+Now that you've got your own working version of the textbook, it's time to
+[connect your course with the homeworks, labs, and other course material in Data 8](connect_labs_and_homework.md).
