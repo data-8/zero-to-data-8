@@ -31,12 +31,12 @@ exposes some options for you to oversee their work. In particular:
 
 ![Admin page](images/admin_page.png)
 
-**Add Users** - Allows you to manually add new users to the JupyterHub.
-**Stop server** - Allows you to stop a student's server (useful if something is stuck)
-**Start server** - Allows you to start a student's server (usually done just after stopping their server)
-**Access server** - Allows you to browse the user's directory so that you can see their work. Useful for debugging.
-**Edit/Delete** - Allows you to edit the user's information, or delete them from record
-**Stop All / Shutdown Hub** - Shuts down all user sessions or turns off the JupyterHub. *Only do this if you really know what you're doing!*
+* **Add Users** - Allows you to manually add new users to the JupyterHub.
+* **Stop server** - Allows you to stop a student's server (useful if something is stuck)
+* **Start server** - Allows you to start a student's server (usually done just after stopping their server)
+* **Access server** - Allows you to browse the user's directory so that you can see their work. Useful for debugging.
+* **Edit/Delete** - Allows you to edit the user's information, or delete them from record
+* **Stop All / Shutdown Hub** - Shuts down all user sessions or turns off the JupyterHub. *Only do this if you really know what you're doing!*
 
 ## Troubleshooting and debugging
 
