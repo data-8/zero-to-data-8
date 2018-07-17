@@ -31,6 +31,11 @@ will do the following:
 * A small message will be displayed telling the user where "interact" points.
 * Internal links on the page will also now contain this URL.
 
+For example, the following URL will over-ride the interact link at `inferentialthinking.com`
+to point to the Berkeley DataHub (instead of to `mybinder.org`):
+
+    https://www.inferentialthinking.com/chapters/13/1/Percentiles?hub=datahub.berkeley.edu
+
 **Note: users need to supply this URL parameter each time they visit
 `inferentialthinking.com`.** For example, you might instruct users to **only**
 access the online textbook by clicking a link that you distribute in your
