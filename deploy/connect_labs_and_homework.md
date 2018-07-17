@@ -91,7 +91,7 @@ content is the right match for your course. To do this, perform the following st
 4. Ensure that you have a JupyterHub running the Data 8 environment (if not, [follow these instructions](customize_hub_environment.html))
 5. Create your interact links so they point to *your* version of the labs. For example,
 
-      http://{{ YOUR-HUB-URL }}/hub/user-redirect/git-sync?repo=https://github.com/{{ YOUR-ORG }}/materials-sp18&subPath=materials/sp18/lab/lab02/lab02.ipynb
+       http://{{ YOUR-HUB-URL }}/hub/user-redirect/git-sync?repo=https://github.com/{{ YOUR-ORG }}/materials-sp18&subPath=materials/sp18/lab/lab02/lab02.ipynb
 
 ## Homework
 
@@ -148,9 +148,7 @@ To customize the Data 8 homework for your course, take the following steps:
 2. Ensure that you have a JupyterHub running the Data 8 environment (if not, [follow these instructions](customize_hub_environment.html))
 3. Create your interact links so they point to *your* version of the homeworks. For example,
 
-   ```
-   http://{{ YOUR-HUB-URL }}/hub/user-redirect/git-sync?repo=https://github.com/{{ YOUR-USERNAME }}/materials-sp18/materials/sp18/hw/hw07/hw07.ipynb
-   ```
+       http://{{ YOUR-HUB-URL }}/hub/user-redirect/git-sync?repo=https://github.com/{{ YOUR-USERNAME }}/materials-sp18/materials/sp18/hw/hw07/hw07.ipynb
 
 ## Next step
 
