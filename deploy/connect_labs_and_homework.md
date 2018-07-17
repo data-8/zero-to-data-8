@@ -124,18 +124,33 @@ https://github.com/data-8/materials-sp18/tree/master/materials/sp18/hw
 
 ### Grading course homework
 
-* <TODO: link to gradememaybe when it's ready for use>
+Grading in Data 8 is performed with the [OKpy package](https://okpy.org/). This is a course
+management tool that allows you to both collect and grade notebooks, take
+attendance, and manage many other course tasks.
+
+If you prefer a more light-weight solution, we recommend looking into [gradememaybe](https://github.com/data-8/gradememaybe).
+This package replicates the auto-grading function of OKpy, without the other aspects
+of course management. It is useful if you *only* wish to use the tool for giving interactive
+student feedback and for grading assignments, and do not wish to use the OK servers for this.
+
+`gradememaybe` works with the same API that `OKpy` uses, meaning that using one package
+or another should require no change in the code itself. The only difference is that
+`gradememaybe` will not send any course material to the OKpy servers.
+
+> **Note:** `gradememaybe` and `OKpy` should not both be installed at the same time. If one
+  is installed, the other should be uninstalled.
 
 ### Customizing your own copies of the homework
 
 To customize the Data 8 homework for your course, take the following steps:
 
 1. Fork and clone the Data 8 materials for the semester of your choice (see above section on labs).
-2. **XXX TODO**: Include steps that use gradememaybe.
-3. Ensure that you have a JupyterHub running the Data 8 environment (if not, [follow these instructions](customize_hub_environment.html))
-4. Create your interact links so they point to *your* version of the homeworks. For example,
+2. Ensure that you have a JupyterHub running the Data 8 environment (if not, [follow these instructions](customize_hub_environment.html))
+3. Create your interact links so they point to *your* version of the homeworks. For example,
 
-       http://{{ YOUR-HUB-URL }}/hub/user-redirect/git-sync?repo=https://github.com/{{ YOUR-USERNAME }}/materials-sp18/materials/sp18/hw/hw07/hw07.ipynb
+   ```
+   http://{{ YOUR-HUB-URL }}/hub/user-redirect/git-sync?repo=https://github.com/{{ YOUR-USERNAME }}/materials-sp18/materials/sp18/hw/hw07/hw07.ipynb
+   ```
 
 ## Next step
 
