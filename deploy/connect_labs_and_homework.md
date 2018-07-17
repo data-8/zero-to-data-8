@@ -85,7 +85,7 @@ content is the right match for your course. To do this, perform the following st
 1. Fork the repository for the course you want to run. (e.g., `https://github.com/data-8/materials-sp18/`)
 2. Clone your repository to your machine
 
-      git clone https://github.com/<YOUR-USERNAME>/materials-sp18/
+       git clone https://github.com/<YOUR-USERNAME>/materials-sp18/
 
 3. Make modifications to the labs as you see fit, push them to GitHub
 4. Ensure that you have a JupyterHub running the Data 8 environment (if not, [follow these instructions](customize_hub_environment.html))
