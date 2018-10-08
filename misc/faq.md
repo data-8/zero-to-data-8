@@ -27,7 +27,7 @@ out to the Data 8 team so that we can discuss how to do this most effectively.
 For a more in-depth guide on customizing a JupyterHub (e.g. to install an environment
 that isn't covered by the Data 8 Docker image), see the [Zero to JupterHub](https://z2jh.jupyter.org)
 guide. For a more generic jekyll-based textbook template, see the
-[Textbooks with Jekyll](https://github.com/choldgraf/textbook-jekyll-template)
+[Textbooks with Jekyll](https://github.com/choldgraf/jupyter-book)
 template repository.
 
 ## How can I contribute back to Data 8 materials?

@@ -6,6 +6,7 @@
     * [Set up your course website and textbook](deploy/connect_website_and_textbook.md)
     * [Set up your course labs and homework](deploy/connect_labs_and_homework.md)
     * [Wisdom and tips for course logistics](deploy/course_logistics.md)
+    * [Demo the textbook locally](deploy/deploy_locally.md)
 * [Technology stack](tech/README.md)
     * [General Technical Considerations](tech/considerations.md)
     * [Technical Needs and the Tools that Do Them](tech/tech.md)

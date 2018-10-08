@@ -66,8 +66,7 @@ You should now have all of the dependencies needed to build your textbook site.
 Update these fields, and you should then be ready to build the site.
 
 *For more information on options for configuring your Data 8 website, see
-the [Textbooks with Jupyter](https://predictablynoisy.com/textbooks-with-jupyter/guide/01_overview/)
-guide*
+the [Jupyter Books](https://predictablynoisy.com/jupyter-book) guide*
 
 ### Push changes to your site
 
