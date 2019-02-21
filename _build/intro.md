@@ -34,7 +34,7 @@ own version of Data 8. It explains how to create a JupyterHub running in the clo
 can access, how to connect this JupyterHub with the coding environment that Data 8 students use,
 and how to incorporate course materials into your class. Check it out here:
 
-* [Deploying Data 8](https://berkeleydsep.gitbook.io/zero-to-data-8/deploying-data-8) describes how to set up your own Data 8 JupyterHub from scratch. It also contains suggestions and guidelines for running a Data 8 course at your own institution.
+* [Deploying Data 8](deploy/README) describes how to set up your own Data 8 JupyterHub from scratch. It also contains suggestions and guidelines for running a Data 8 course at your own institution.
 
 ## Technical and pedagogical decisions for Data 8
 
@@ -42,8 +42,8 @@ These sections cove the high-level reasoning behind the Data 8 course, including
 the technical and pedagogical pieces that make up the course. It should be treated as a reference
 for running your own Data 8 course, or for taking a similar technical approach to teaching data science.
 
-* [Teaching and Pedagogy](https://berkeleydsep.gitbook.io/zero-to-data-8/teaching-and-topics) covers the unique blend of computational, coding, and conceptual information taught in Data 8.
-* [The Data 8 Tech Stack](https://berkeleydsep.gitbook.io/zero-to-data-8/technology-stack) describes the technical pieces of Data 8, including hosting student environments, grading, and managing the course.
+* [Teaching and Pedagogy](teaching/README) covers the unique blend of computational, coding, and conceptual information taught in Data 8.
+* [The Data 8 Tech Stack](tech/README) describes the technical pieces of Data 8, including hosting student environments, grading, and managing the course.
 
 ## Other Data 8 information
 
