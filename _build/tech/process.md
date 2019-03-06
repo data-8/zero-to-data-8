@@ -30,12 +30,10 @@ another for `prod` (short for "production"). Each branch controls a
 different JupyterHub deployment.
 
 * `staging` lives at [staging.datahub.berkeley.edu](staging.datahub.berkeley.edu).
-  It has less resources than `prod`, and is used to test new modifications
-  before they're deployed to the live student environment. Students
-  do not use this JupyterHub, only the Data 8 development team.
-* `prod` lives at [datahub.berkeley.edu](datahub.berkeley.edu). It is
-  the JupyterHub that students use, and as such has more resources as
-  well as higher standards for stability.
+  It is used by the Data 8 development team to test modifications before they're
+  deployed to the production environment. Students do not use this JupyterHub.
+* `prod` lives at [datahub.berkeley.edu](datahub.berkeley.edu). It is the
+  JupyterHub that students use, and as such has  higher standards for stability.
 
 The DataHub uses [Travis CI](https://travis-ci.org/) (short for
 "continuous integration") to automatically run tests and code every

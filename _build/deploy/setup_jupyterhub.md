@@ -21,19 +21,26 @@ Data 8.
 ## Deploying JupyterHub in the cloud
 
 There are two recommended methods for running a JupyterHub for your course.
-Which one you choose depends on how large your course is.
+Which one you choose depends on the size and computational demands for the course.
+To run the code in Data 8, students do not need high-powered environments.
+
+Once you've either of the sections below, you should have a JupyterHub available at a
+public address. The remainder of this guide will focus on customizing the
+environment that this JupyterHub serves in order to work with the Data 8
+course materials.
 
 ### Deploy JupyterHub on a single VM (<= 50 students)
 
-**For courses of 50 or less students** we recommend
-[The Littlest JupyterHub](https://the-littlest-jupyterhub.readthedocs.io/en/latest/),
+For courses of 50 or less students we recommend
+[*The Littlest JupyterHub**](https://the-littlest-jupyterhub.readthedocs.io/en/latest/),
 a short guide for deploying JupyterHub on a virtual machine (VM).
 Follow the instructions on the link above to deploy a JupyterHub with a publicly-accessible
 IP address.
 
 ### Deploy JupyterHub on Kubernetes (> 50 students)
 
-**For courses of more than 50 students** we recommend the [Zero to JupyterHub for Kubernetes](https://zero-to-jupyterhub.readthedocs.io/en/latest/) guide.
+For courses of more than 50 students we recommend the
+[**Zero to JupyterHub for Kubernetes**](https://zero-to-jupyterhub.readthedocs.io/en/latest/) guide.
 This uses open-source technology called [Kubernetes](https://kubernetes.io/)
 managing resources in the cloud. It is more complex, but much more scalable than
 running JupyterHub on a single VM. This is what Data 8 uses at Berkeley.
@@ -51,10 +58,6 @@ in the Z2JH guide, but listed below for clarity):
 * [Install JupyterHub](https://zero-to-jupyterhub.readthedocs.io/en/latest/setup-jupyterhub.html),
   which gives us a fully-functional (though bare-bones) JupyterHub installation!
 
-Once you've followed these steps, you should have a JupyterHub available at a
-public address. The remainder of this guide will focus on customizing the
-environment that this JupyterHub serves in order to work with the Data 8
-course materials.
 
 ## What kind of hardware should I use?
 
@@ -69,6 +72,7 @@ we've found that RAM is often the biggest bottleneck for a course like Data 8. W
 choosing machines that have a larger amount of RAM (and using fewer of them in the course, since
 each machine will be able to fit more students on it).
 
+
 ## How much will this cost?
 
 There are many factors that go into assessing how much it will cost to deploy
@@ -76,19 +80,16 @@ Data 8 for your course. The biggest of these are CPU and RAM that each student
 has available.  For details on how choices of hardware affect the cost of the
 deployment, we recommend checking out the [Zero to JupyterHub deployment costs guide](https://zero-to-jupyterhub.readthedocs.io/en/latest/cost.html).
 
-If you follow the recommendations for CPU and RAM that we'll cover in the next
-section of this guide, then a reasonable estimate for cost is
-**TODO: XXX per student**.
 
 ## A note on the rest of this guide
 
 Note that while we're shown two options for deploying JupyterHub above,
 the rest of this guide will focus on **Deploying JupyterHub with Kubernetes**.
-This is because running a JupyterHub on Kubernetes is more complex and less-straightforward,
+This is because running a JupyterHub on Kubernetes is more complex,
 and warrants more guidance. However, if you are deploying a JupyterHub on a single VM
 with "The Littlest JupyterHub", you can follow along to determine the environment
 needed to run your course.
 
 ## Next step
 Now that we have a running JupyterHub, the next step is
-to [customize your JupyterHub environment](customize_hub_environment.md).
+to [customize your JupyterHub environment](customize_hub_environment).

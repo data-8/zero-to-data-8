@@ -6,8 +6,8 @@ prev_page:
   url: /tech/process
   title: 'The DataHub Deployment Process'
 next_page:
-  url: /teaching/structure
-  title: 'General course and personnel structure'
+  url: /teaching/inspiration
+  title: 'Inspiration for Data 8 Pedagogy'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 # The Data 8 Teaching Philosophy
