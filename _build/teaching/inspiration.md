@@ -1,8 +1,8 @@
 ---
 title: 'Inspiration for Data 8 Pedagogy'
 prev_page:
-  url: /teaching/structure
-  title: 'General course and personnel structure'
+  url: /teaching/README
+  title: 'Teaching and topics'
 next_page:
   url: /teaching/syllabus
   title: 'The Data 8 Course Syllabus'
@@ -10,6 +10,10 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 ---
 
 # General concepts
+
+The following are some general concepts and motivations behind the choices
+that were made in Data 8. They give an idea for why particular decisions were
+made about which topics to cover, which technology to use, etc.
 
 ## Major goals
 * Diversity

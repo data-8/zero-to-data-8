@@ -34,7 +34,7 @@ distributing content. However, we recommend setting up a syllabus page that
 is used for distributing interact links and course materials. For an example,
 see the structure of the Spring 2018 course syllabus:
 
-http://data8.org/sp18/
+[http://data8.org/sp18/]
 
 It has a structure like this:
 
@@ -58,17 +58,17 @@ environment that we've used in your JupyterHub).
 The latest links to the labs can be found in the course page for the current
 semester. For example, the Spring 2018 course is found here:
 
-http://data8.org/sp18/
+[http://data8.org/sp18/]
 
 These materials are freely available on the semester course repository.
 There is a new repository created for each semester of the course, as the materials
 tend to evolve over time. For example, here is the repository for the Spring 2018 course:
 
-https://github.com/data-8/materials-sp18
+[https://github.com/data-8/materials-sp18]
 
 you can find the labs for this repository here:
 
-https://github.com/data-8/materials-sp18/tree/master/materials/sp18/lab
+[https://github.com/data-8/materials-sp18/tree/master/materials/sp18/lab]
 
 
 ### Customizing your own copies of the labs
@@ -77,7 +77,7 @@ All labs should already be runnable on the environment that the Data 8 Docker im
 The Data 8 materials are shared by adding
 "interact links" to the following syllabus page:
 
-http://data8.org/sp18/
+[http://data8.org/sp18/]
 
 We recommend forking and customizing your own version of the labs, so that you can ensure the
 content is the right match for your course. To do this, perform the following steps:
@@ -88,7 +88,7 @@ content is the right match for your course. To do this, perform the following st
        git clone https://github.com/<YOUR-USERNAME>/materials-sp18/
 
 3. Make modifications to the labs as you see fit, push them to GitHub
-4. Ensure that you have a JupyterHub running the Data 8 environment (if not, [follow these instructions](customize_hub_environment.html))
+4. Ensure that you have a JupyterHub running the Data 8 environment (if not, [follow these instructions](customize_hub_environment))
 5. Create your interact links so they point to *your* version of the labs. For example,
 
        http://<< YOUR-HUB-URL >>/hub/user-redirect/git-sync?repo=https://github.com/<< YOUR-ORG >>/materials-sp18&subPath=materials/sp18/lab/lab02/lab02.ipynb
@@ -109,17 +109,17 @@ At the moment, we recommend using only #1 for your course.
 The latest links to the homeworks can be found in the course page for the current
 semester. For example, the Spring 2018 course is found here:
 
-http://data8.org/sp18/
+[http://data8.org/sp18/]
 
 These materials are freely available on the semester course repository.
 There is a new repository created for each semester of the course, as the materials
 tend to evolve over time. For example, here is the repository for the Spring 2018 course:
 
-https://github.com/data-8/materials-sp18
+[https://github.com/data-8/materials-sp18]
 
 you can find the homeworks for this repository here:
 
-https://github.com/data-8/materials-sp18/tree/master/materials/sp18/hw
+[https://github.com/data-8/materials-sp18/tree/master/materials/sp18/hw]
 
 
 ### Grading course homework
@@ -128,16 +128,14 @@ Grading in Data 8 is performed with the [OKpy package](https://okpy.org/). This 
 management tool that allows you to both collect and grade notebooks, take
 attendance, and manage many other course tasks.
 
-If you prefer a more light-weight solution, we recommend looking into [gradememaybe](https://github.com/data-8/gradememaybe).
-This package replicates the auto-grading function of OKpy, without the other aspects
-of course management. It is useful if you *only* wish to use the tool for giving interactive
-student feedback and for grading assignments, and do not wish to use the OK servers for this.
+If you prefer a more light-weight solution, we recommend looking into [Gofer Grader](https://github.com/data-8/Gofer-Grader).
+This package focuses on auto-grading Jupyter Notebooks only, and is less complex to run.
 
-`gradememaybe` works with the same API that `OKpy` uses, meaning that using one package
+Gofer Grader works with the same API that `OKpy` uses, meaning that using one package
 or another should require no change in the code itself. The only difference is that
-`gradememaybe` will not send any course material to the OKpy servers.
+Gofer Grader will not send any course material to the OKpy servers.
 
-> **Note:** `gradememaybe` and `OKpy` should not both be installed at the same time. If one
+> **Note:** `GoferGrader` and `OKpy` should not both be installed at the same time. If one
   is installed, the other should be uninstalled.
 
 ### Customizing your own copies of the homework
@@ -153,4 +151,4 @@ To customize the Data 8 homework for your course, take the following steps:
 ## Next step
 
 Now that you've prepared materials for your course and JupyterHub, it's
-time to [connect with the course textbook](connect_website_and_textbook.md)
+time to [connect with the course textbook](connect_website_and_textbook)

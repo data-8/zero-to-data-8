@@ -1,6 +1,10 @@
 
 # General concepts
 
+The following are some general concepts and motivations behind the choices
+that were made in Data 8. They give an idea for why particular decisions were
+made about which topics to cover, which technology to use, etc.
+
 ## Major goals
 * Diversity
 * Equity

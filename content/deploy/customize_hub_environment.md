@@ -7,6 +7,10 @@ to your JupyterHub so that all users will have the environment needed
 for the class. This page describes how to set up your JupyterHub
 environment so that it serves the environment used in Data 8.
 
+UC Berkeley deploys many JupyterHubs for its courses. You can see the documentation
+that we use to coordinate information across JupyterHub teams
+[in the UC Berkeley JupyterHubs guide](https://docs.datahub.berkeley.edu/en/latest/).
+
 ## Deploying a change to your JupyterHub configuration
 
 First things first, to make changes to your JupyterHub configuration, you
@@ -14,7 +18,7 @@ need to know how to **deploy** those changes. This section covers how to deploy
 a change to your configuration file ``config.yml`` in Kubernetes.
 
 All modifications to the base JupyterHub deployment are made with
-changes to your `config.yaml` file. When we first [created our JupyterHub](setup_jupyterhub.md),
+changes to your `config.yaml` file. When we first [created our JupyterHub](setup_jupyterhub),
 we created this file with a single value inside that contained our secret token.
 
 **Once you've made a change to `config.yaml`** you can deploy it with the following
@@ -34,12 +38,12 @@ steps:
 2. **Deploy your change to the JupyterHub.** Use the following command:
 
     ```
-    helm upgrade << YOUR-HUB-NAMESPACE >> jupyterhub/jupyterhub --version=v0.6 -f config.yaml
+    helm upgrade << YOUR-HUB-NAMESPACE >> jupyterhub/jupyterhub --version=<< YOUR-VERSION >> -f config.yaml
     ```
 
     This runs a "Helm Upgrade", which tells Kubernetes to update its deployment to match
     the values that you've placed in `config.yaml`. The value in `<< YOUR-HUB-NAMESPACE >>` should
-    be whatever you chose when [creating the JupyterHub](setup_jupyterhub.md).
+    be whatever you chose when [creating the JupyterHub](setup_jupyterhub).
 
     Most hardware modifications to your
     Kubernetes deployment will be done in this way.
@@ -217,4 +221,4 @@ If this worked, then congratulations! Your JupyterHub is ready to go.
 ## Next: connect with course materials
 
 Now that you've got your own working version of the textbook, it's time to
-[connect your course with the homeworks, labs, and other course material in Data 8](connect_labs_and_homework.md).
+[connect your course with the homeworks, labs, and other course material in Data 8](connect_labs_and_homework).

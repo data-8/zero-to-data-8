@@ -5,6 +5,13 @@ should be suitable for most courses. However, in the event that you wish to cust
 some parts of the textbook for your own course, follow the instructions on this
 page.
 
+## Message the Data 8 textbook instructors
+
+The Data 8 textbook is licensed CC-BY-ND. The last clause means "No Derivatives" unless
+you are given approval. If you'd like to make any edits to the textbook, please contact
+the Data 8 team first. You can find contact information at
+[the Data 8 course information page](https://data.berkeley.edu/education/courses/data-8).
+
 ## Prepare your computer
 
 First off, take these step to prepare your computer for adapting the Data 8
