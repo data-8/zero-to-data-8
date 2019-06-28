@@ -12,7 +12,7 @@ There are two recommended methods for running a JupyterHub for your course.
 Which one you choose depends on the size and computational demands for the course.
 To run the code in Data 8, students do not need high-powered environments.
 
-Once you've either of the sections below, you should have a JupyterHub available at a
+Once you've followed either of the sections below, you should have a JupyterHub available at a
 public address. The remainder of this guide will focus on customizing the
 environment that this JupyterHub serves in order to work with the Data 8
 course materials.
