@@ -22,7 +22,7 @@ cloud providers provide, with various pros and cons.
 > **An aside on using free hosted services vs. creating your own deployments**. Many cloud
   providers offer a "free" and customized notebook service for basic usage. While these are
   appealing on their surface, they provide a number of challenges down the road, such as
-  getting your students used to the vendor-specific interface rather than an open-source alternative.
+  getting your students used to the vendor-specific interface rather than an open-source version.
   The Jupyter Project (and the Data 8 approach) aims to maximize your choice and flexibility in
   how and where you deploy Jupyter environments on shared infrastructure, and for this reason
   we do not recommend using most fully-managed "free" services.
