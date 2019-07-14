@@ -6,7 +6,11 @@ own workspaces so they can interact with course material. This section
 covers how to set up a JupyterHub that runs the environment needed for
 Data 8.
 
-## Deploying JupyterHub in the cloud
+## What distribution of JupyterHub should I use?
+
+JupyterHub has a few "distributions" that make it easy to set up on a particular
+kind of cloud infrastructure. Which one you choose will depend on your use-case.
+This section provides some information to help you decide.
 
 There are two recommended methods for running a JupyterHub for your course.
 Which one you choose depends on the size and computational demands for the course.
@@ -20,7 +24,7 @@ course materials.
 ### Deploy JupyterHub on a single VM (<= 50 students)
 
 For courses of 50 or less students we recommend
-[*The Littlest JupyterHub**](https://the-littlest-jupyterhub.readthedocs.io/en/latest/),
+[**The Littlest JupyterHub**](https://the-littlest-jupyterhub.readthedocs.io/en/latest/),
 a short guide for deploying JupyterHub on a virtual machine (VM).
 Follow the instructions on the link above to deploy a JupyterHub with a publicly-accessible
 IP address.
