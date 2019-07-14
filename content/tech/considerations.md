@@ -36,7 +36,7 @@ as well as open source. Being an open source language means that anybody can use
 contribute to it, or even modify it if they wish. The language isn't "owned" by anybody, which
 we believe is an important foundation to use for introducing students to data science.
 
-### The scipy stack - an open source ecosystem
+### The Scipy stack - an open source ecosystem
 
 On top of the Python language is a thriving community of libraries and tools for scientific
 computing. These are largely developed and driven by an open community of developers, many
