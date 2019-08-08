@@ -18,5 +18,5 @@ used for.
   host the textbook for the course, and control revisions of all course
   materials. It's also where you can host your course template online.
 * [Kubernetes](https://kubernetes.io/) (optional, only if your course is
-  > around 60 students) is used to orchestrate the cloud
+  around 60 students) is used to orchestrate the cloud
   resources that serve user sessions.
