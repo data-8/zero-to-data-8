@@ -66,5 +66,5 @@ data analytics pedagogy. Here are a few notable resources:
 
 ## Contacting Us
 
-If you woud like to learn more about any of the tools used in Data 8 or are interested in deploying your own data 8 course, 
+If you would like to learn more about any of the tools used in Data 8 or are interested in deploying your own data 8 course, 
 please fill out our [Data 8 Instructor Interest form](https://forms.gle/maRqsceCvTNnqQ3w9) or shoot us an email at `ds-help@berkeley.edu`.
