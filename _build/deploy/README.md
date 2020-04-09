@@ -6,8 +6,8 @@ prev_page:
   url: /intro
   title: 'Home'
 next_page:
-  url: /deploy/setup_jupyterhub
-  title: 'Deploy your JupyterHub'
+  url: /deploy/choose_cloud
+  title: 'Choose where to deploy your JupyterHub'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 # Deploy Data 8 for your course
@@ -30,5 +30,5 @@ used for.
   host the textbook for the course, and control revisions of all course
   materials. It's also where you can host your course template online.
 * [Kubernetes](https://kubernetes.io/) (optional, only if your course is
-  > around 60 students) is used to orchestrate the cloud
+  around 60 students) is used to orchestrate the cloud
   resources that serve user sessions.
