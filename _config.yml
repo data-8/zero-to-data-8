@@ -19,24 +19,25 @@
 title: Zero to Data 8
 author: The Berkeley Division of Data Sciences
 email:
-description: A short guide to deploying your own Data 8 course.
-baseurl: /zero-to-data-8               # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
-url: https://data-8.github.io              # the base hostname & protocol for your site, e.g. http://example.com
+description: >-
+  A short guide to deploying your own Data 8 course.
+
+baseurl: /zero-to-data-8 # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
+url: https://data-8.github.io  # the base hostname & protocol for your site, e.g. http://example.com
 
 
 #######################################################################################
 # Jupyter Book settings
 
-# Notebook content settings
-hide_cell_text: '# HIDDEN'              # When building the textbook, any cells with this text inside will be hidden in the output markdown
-hide_code_text: '# NO CODE'              # When building the textbook, any cells with this text inside will have *only* their output shown (no code)
-use_hide_code_button: true        # If True, a small button appears to the right of each cell that lets you hide its contents.
+# Main page settings
+footer_text: This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The
+  Jupyter Book Community</a>
 
 # Sidebar settings
 show_sidebar: true                # Show the sidebar. Only set to false if your only wish to host a single page.
 collapse_inactive_chapters: true  # Whether to collapse the inactive chapters in the sidebar
-textbook_logo: content/images/data8.png               # A logo to be displayed at the top of your textbook sidebar
-textbook_logo_link: https://data-8.github.io/zero-to-data-8                    # A link for the logo.
+textbook_logo: content/images/data8.png           # A logo to be displayed at the top of your textbook sidebar. Should be square
+textbook_logo_link: https://data-8.github.io/zero-to-data-8     # A link for the logo.
 sidebar_footer_text: Powered by <a href="https://github.com/jupyter/jupyter-book">Jupyter
   Book</a>
 number_toc_chapters: true         # Whether to add numbers to chapterse in your Table of Contents. If true, you can control this at the Chapter level in _data/toc.yml
@@ -61,16 +62,21 @@ binderhub_url: https://mybinder.org                        # The URL for your Bi
 binder_repo_base: https://github.com/                     # The site on which the textbook repository is hosted
 binder_repo_org: YOUR-ORG                     # The username or organization that owns this repository
 binder_repo_name: YOUR-REPO                        # The name of the repository on the web
-binder_repo_branch: master                   # The branch on which your textbook is hosted.
+binder_repo_branch: master                     # The branch on which your textbook is hosted.
 binderhub_interact_text: Interact              # The text that interact buttons will contain.
 
 # Thebelab settings
-use_thebelab_button: false                # If 'true', display a button to allow in-page running code cells with Thebelab
+use_thebelab_button: false               # If 'true', display a button to allow in-page running code cells with Thebelab
 thebelab_button_text: Thebelab                 # The text to display inside the Thebelab initialization button
+codemirror_theme: abcdef                     # Theme for codemirror cells, for options see https://codemirror.net/doc/manual.html#config
+
+# nbinteract settings
+use_show_widgets_button: true                # If 'true', display a button to allow in-page running code cells with nbinteract
 
 # Download settings
-use_download_button: false                # If 'true', display a button to download a zip file for the notebook
+use_download_button: false               # If 'true', display a button to download a zip file for the notebook
 download_button_text: Download                # The text that download buttons will contain
+download_page_header: Made with Jupyter Book                # A header that will be displayed at the top of and PDF-printed page
 
 #######################################################################################
 # Jupyter book extensions and additional features
@@ -79,6 +85,12 @@ download_button_text: Download                # The text that download buttons w
 scholar:
   style: apa
 
+
+#######################################################################################
+# Jupyter book settings you probably don't need to change
+
+google_analytics:
+  mytrackingcode: ''
 
 #######################################################################################
 # Jupyter book settings you probably don't need to change
@@ -137,4 +149,4 @@ plugins:
 - jekyll-scholar
 
 # Jupyter Book version - DO NOT CHANGE THIS. It is generated when a new book is created
-jupyter_book_version: 0.4.1
+jupyter_book_version: 0.6.3
