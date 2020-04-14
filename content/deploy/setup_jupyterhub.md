@@ -24,10 +24,14 @@ course materials.
 ### Deploy JupyterHub on a single VM (<= 50 students)
 
 For courses of 50 or less students we recommend
-[**The Littlest JupyterHub**](https://the-littlest-jupyterhub.readthedocs.io/en/latest/),
+[**The Littlest JupyterHub**](https://the-littlest-jupyterhub.readthedocs.io/en/latest/), which links to
 a short guide for deploying JupyterHub on a virtual machine (VM).
-Follow the instructions on the link above to deploy a JupyterHub with a publicly-accessible
-IP address.
+
+To set up The Littlest JupyterHub, follow the installation guide specific to the cloud provider you’re using. You’ll need to complete the following steps (which are linked in the TLJH guide, but listed below for clarity): 
+
+* [Create and customize a server](https://the-littlest-jupyterhub.readthedocs.io/en/latest/install/index.html) upon which you will be able to install and run JupyterHub on.
+* [Set up and configure your JupyterHub](https://the-littlest-jupyterhub.readthedocs.io/en/latest/howto/index.html) to fit your use case and add more users to the JupyterHub.
+* [Install conda, pip, or apt packages](https://the-littlest-jupyterhub.readthedocs.io/en/latest/howto/env/user-environment.html) to create a shared environment for all users to have standard access to libraries.
 
 ### Deploy JupyterHub on Kubernetes (> 50 students)
 
