@@ -23,7 +23,7 @@
 
 # Top-level page
 - title: Home
-  url: /intro
+  url: v1/intro
   not_numbered: true
 
 # Adds a searchbar link
@@ -34,54 +34,54 @@
 - divider: true
 
 - title: Deploying Data 8
-  url: deploy/README
+  url: v1/deploy/README
   not_numbered: true
   expand_sections: true
   sections:
     - title: Choose where to deploy your JupyterHub
-      url: deploy/choose_cloud
+      url: v1/deploy/choose_cloud
     - title: Deploy your JupyterHub
-      url: deploy/setup_jupyterhub
+      url: v1/deploy/setup_jupyterhub
     - title: Customize the JupyterHub environment for Data 8
-      url: deploy/customize_hub_environment
+      url: v1/deploy/customize_hub_environment
     - title: Set up your course website and textbook
-      url: deploy/connect_website_and_textbook
+      url: v1/deploy/connect_website_and_textbook
     - title: Set up your course labs and homework
-      url: deploy/connect_labs_and_homework
+      url: v1/deploy/connect_labs_and_homework
     - title: Wisdom and tips for course logistics
-      url: deploy/course_logistics
+      url: v1/deploy/course_logistics
     - title: Demo the textbook locally
-      url: deploy/deploy_locally
+      url: v1/deploy/deploy_locally
 - title: Technology stack
-  url: tech/README
+  url: v1/tech/README
   not_numbered: true
   expand_sections: true
   sections:
     - title: General Technical Considerations
-      url: tech/considerations
+      url: v1/tech/considerations
     - title: Technical Needs and the Tools that Do Them
-      url: tech/tech
+      url: v1/tech/tech
     - title: The Data 8 Tech Team Structure
-      url: tech/team
+      url: v1/tech/team
     - title: The DataHub Deployment Process
-      url: tech/process
+      url: v1/tech/process
 - title: Teaching and topics
-  url: teaching/README
+  url: v1/teaching/README
   not_numbered: true
   expand_sections: true
   sections:
     - title: Inspiration for Data 8 Pedagogy
-      url: teaching/inspiration
+      url: v1/teaching/inspiration
     - title: The Data 8 Course Syllabus
-      url: teaching/syllabus
+      url: v1/teaching/syllabus
 - title: Extra and miscellaneous information
-  url: misc/README
+  url: v1/misc/README
   not_numbered: true
   expand_sections: true
   sections:
     - title: Connector Courses and Extending Beyond Data 8
-      url: misc/connectors
+      url: v1/misc/connectors
     - title: Useful Links for Learning More
-      url: misc/links
+      url: v1/misc/links
     - title: Frequently Asked Questions (FAQ)
-      url: misc/faq
+      url: v1/misc/faq
