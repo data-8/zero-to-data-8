@@ -6,8 +6,7 @@ This section describes the process of configuring and deploying your own Jupyter
 
 ## Why JupyterHub?
 
-
-Data 8 operates on a scale and level of complexity that required several technological improvements to our current teaching toolset. The Data 8 team worked closely with various open-source projects in order to contribute to tools that are broadly useful.
+Data 8 started with 60 students in Fall 2015, and now has 1350 students as of Spring 2020. The course operates on a scale and level of complexity that required several technological improvements to our current teaching toolset. The Data 8 team worked closely with various open-source projects in order to contribute to tools that are broadly useful.
 
 All of the course infrastructure that Data 8 uses runs on JupyterHub and Kubernetes. These
 are both open source projects for managing user sessions and orchestrating computational
