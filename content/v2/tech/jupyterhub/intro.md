@@ -4,7 +4,6 @@ This section describes the process of configuring and deploying your own Jupyter
 
 ## Why JupyterHub?
 
-[**JupyterHub**](https://zero-to-jupyterhub.readthedocs.io/en/latest/) is a multi-user Hub that allows students to interact with their own computing environment. It makes it easy to spawn and manage multiple instances of a Jupyter notebook.
 
 Data 8 operates on a scale and level of complexity that required several technological improvements to our current teaching toolset. The Data 8 team worked closely with various open-source projects in order to contribute to tools that are broadly useful.
 
@@ -17,4 +16,3 @@ allowing other organizations to deploy JupyterHub for teaching Data 8 on whateve
 they'd prefer. For example JupyterHub runs on both large, scalable cloud infrastructure like
 Kubernetes, but also on much smaller-scale infrastructure without Kubernetes, such as a single machine, which gives
 others more flexibility in how and where they want to run their Data 8 infrastructure.
-
