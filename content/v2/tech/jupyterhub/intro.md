@@ -15,7 +15,6 @@ the freedom to run Data 8 on any cloud provider, and lessens the likelihood of b
 dependent on a single cloud vendor to run the course. It also allowed us to improve these tools,
 allowing other organizations to deploy JupyterHub for teaching Data 8 on whatever cloud resources
 they'd prefer. For example JupyterHub runs on both large, scalable cloud infrastructure like
-Kubernetes, but also on much smaller-scale infrastructure such as a single machine, which gives
+Kubernetes, but also on much smaller-scale infrastructure without Kubernetes, such as a single machine, which gives
 others more flexibility in how and where they want to run their Data 8 infrastructure.
-
 
