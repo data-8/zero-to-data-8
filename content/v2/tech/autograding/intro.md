@@ -1,0 +1,5 @@
+# Autograding
+
+Autograding is an essential part of any scalable computation-centered course. It allows instructors to easily and efficiently grade swathes of student submissions, and also lets students have a way to check their progress and ensure they're heading the right direction. There are many different options for autograding depending on the scale and requirements of your course, from those that run entirely on the instructor's machine to those that utilize a server that grades students' assignments on submission.
+
+Autograding as it is done at Berkeley originated with the development of [OkPy](okpy.md), a Python autograder originally designed for [CS 61A](https://cs61a.org) that was later retrofitted with the tools to grade Jupyter Notebooks for use in Data 8. Since OkPy, Berkeley has released a few different autograding solutions based on the different requirements of certain course offerings, including [Gofer Grader](https://github.com/data-8/Gofer-Grader), which is used in the EdX MOOC offering of Data 8, and [Otter Grader](otter.md), a truly scalable solution that supports both local and server-based autograding.
