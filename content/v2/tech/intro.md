@@ -2,7 +2,9 @@
 
 This online resource serves as a "snapshot" of the Data 8 technology stack, and a guide for others
 that wish to adopt a Data 8 classroom environment. For a guide on the *pedagogical* and *curriculum* 
-considerations, [there is a separate guide here](../v1/teaching/inspiration).
+considerations, [there is a separate guide here](../v1/teaching/inspiration). This guide is written 
+with all levels of technical understanding in mind, so even if you are new to creating a 
+computational course, this guide is for everyone!
 
 [comment]: <> (TODO: A reminder to change the link above once the new guide is created and finished.)
 
