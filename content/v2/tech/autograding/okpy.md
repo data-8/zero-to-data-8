@@ -6,7 +6,7 @@
 
 The first step in autograding is creating an assignment and tests. [Jassign](https://github.com/okpy/jassign) is a tool that simplifies this process by allowing instructors to create a master notebook that includes questions, solutions, and public and hidden tests, which are then parsed into the correct test files and notebook versions (one solutions notebook and one sanitized student notebook). 
 
-After you have created the notebook, continue by making an assignment on [okpy.org](https://okpy.org) and generating a .ok file that is used to configure the autograding client. The .ok file is placed with the student notebook and any support files (e.g. data files) in a public GitHub repo which students will pull into their JupyterHub accounts to work on.
+After you have created the notebook, continue by making an assignment on [okpy.org](https://okpy.org) and generating a `.ok` file that is used to configure the autograding client. The `.ok` file is placed in a public GitHub repo with the student notebook and any support files (e.g. data files), which students will pull into their JupyterHub accounts to work on.
 
 Grading code is then performed automatically on OkPy when a student submits. Autograders default to timing out after 300 seconds, although this is configurable. It is also possible to create custom integrations with the OkPy server to incorporate it into existing workflows.
 
