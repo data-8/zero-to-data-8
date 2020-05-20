@@ -22,7 +22,7 @@ The syllabus has the following structure:
 | 2018-01-24 | Data Types | [Demos](http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-sp18&subPath=lec/lec04.ipynb), [Slides](http://data8.org/materials-sp18/lec/lec04PDF.pdf), [Video](https://www.youtube.com/watch?v=O3AAJs7dx-c) | [Chapters 4](https://www.inferentialthinking.com/chapters/04/data-types.html), [5](https://www.inferentialthinking.com/chapters/05/sequences.html)| [Lab 02: Types and Sequences](http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-sp18&subPath=materials/sp18/lab/lab02/lab02.ipynb)
 
 Each row is a lecture, and each column is a type of material you can distribute.
-The links in the columns either point to pages on the course textbook (at inferentialthinking.com)
+The links in the columns either point to pages on the [course textbook](https://inferentialthinking.com).
 or interact links that connect students with the course JupyterHub for distribution of homeworks and labs.
 
 
