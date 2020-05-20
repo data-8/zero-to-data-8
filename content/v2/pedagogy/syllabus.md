@@ -2,7 +2,6 @@
 
 This section covers how to build your course syllabus and materials. It also goes over 
 a few tips on how to distribute your content for Data 8.
-course.
 
 
 ## Course syllabus page
@@ -143,4 +142,3 @@ content is the right match for your course. To do this, perform the following st
 5. Create your interact links so they point to *your* version of the labs. For example,
 
        http://<< YOUR-HUB-URL >>/hub/user-redirect/git-sync?repo=https://github.com/<< YOUR-ORG >>/materials-sp18&subPath=materials/sp18/lab/lab02/lab02.ipynb
-
