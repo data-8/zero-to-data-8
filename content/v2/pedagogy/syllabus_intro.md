@@ -3,4 +3,4 @@ Teaching Data Science requires a shift in the way we traditionally teach each of
 
 In Data 8, touching on these topics in a single course is a feature, not a bug. For example, by teaching programming fundamentals of statistics, students gain an appreciation for the close interplay between these two and learn a valuable set of skills at the same time.
 
-This section covers many of the pedagogical decisions that were made in Data 8. It should be seen as a reference and background for the Data 8 textbook, which is freely-available online.
+This section covers many of the pedagogical decisions that were made in Data 8. It should be seen as a reference and background for the [Data 8 textbook](https://inferentialthinking.com), which is freely-available online.
