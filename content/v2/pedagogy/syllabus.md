@@ -30,7 +30,7 @@ or interact links that connect students with the course JupyterHub for distribut
 ## Interact links
 
 The primary way that material is distributed in Data 8 is via "interact links". These are links that,
-when clicked, will automatically pull new material into a students' file system on your JupyterHub, and then
+when clicked, will automatically pull new material into a student's file system on your (the instructor's) JupyterHub, and then
 direct them to this new content in a live session.
 
 The tool that you use to do this is called [nbgitpuller](https://github.com/data-8/nbgitpuller),
