@@ -47,7 +47,7 @@ content in order to distribute materials to your students.
 ## Homework
 
 Homework in Data 8 is used for course grading as well as to guide students through the
-material. The homework uses a package called OKpy for auto-grading student homework. This can be
+material. The homework uses a package called OkPy for auto-grading student homework. This can be
 used in two primary ways:
 
 1. Grading is performed locally (on the students own computer) in order to give live feedback
