@@ -1,0 +1,75 @@
+---
+redirect_from:
+  - "v1/deploy/connect-website-and-textbook"
+title: |-
+  Set up your course website and textbook
+prev_page:
+  url: /v1/deploy/customize_hub_environment.html
+  title: |-
+    Customize the JupyterHub environment for Data 8
+next_page:
+  url: /v1/deploy/connect_labs_and_homework.html
+  title: |-
+    Set up your course labs and homework
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Using-the-Data-8-textbook">Using the Data 8 textbook<a class="anchor-link" href="#Using-the-Data-8-textbook"> </a></h1><p>This page covers how to connect your course with the Data 8 textbook,
+either via using the one hosted at <a href="https://www.inferentialthinking.com">www.inferentialthinking.com</a>
+or by customizing your own.</p>
+<h2 id="The-Data-8-Textbook">The Data 8 Textbook<a class="anchor-link" href="#The-Data-8-Textbook"> </a></h2><p>The <a href="https://www.inferentialthinking.com/">online Data 8 textbook</a> is
+built using a site generation engine called <a href="https://jekyllrb.com/">Jekyll</a>,
+and hosted online with the free <a href="https://pages.github.com/">GitHub Pages</a> service.</p>
+<p>For a short explanation of the structure / relevant files / etc of the
+Data 8 textbook, see the <a href="https://github.com/data-8/textbook/blob/gh-pages/README.md">Data 8 textbook readme</a>.</p>
+<p>You have two options for using the Data 8 textbook:</p>
+<h3 id="Use-the-version-of-the-textbook-at-inferentialthinking.com">Use the version of the textbook at <a href="https://www.inferentialthinking.com">inferentialthinking.com</a><a class="anchor-link" href="#Use-the-version-of-the-textbook-at-inferentialthinking.com"> </a></h3><p>The textbook hosted online should be suitable for most courses. The "interact" links
+at the top of each page point to <a href="https://mybinder.org">mybinder.org</a>, a public
+service that lets users interact with material online. If you wish, you may
+send students links to this textbook for your course.</p>
+<p><strong>To override this textbook's interact links to point to your JupyterHub</strong> you
+may link to the textbook with an optional REST parameter at the end of the url.
+Putting <code>?hub=&lt;your-jupyterhub-url&gt;</code> at the end of a link to <code>inferentialthinking.com</code>
+will do the following:</p>
+<ul>
+<li>The interact button will now point to the URL provided.</li>
+<li>A small message will be displayed telling the user where "interact" points.</li>
+<li>Internal links on the page will also now contain this URL.</li>
+</ul>
+<p>For example, the following URL will over-ride the interact link at <code>inferentialthinking.com</code>
+to point to the Berkeley DataHub (instead of to <code>mybinder.org</code>):</p>
+
+<pre><code>https://www.inferentialthinking.com/chapters/13/1/Percentiles?hub=datahub.berkeley.edu
+
+</code></pre>
+<p><strong>Note: users need to supply this URL parameter each time they visit
+<code>inferentialthinking.com</code>.</strong> For example, you might instruct users to <strong>only</strong>
+access the online textbook by clicking a link that you distribute in your
+syllabus that contains the <code>hub=</code> parameter in it.</p>
+<h3 id="Customize-the-textbook-for-your-course">Customize the textbook for your course<a class="anchor-link" href="#Customize-the-textbook-for-your-course"> </a></h3><p>Alternatively, you may wish to
+customize the textbook for your own course. The most common reason to do so is
+in order to make "interact" links point to your JupyterHub. This way, students
+can interact with textbook material in their own JupyterHub sessions, and their
+work will persist over time.</p>
+<p>To do so, follow the steps in the <a href="../misc/custom_textbook.md">customizing your textbook</a>
+guide.</p>
+<h2 id="Next-step">Next step<a class="anchor-link" href="#Next-step"> </a></h2><p>Now that you've got your own working version of the textbook, let's discuss
+some <a href="course_logistics.md">course logistics</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    

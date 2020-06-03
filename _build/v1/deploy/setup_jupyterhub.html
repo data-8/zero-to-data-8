@@ -1,0 +1,93 @@
+---
+redirect_from:
+  - "v1/deploy/setup-jupyterhub"
+title: |-
+  Deploy your JupyterHub
+prev_page:
+  url: /v1/deploy/choose_cloud.html
+  title: |-
+    Choose where to deploy your JupyterHub
+next_page:
+  url: /v1/deploy/customize_hub_environment.html
+  title: |-
+    Customize the JupyterHub environment for Data 8
+suffix: .md
+
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Deploying-JupyterHub">Deploying JupyterHub<a class="anchor-link" href="#Deploying-JupyterHub"> </a></h1><p>JupyterHub gives each of your students access to their own
+computational environment. They'll have their own storage and their
+own workspaces so they can interact with course material. This section
+covers how to set up a JupyterHub that runs the environment needed for
+Data 8.</p>
+<h2 id="What-distribution-of-JupyterHub-should-I-use?">What distribution of JupyterHub should I use?<a class="anchor-link" href="#What-distribution-of-JupyterHub-should-I-use?"> </a></h2><p>JupyterHub has a few "distributions" that make it easy to set up on a particular
+kind of cloud infrastructure. Which one you choose will depend on your use-case.
+This section provides some information to help you decide.</p>
+<p>There are two recommended methods for running a JupyterHub for your course.
+Which one you choose depends on the size and computational demands for the course.
+To run the code in Data 8, students do not need high-powered environments.</p>
+<p>Once you've followed either of the sections below, you should have a JupyterHub available at a
+public address. The remainder of this guide will focus on customizing the
+environment that this JupyterHub serves in order to work with the Data 8
+course materials.</p>
+<h3 id="Deploy-JupyterHub-on-a-single-VM-(&lt;=-50-students)">Deploy JupyterHub on a single VM (&lt;= 50 students)<a class="anchor-link" href="#Deploy-JupyterHub-on-a-single-VM-(&lt;=-50-students)"> </a></h3><p>For courses of 50 or less students we recommend
+<a href="https://the-littlest-jupyterhub.readthedocs.io/en/latest/"><strong>The Littlest JupyterHub</strong></a>,
+a short guide for deploying JupyterHub on a virtual machine (VM).
+Follow the instructions on the link above to deploy a JupyterHub with a publicly-accessible
+IP address.</p>
+<h3 id="Deploy-JupyterHub-on-Kubernetes-(&gt;-50-students)">Deploy JupyterHub on Kubernetes (&gt; 50 students)<a class="anchor-link" href="#Deploy-JupyterHub-on-Kubernetes-(&gt;-50-students)"> </a></h3><p>For courses of more than 50 students we recommend the
+<a href="https://zero-to-jupyterhub.readthedocs.io/en/latest/"><strong>Zero to JupyterHub for Kubernetes</strong></a> guide.
+This uses open-source technology called <a href="https://kubernetes.io/">Kubernetes</a>
+managing resources in the cloud. It is more complex, but much more scalable than
+running JupyterHub on a single VM. This is what Data 8 uses at Berkeley.
+Kubernetes is rapidly gaining popularity, and should soon be easily-deployable
+on all of the major cloud providers.</p>
+<p>To set up JupyterHub on Kubernetes, follow the section of
+Zero to JupyterHub that is relevant to the cloud
+provider you're using. You'll need to complete the following steps (which are linked
+in the Z2JH guide, but listed below for clarity):</p>
+<ul>
+<li><a href="https://zero-to-jupyterhub.readthedocs.io/en/latest/create-k8s-cluster.html">Initialize Kubernetes on your cloud provider</a>
+so that we can run kubernetes to set up JupyterHub.</li>
+<li><a href="https://zero-to-jupyterhub.readthedocs.io/en/latest/setup-helm.html">Set up Helm</a>, a way to quickly install applications (like JupyterHub) using Kubernetes.</li>
+<li><a href="https://zero-to-jupyterhub.readthedocs.io/en/latest/setup-jupyterhub.html">Install JupyterHub</a>,
+which gives us a fully-functional (though bare-bones) JupyterHub installation!</li>
+</ul>
+<h2 id="What-kind-of-hardware-should-I-use?">What kind of hardware should I use?<a class="anchor-link" href="#What-kind-of-hardware-should-I-use?"> </a></h2><p>One of the first things you'll need to do when setting up Kubernetes is to choose the kind
+of machines on which you'll run the course infrastructure. There are a lot of choices here -
+do you want fewer machines with a lot of RAM? Do you want machines with really fast CPUs? For
+example, here's a list of <a href="https://cloud.google.com/compute/docs/machine-types">all google cloud machine types</a>
+that you could pick from.</p>
+<p>There is no single correct answer to what kind of machines you need for your class. However,
+we've found that RAM is often the biggest bottleneck for a course like Data 8. We recommend
+choosing machines that have a larger amount of RAM (and using fewer of them in the course, since
+each machine will be able to fit more students on it).</p>
+<h2 id="How-much-will-this-cost?">How much will this cost?<a class="anchor-link" href="#How-much-will-this-cost?"> </a></h2><p>There are many factors that go into assessing how much it will cost to deploy
+Data 8 for your course. The biggest of these are CPU and RAM that each student
+has available.  For details on how choices of hardware affect the cost of the
+deployment, we recommend checking out the <a href="https://zero-to-jupyterhub.readthedocs.io/en/latest/cost.html">Zero to JupyterHub deployment costs guide</a>.</p>
+<h2 id="A-note-on-the-rest-of-this-guide">A note on the rest of this guide<a class="anchor-link" href="#A-note-on-the-rest-of-this-guide"> </a></h2><p>Note that while we're shown two options for deploying JupyterHub above,
+the rest of this guide will focus on <strong>Deploying JupyterHub with Kubernetes</strong>.
+This is because running a JupyterHub on Kubernetes is more complex,
+and warrants more guidance. However, if you are deploying a JupyterHub on a single VM
+with "The Littlest JupyterHub", you can follow along to determine the environment
+needed to run your course.</p>
+<h2 id="Next-step">Next step<a class="anchor-link" href="#Next-step"> </a></h2><p>Now that we have a running JupyterHub, the next step is
+to <a href="customize_hub_environment">customize your JupyterHub environment</a>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+    </main>
+    
