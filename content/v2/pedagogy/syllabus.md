@@ -110,7 +110,7 @@ Below are some fundamentals for comparing two distributions that students come a
 You may use whatever technology you prefer for managing your course and
 distributing content. However, we recommend setting up a syllabus page that
 is used for distributing interact links and course materials. For an example,
-see the structure of the Spring 2020 course syllabus:[http://data8.org/sp20/]
+see the structure of the Spring 2020 course syllabus:http://data8.org/sp20/
 
 The syllabus has the following structure:
 
