@@ -36,7 +36,7 @@ footer_text: This page was created by <a href="https://github.com/jupyter/jupyte
 # Sidebar settings
 show_sidebar: true                # Show the sidebar. Only set to false if your only wish to host a single page.
 collapse_inactive_chapters: true  # Whether to collapse the inactive chapters in the sidebar
-textbook_logo: content/images/data8.png           # A logo to be displayed at the top of your textbook sidebar. Should be square
+textbook_logo: content/v1/images/data8.png           # A logo to be displayed at the top of your textbook sidebar. Should be square
 textbook_logo_link: https://data-8.github.io/zero-to-data-8     # A link for the logo.
 sidebar_footer_text: Powered by <a href="https://github.com/jupyter/jupyter-book">Jupyter
   Book</a>
