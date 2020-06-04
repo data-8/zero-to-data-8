@@ -2,7 +2,7 @@
 # Connector courses
 
 
-Connectors are two-unit (usually) courses which give students an in-depth introduction into the use of the data science toolkit and concepts in a particular field. Connector courses vary every semester, but are usually within the domain of social sciences. Connectors are not an official part of Data 8, though they play a crucial role in the data science education ecosystem with the DSEP (Data Science Education Program). Students are encouraged to take them together with Data 8 or a semester after they take Data 8.
+Connectors are one or two-unit courses which give students an in-depth introduction into the use of the data science toolkit and concepts in a particular field. Connector courses vary every semester, but are usually within the domain of social sciences. Connectors are not an official part of Data 8, though they play a crucial role in the data science education ecosystem with the DSEP (Data Science Education Program). Students are encouraged to take them together with Data 8 or a semester after they take Data 8.
 
 For more information about connector courses, check out [The Data Science Connector Courses Page](https://data.berkeley.edu/education/connectors)
 
