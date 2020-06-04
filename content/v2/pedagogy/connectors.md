@@ -12,7 +12,7 @@ For more information about connector courses, check out [The Data Science Connec
 
 Modules are short explorations into data science that can be implemented into (almost) any class on campus. Modules allow students to explore a data set relevant to their course with the help of the data science toolkit. 
 
-Like connectors, modules vary widely, and can be customized to fit each instructor's need and objective for the course. A module might include one or two lectures on analyzing course-relevant data and learning how to interpret the graphs, or they can be a set of labs in which students will learn the basics of programming and statistics which they can apply to their field of studies; some modules can also include a final class project ran in Jupyter Notebooks.
+Like connectors, modules vary widely, and can be customized to fit each instructor's need and objective for the course. A module might include one or two lectures on analyzing course-relevant data and learning how to interpret the graphs, or they can be a set of labs in which students will learn the basics of programming and statistics which they can apply to their field of studies. Some modules also include a final class project run completely within Jupyter Notebooks.
 
 Modules allow students from different fields of studies to get familiarized with the foundations of data analysis.
 
