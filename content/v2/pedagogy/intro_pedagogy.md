@@ -17,5 +17,5 @@ To explore the guide, select a section to the left!
 
 ### Contacting Us
 
-If you woud like to learn more about any of the tools used in Data 8 or are interested in deploying your own data 8 course, please fill out our Data 8 [Instructor Interest form](https://forms.gle/y5aQBi816xDXKe7r7) or shoot us an email at ds-help@berkeley.edu.
+If you woud like to learn more about any of the tools used in Data 8 or are interested in deploying your own data 8 course, please fill out our Data 8 [Instructor Interest form](https://forms.gle/y5aQBi816xDXKe7r7) or shoot us an email at [ds-help@berkeley.edu](mailto:ds-help@berkeley.edu).
 <!-- #endregion -->
