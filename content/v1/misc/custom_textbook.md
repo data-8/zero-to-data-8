@@ -29,7 +29,7 @@ materials:
 
 Now you're ready to set up your textbook!
 
-#### Prepare your textbook repository
+### Prepare your textbook repository
 
 You'll use a tool called Jekyll to host your textbook content. Jekyll is a static
 website generator - meaning that you can use static files (like markdown) to
@@ -52,7 +52,7 @@ To get your own version of this textbook site, take the following steps:
 
        bundle install
 
-#### Configure your textbook site for your JupyterHub
+### Configure your textbook site for your JupyterHub
 
 You should now have all of the dependencies needed to build your textbook site.
 
