@@ -1,4 +1,5 @@
 # Data 8 Course Staff Structure
+
 ## Motivation
 
 Data 8 has three hours of lecture a week with a two hour weekly lab section, 12 weekly lab and homework assignments each, and three larger projects. These are reflected in the course resource allocation diagram below. Weekly lab sections have a ratio of 27 students to one graduate student instructor and allow students to make personal connections with instructors in a large course. With large enrollment numbers, UC Berkeley had to address how to make class sizes in the thousands feel small. 
