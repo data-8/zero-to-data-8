@@ -19,6 +19,16 @@ See [the jupyter book documentation](https://jupyterbook.org) for more informati
 
 ## To make changes to this book
 
+All of the book content is in the `content/` folder.
+
+The `_toc.yml` file contains
+the table of contents for the book. If you add pages, then update this file.
+
+The `_config.yml` file contains the book's configuration. It controls many other
+aspects of the book.
+
+To make changes to the book's content:
+
 1. Edit the files in `content/` that you wish to change. If you add a **new**
    file, make sure to add a new entry for it in `_toc.yml`.
 2. Run `jupyter-book build .`. This will update the book's built markdown files.
