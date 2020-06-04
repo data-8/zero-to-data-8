@@ -1,10 +1,10 @@
 # Distributing Notebooks
 
-Interact links launch students into a notebook on JupyterHub by pulling the assignment from Github. If you are using a JupyterHub instance for your course,  we recommend using interact links to distribute notebooks to students. If you are running notebooks locally, you should instead distribute assignments through a learning management system (LMS). In this case, after you have uploaded the files to the LMS, students will need to download them and run it locally on their computers.
+Interact links launch students into a notebook on JupyterHub by pulling the assignment from Github. If you are using a JupyterHub instance for your course,  we recommend using interact links to distribute notebooks to students. If you are running notebooks locally, you should instead distribute assignments through a learning management system (LMS). In this case, after you have uploaded the files to the LMS, students will need to download them and run it locally on their computers. To learn more about how to use Jupyterhub or running locally, check out the ["Choosing where your JupyterHub will run"](https://ucbds-infra.github.io/ds-course-infra-guide/jupyterhub/choosing_cloud.html) chapter from the [technology guide](https://ucbds-infra.github.io/ds-course-infra-guide/intro.html).
 
 ## What are interact links?
 
-Interact links simplify the assignment distribution process. Rather than downloading files from an external source and then uploading to their personal JupyterHub accounts, users can obtain all files for a given assignment with just one click. When a user clicks on an interact link for a particular assignment, all files for the assignment will show up in the user's personal JupyterHub account.
+Interact links simplify the assignment distribution process. Rather than downloading files from an external source and then uploading to their personal JupyterHub accounts, users can obtain all files for a given assignment with just one button click. When a user clicks on an interact link for a particular assignment, all files for the assignment will show up in the user's personal JupyterHub account.
 
 These links can be used with any content stored on GitHub in a public repository. Interact links can be generated for an entire repository, or a particular file or folder. When a link is clicked, a series of Git commands are run from the user's JupyterHub account, which is why interact links must be used with content on GitHub. They cannot be used to pull arbitrary files from sources other than GitHub.
 
@@ -37,7 +37,7 @@ Interact links can be manually created in the format shown above, or can be auto
 
 ![nbgitpuller](nbgitpuller.png)
 
-For example, to pull [this repo](https://github.com/ds-modules/SW-282/tree/master/lab04/lab04.ipynb) into the JupyterHub at `https://datahub.berkeley.edu`, we would fill out the nbgitpuller link generator with:
+For example, to pull from [this repo](https://github.com/ds-modules/SW-282/tree/master/lab04/lab04.ipynb) into the JupyterHub at `https://datahub.berkeley.edu`, we would fill out the nbgitpuller link generator with:
 
 1. Fill in the JupyterHub URL field with `https://datahub.berkeley.edu`
 2. Paste the GitHub URL **to the repo** in the Git Repository URL field: `https://github.com/ds-modules/SW-282`
@@ -45,7 +45,6 @@ For example, to pull [this repo](https://github.com/ds-modules/SW-282/tree/maste
 4. Fill in the File to Open field with the path to the file: `lab04/lab04.ipynb`
 
 After finishing these steps, the link in the grey text box will be your interact link.
-
 
 ### An important note
 
