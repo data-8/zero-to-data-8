@@ -1,4 +1,4 @@
-## Roles and Responsibilities
+# Roles and Responsibilities
 Each semester, around 45 teaching assistants (TAs), 45 tutors, and 150 academic interns (AIs) are hired to be part of Data 8 course staff. There are differing levels of hourly commitments, roles, and responsibilities both by and within roles depending on the staff member’s experience and ability to contribute to course staff.
 
 ### Academic Intern (AIs)
