@@ -1,0 +1,476 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Connecting Data 8 Labs and Homework &#8212; Zero to Data 8</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/sphinx-book-theme.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mystnb.js"></script>
+    <script src="../../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <link rel="canonical" href="zero-to-data-8/content/v1/deploy/connect_labs_and_homework.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Course Logistics" href="course_logistics.html" />
+    <link rel="prev" title="Using the Data 8 textbook" href="connect_website_and_textbook.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="zero-to-data-8/content/v1/deploy/connect_labs_and_homework.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Connecting Data 8 Labs and Homework" />
+<meta property="og:description" content="Connecting Data 8 Labs and Homework  Now that our JupyterHub has the Data 8 computing environment, it’s time to connect it with the course materials for the cla" />
+<meta property="og:image"       content="zero-to-data-8/_static/data8.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/data8.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Zero to Data 8</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../intro.html">An Educator’s Guide to Data 8</a>
+  </li>
+  <li class="active">
+    <a href="README.html">Deploying Data 8</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="choose_cloud.html">Choose where to deploy your JupyterHub</a>
+    </li>
+    <li class="">
+      <a href="setup_jupyterhub.html">Deploy your JupyterHub</a>
+    </li>
+    <li class="">
+      <a href="customize_hub_environment.html">Customize the JupyterHub environment for Data 8</a>
+    </li>
+    <li class="">
+      <a href="connect_website_and_textbook.html">Set up your course website and textbook</a>
+    </li>
+    <li class="active">
+      <a href="">Set up your course labs and homework</a>
+    </li>
+    <li class="">
+      <a href="course_logistics.html">Wisdom and tips for course logistics</a>
+    </li>
+    <li class="">
+      <a href="deploy_locally.html">Demo the textbook locally</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../tech/README.html">Technology stack</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../tech/considerations.html">General Technical Considerations</a>
+    </li>
+    <li class="">
+      <a href="../tech/tech.html">Technical Needs and the Tools that Do Them</a>
+    </li>
+    <li class="">
+      <a href="../tech/team.html">The Data 8 Tech Team Structure</a>
+    </li>
+    <li class="">
+      <a href="../tech/process.html">The DataHub Deployment Process</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../teaching/README.html">Teaching and topics</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../teaching/inspiration.html">Inspiration for Data 8 Pedagogy</a>
+    </li>
+    <li class="">
+      <a href="../teaching/syllabus.html">The Data 8 Course Syllabus</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../misc/README.html">Extra and miscellaneous information</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../misc/connectors.html">Connector Courses and Extending Beyond Data 8</a>
+    </li>
+    <li class="">
+      <a href="../misc/links.html">Useful Links for Learning More</a>
+    </li>
+    <li class="">
+      <a href="../misc/faq.html">Frequently Asked Questions (FAQ)</a>
+    </li>
+  </ul>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../../_sources/content/v1/deploy/connect_labs_and_homework.md.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Source interaction buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+            <div class="dropdown-buttons sourcebuttons">
+                <a class="repository-button" href="https://github.com/data-8/zero-to-data-8"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Source repository"><i class="fab fa-github"></i>repository</button></a>
+                <a class="issues-button" href="https://github.com/data-8/zero-to-data-8/issues/new?title=Issue%20on%20page%20%2Fcontent/v1/deploy/connect_labs_and_homework.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                <a class="edit-button" href="https://github.com/data-8/zero-to-data-8/edit/master/content/v1/deploy/connect_labs_and_homework.md"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+            </div>
+        </div>
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#distributing-course-content" class="nav-link">Distributing course content</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#interact-links" class="nav-link">Interact links</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#course-syllabus-page" class="nav-link">Course syllabus page</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#labs" class="nav-link">Labs</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#customizing-your-own-copies-of-the-labs" class="nav-link">Customizing your own copies of the labs</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#homework" class="nav-link">Homework</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#grading-course-homework" class="nav-link">Grading course homework</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#customizing-your-own-copies-of-the-homework" class="nav-link">Customizing your own copies of the homework</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#next-step" class="nav-link">Next step</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/data-8/zero-to-data-8/edit/master/content/v1/deploy/connect_labs_and_homework.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="connecting-data-8-labs-and-homework">
+<h1>Connecting Data 8 Labs and Homework<a class="headerlink" href="#connecting-data-8-labs-and-homework" title="Permalink to this headline">¶</a></h1>
+<p>Now that our JupyterHub has the Data 8 computing environment, it’s time to
+connect it with the course materials for the class (e.g., lectures, labs, and homeworks).
+This section covers how to get your own copies of the course labs and
+homeworks, so that you can modify them and distribute as you wish. We’ll
+cover how to connect with the Data 8 textbook in the next section.</p>
+<div class="section" id="distributing-course-content">
+<h2>Distributing course content<a class="headerlink" href="#distributing-course-content" title="Permalink to this headline">¶</a></h2>
+<p>This section covers a few tips on how to distribute content for your Data 8
+course.</p>
+<div class="section" id="interact-links">
+<h3>Interact links<a class="headerlink" href="#interact-links" title="Permalink to this headline">¶</a></h3>
+<p>The primary way that material is distributed in Data 8 is via “interact links”. These are links that,
+when clicked, will automatically pull new material into a students’ file system on your JupyterHub, and then
+direct them to this new content in a live session.</p>
+<p>The tool that you use to do this is called <a class="reference external" href="https://github.com/data-8/nbgitpuller">nbgitpuller</a>,
+which is pre-installed in the Docker image for the course. This means you can create interact links
+without needing to install anything new. For example, the following link should pull in
+the <a class="reference external" href="https://github.com/jakevdp/PythonDataScienceHandbook/tree/master/notebooks">Data Science Handbook</a> from Jake van der Plas:</p>
+<p><code class="docutils literal notranslate"><span class="pre">http://&lt;&lt;</span> <span class="pre">YOUR-HUB-IP</span> <span class="pre">&gt;&gt;/hub/user-redirect/git-pull?repo=https://github.com/jakevdp/PythonDataScienceHandbook&amp;branch=master&amp;subPath=notebooks</span></code></p>
+<p>In the following sections we’ll cover how interact links can be used with each type of Data 8
+content in order to distribute materials to your students.</p>
+</div>
+<div class="section" id="course-syllabus-page">
+<h3>Course syllabus page<a class="headerlink" href="#course-syllabus-page" title="Permalink to this headline">¶</a></h3>
+<p>You may use whatever technology you prefer for managing your course and
+distributing content. However, we recommend setting up a syllabus page that
+is used for distributing interact links and course materials. For an example,
+see the structure of the Spring 2018 course syllabus:</p>
+<p>[http://data8.org/sp18/]</p>
+<p>It has a structure like this:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Date</p></th>
+<th class="head"><p>Topic</p></th>
+<th class="head"><p>Lecture</p></th>
+<th class="head"><p>Reading</p></th>
+<th class="head"><p>Assignment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2018-01-09</p></td>
+<td><p>Cause and Effect</p></td>
+<td><p><a class="reference external" href="http://data8.org/materials-sp18/lec/lec02PDF.pdf">Slides</a>, <a class="reference external" href="https://www.youtube.com/watch?v=oF9rA2PYG6A">Video</a></p></td>
+<td><p><a class="reference external" href="https://www.inferentialthinking.com/chapters/02/causality-and-experiments.html">Chapter 2</a></p></td>
+<td><p><a class="reference external" href="http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-sp18&amp;subPath=materials/sp18/hw/hw01/hw01.ipynb">Homework 01</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>2018-01-22</p></td>
+<td><p>Tables</p></td>
+<td><p><a class="reference external" href="http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-sp18&amp;subPath=lec/lec03.ipynb">Demos</a>, <a class="reference external" href="http://data8.org/materials-sp18/lec/lec03PDF.pdf">Slides</a>, <a class="reference external" href="https://www.youtube.com/watch?v=NLw4egmXBHM">Video</a></p></td>
+<td><p><a class="reference external" href="https://www.inferentialthinking.com/chapters/03/programming-in-python.html">Chapter 3</a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>2018-01-24</p></td>
+<td><p>Data Types</p></td>
+<td><p><a class="reference external" href="http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-sp18&amp;subPath=lec/lec04.ipynb">Demos</a>, <a class="reference external" href="http://data8.org/materials-sp18/lec/lec04PDF.pdf">Slides</a>, <a class="reference external" href="https://www.youtube.com/watch?v=O3AAJs7dx-c">Video</a></p></td>
+<td><p><a class="reference external" href="https://www.inferentialthinking.com/chapters/04/data-types.html">Chapters 4</a>, <a class="reference external" href="https://www.inferentialthinking.com/chapters/05/sequences.html">5</a></p></td>
+<td><p><a class="reference external" href="http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-sp18&amp;subPath=materials/sp18/lab/lab02/lab02.ipynb">Lab 02: Types and Sequences</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Each row is a class, and each column is a type of material you can distribute.
+Links either point to pages on the course textbook (at inferentialthinking.com)
+or interact links that connect students with the course JupyterHub to
+distribute homeworks and labs.</p>
+</div>
+</div>
+<div class="section" id="labs">
+<h2>Labs<a class="headerlink" href="#labs" title="Permalink to this headline">¶</a></h2>
+<p>Alongside the textbook are several computational labs that let students interact with the
+ideas covered in class. They can all be run interactively in the Data 8 environment (the same
+environment that we’ve used in your JupyterHub).</p>
+<p>The latest links to the labs can be found in the course page for the current
+semester. For example, the Spring 2018 course is found here:</p>
+<p>[http://data8.org/sp18/]</p>
+<p>These materials are freely available on the semester course repository.
+There is a new repository created for each semester of the course, as the materials
+tend to evolve over time. For example, here is the repository for the Spring 2018 course:</p>
+<p>[https://github.com/data-8/materials-sp18]</p>
+<p>you can find the labs for this repository here:</p>
+<p>[https://github.com/data-8/materials-sp18/tree/master/materials/sp18/lab]</p>
+<div class="section" id="customizing-your-own-copies-of-the-labs">
+<h3>Customizing your own copies of the labs<a class="headerlink" href="#customizing-your-own-copies-of-the-labs" title="Permalink to this headline">¶</a></h3>
+<p>All labs should already be runnable on the environment that the Data 8 Docker image serves.
+The Data 8 materials are shared by adding
+“interact links” to the following syllabus page:</p>
+<p>[http://data8.org/sp18/]</p>
+<p>We recommend forking and customizing your own version of the labs, so that you can ensure the
+content is the right match for your course. To do this, perform the following steps:</p>
+<ol>
+<li><p>Fork the repository for the course you want to run. (e.g., <code class="docutils literal notranslate"><span class="pre">https://github.com/data-8/materials-sp18/</span></code>)</p></li>
+<li><p>Clone your repository to your machine</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/&lt;YOUR-USERNAME&gt;/materials-sp18/
+</pre></div>
+</div>
+</li>
+<li><p>Make modifications to the labs as you see fit, push them to GitHub</p></li>
+<li><p>Ensure that you have a JupyterHub running the Data 8 environment (if not, <a class="reference internal" href="customize_hub_environment.html"><span class="doc">follow these instructions</span></a>)</p></li>
+<li><p>Create your interact links so they point to <em>your</em> version of the labs. For example,</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>http://&lt;&lt; YOUR-HUB-URL &gt;&gt;/hub/user-redirect/git-sync?repo=https://github.com/&lt;&lt; YOUR-ORG &gt;&gt;/materials-sp18&amp;subPath=materials/sp18/lab/lab02/lab02.ipynb
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="homework">
+<h2>Homework<a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h2>
+<p>Homework in Data 8 is used for course grading as well as to guide students through the
+material. The homework uses a package called OKpy for auto-grading student homework. This can be
+used in two primary ways:</p>
+<ol class="simple">
+<li><p>Grading is performed locally (on the students own computer) in order to give live feedback
+to the code that students write.</p></li>
+<li><p>Grading is performed with the OKpy servers. This requires an account with OKpy, and is
+used by Data 8 to handle “official” grades for the course.</p></li>
+</ol>
+<p>At the moment, we recommend using only #1 for your course.</p>
+<p>The latest links to the homeworks can be found in the course page for the current
+semester. For example, the Spring 2018 course is found here:</p>
+<p>[http://data8.org/sp18/]</p>
+<p>These materials are freely available on the semester course repository.
+There is a new repository created for each semester of the course, as the materials
+tend to evolve over time. For example, here is the repository for the Spring 2018 course:</p>
+<p>[https://github.com/data-8/materials-sp18]</p>
+<p>you can find the homeworks for this repository here:</p>
+<p>[https://github.com/data-8/materials-sp18/tree/master/materials/sp18/hw]</p>
+<div class="section" id="grading-course-homework">
+<h3>Grading course homework<a class="headerlink" href="#grading-course-homework" title="Permalink to this headline">¶</a></h3>
+<p>Grading in Data 8 is performed with the <a class="reference external" href="https://okpy.org/">OKpy package</a>. This is a course
+management tool that allows you to both collect and grade notebooks, take
+attendance, and manage many other course tasks.</p>
+<p>If you prefer a more light-weight solution, we recommend looking into <a class="reference external" href="https://github.com/data-8/Gofer-Grader">Gofer Grader</a>.
+This package focuses on auto-grading Jupyter Notebooks only, and is less complex to run.</p>
+<p>Gofer Grader works with the same API that <code class="docutils literal notranslate"><span class="pre">OKpy</span></code> uses, meaning that using one package
+or another should require no change in the code itself. The only difference is that
+Gofer Grader will not send any course material to the OKpy servers.</p>
+<blockquote>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">GoferGrader</span></code> and <code class="docutils literal notranslate"><span class="pre">OKpy</span></code> should not both be installed at the same time. If one
+is installed, the other should be uninstalled.</p>
+</div></blockquote>
+</div>
+<div class="section" id="customizing-your-own-copies-of-the-homework">
+<h3>Customizing your own copies of the homework<a class="headerlink" href="#customizing-your-own-copies-of-the-homework" title="Permalink to this headline">¶</a></h3>
+<p>To customize the Data 8 homework for your course, take the following steps:</p>
+<ol>
+<li><p>Fork and clone the Data 8 materials for the semester of your choice (see above section on labs).</p></li>
+<li><p>Ensure that you have a JupyterHub running the Data 8 environment (if not, <code class="xref any docutils literal notranslate"><span class="pre">follow</span> <span class="pre">these</span> <span class="pre">instructions</span></code>)</p></li>
+<li><p>Create your interact links so they point to <em>your</em> version of the homeworks. For example,</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>http://&lt;&lt; YOUR-HUB-URL &gt;&gt;/hub/user-redirect/git-sync?repo=https://github.com/&lt;&lt; YOUR-USERNAME &gt;&gt;/materials-sp18/materials/sp18/hw/hw07/hw07.ipynb
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="next-step">
+<h2>Next step<a class="headerlink" href="#next-step" title="Permalink to this headline">¶</a></h2>
+<p>Now that you’ve prepared materials for your course and JupyterHub, it’s
+time to <a class="reference internal" href="connect_website_and_textbook.html"><span class="doc">connect with the course textbook</span></a></p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="connect_website_and_textbook.html" title="previous page">Using the Data 8 textbook</a>
+    <a class='right-next' id="next-link" href="course_logistics.html" title="next page">Course Logistics</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Berkeley Division of Data Sciences<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../../_static/js/index.js"></script>
+    
+  </body>
+</html>

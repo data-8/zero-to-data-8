@@ -1,0 +1,530 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Customizing the JupyterHub environment (TLJH) &#8212; Zero to Data 8</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/sphinx-book-theme.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mystnb.js"></script>
+    <script src="../../../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <link rel="canonical" href="zero-to-data-8/content/v2/tech/jupyterhub/TLJH Customize Deployment.html" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="zero-to-data-8/content/v2/tech/jupyterhub/TLJH Customize Deployment.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Customizing the JupyterHub environment (TLJH)" />
+<meta property="og:description" content="Customizing the JupyterHub environment (TLJH)  This page describes how to set up your JupyterHub environment for The Littlest JupyterHub (TLJH) pathway.  A lot " />
+<meta property="og:image"       content="zero-to-data-8/_static/data8.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../../index.html">
+  
+  <img src="../../../../_static/data8.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Zero to Data 8</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../../../v1/intro.html">An Educator’s Guide to Data 8</a>
+  </li>
+  <li class="">
+    <a href="../../../v1/deploy/README.html">Deploying Data 8</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../../../v1/deploy/choose_cloud.html">Choose where to deploy your JupyterHub</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/deploy/setup_jupyterhub.html">Deploy your JupyterHub</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/deploy/customize_hub_environment.html">Customize the JupyterHub environment for Data 8</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/deploy/connect_website_and_textbook.html">Set up your course website and textbook</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/deploy/connect_labs_and_homework.html">Set up your course labs and homework</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/deploy/course_logistics.html">Wisdom and tips for course logistics</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/deploy/deploy_locally.html">Demo the textbook locally</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../../../v1/tech/README.html">Technology stack</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../../../v1/tech/considerations.html">General Technical Considerations</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/tech/tech.html">Technical Needs and the Tools that Do Them</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/tech/team.html">The Data 8 Tech Team Structure</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/tech/process.html">The DataHub Deployment Process</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../../../v1/teaching/README.html">Teaching and topics</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../../../v1/teaching/inspiration.html">Inspiration for Data 8 Pedagogy</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/teaching/syllabus.html">The Data 8 Course Syllabus</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../../../v1/misc/README.html">Extra and miscellaneous information</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../../../v1/misc/connectors.html">Connector Courses and Extending Beyond Data 8</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/misc/links.html">Useful Links for Learning More</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/misc/faq.html">Frequently Asked Questions (FAQ)</a>
+    </li>
+  </ul>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../../../_sources/content/v2/tech/jupyterhub/TLJH Customize Deployment.md.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Source interaction buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+            <div class="dropdown-buttons sourcebuttons">
+                <a class="repository-button" href="https://github.com/data-8/zero-to-data-8"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Source repository"><i class="fab fa-github"></i>repository</button></a>
+                <a class="issues-button" href="https://github.com/data-8/zero-to-data-8/issues/new?title=Issue%20on%20page%20%2Fcontent/v2/tech/jupyterhub/TLJH Customize Deployment.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                <a class="edit-button" href="https://github.com/data-8/zero-to-data-8/edit/master/content/v2/tech/jupyterhub/TLJH Customize Deployment.md"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+            </div>
+        </div>
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#deploying-a-change-to-your-jupyterhub-configuration" class="nav-link">Deploying a change to your JupyterHub configuration</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#running-tljh-config" class="nav-link">Running tljh-config</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#set-unset-a-configuration-property" class="nav-link">Set / Unset a configuration property</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#reloading-jupyterhub-to-apply-configuration" class="nav-link">Reloading JupyterHub to apply configuration</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#comparison-with-kubernetes-deployment-config-yaml" class="nav-link">Comparison with Kubernetes deployment: config.yaml</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#customizing-your-hub-environment" class="nav-link">Customizing your Hub environment</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#installing-python-packages-in-the-user-environment" class="nav-link">Installing Python packages in the user environment</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#installing-tljh-plugins" class="nav-link">Installing TLJH plugins</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#modify-the-resources-available-to-your-users" class="nav-link">Modify the resources available to your users</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#user-server-limits" class="nav-link">User Server Limits</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#resize-the-resources-available-to-your-jupyterhub" class="nav-link">Resize the resources available to your JupyterHub</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#verifying-a-resize" class="nav-link">Verifying a Resize</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#authorization-for-your-hub" class="nav-link">Authorization for your hub</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#authenticating-with-github" class="nav-link">Authenticating with GitHub</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#adding-admin-users" class="nav-link">Adding admin users</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#confirm-that-your-environment-works" class="nav-link">Confirm that your environment works</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/data-8/zero-to-data-8/edit/master/content/v2/tech/jupyterhub/TLJH Customize Deployment.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="customizing-the-jupyterhub-environment-tljh">
+<h1>Customizing the JupyterHub environment (TLJH)<a class="headerlink" href="#customizing-the-jupyterhub-environment-tljh" title="Permalink to this headline">¶</a></h1>
+<p>This page describes how to set up your JupyterHub environment for The Littlest JupyterHub (TLJH) pathway.</p>
+<p>A lot of the information on this page can be found within the <a class="reference external" href="http://tljh.jupyter.org/en/latest/">TLJH Guide</a>, specifically within the <a class="reference external" href="http://tljh.jupyter.org/en/latest/howto/index.html">How-To Guides</a> and <a class="reference external" href="http://tljh.jupyter.org/en/latest/topic/index.html">Topic Guides</a>.</p>
+<div class="section" id="deploying-a-change-to-your-jupyterhub-configuration">
+<h2>Deploying a change to your JupyterHub configuration<a class="headerlink" href="#deploying-a-change-to-your-jupyterhub-configuration" title="Permalink to this headline">¶</a></h2>
+<p>First things first, to make changes to your JupyterHub configuration, you need to know how to  <strong>deploy</strong>  those changes. This section covers how to deploy a change with the commandline program <code class="docutils literal notranslate"><span class="pre">tljh-config</span></code>.</p>
+<p>All modifications to the base JupyterHub deployment are made with changes to this <code class="docutils literal notranslate"><span class="pre">tljh-config</span></code> program.</p>
+<div class="section" id="running-tljh-config">
+<h3>Running <code class="docutils literal notranslate"><span class="pre">tljh-config</span></code><a class="headerlink" href="#running-tljh-config" title="Permalink to this headline">¶</a></h3>
+<p>You can run  <code class="docutils literal notranslate"><span class="pre">tljh-config</span></code>  in two ways:</p>
+<ol class="simple">
+<li><p>From inside a terminal in JupyterHub while logged in as an admin user. This method is recommended.</p></li>
+<li><p>By directly calling  <code class="docutils literal notranslate"><span class="pre">/opt/tljh/hub/bin/tljh-config</span></code>  as root when logged in to the server via other means (such as SSH). This is an advanced use case, and not covered much in this guide.</p></li>
+</ol>
+</div>
+<div class="section" id="set-unset-a-configuration-property">
+<h3>Set / Unset a configuration property<a class="headerlink" href="#set-unset-a-configuration-property" title="Permalink to this headline">¶</a></h3>
+<p>TLJH’s configuration is organized in a nested tree structure. You can set a particular property with the following command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sudo tljh-config set &lt;property-path&gt; &lt;value&gt;
+</pre></div>
+</div>
+<p>where:</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;property-path&gt;</span></code>  is a dot-separated path to the property you want to set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;value&gt;</span></code>  is the value you want to set the property to.</p></li>
+</ol>
+<p>This can only set string and numerical properties, not lists.</p>
+<p>To unset a configuration property you can use the following command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sudo tljh-config unset &lt;property-path&gt;
+</pre></div>
+</div>
+<p>Unsetting a configuration property removes the property from the configuration file. If what you want is only to change the property’s value, you should use <code class="docutils literal notranslate"><span class="pre">set</span></code> and overwrite it with the desired value.</p>
+</div>
+<div class="section" id="reloading-jupyterhub-to-apply-configuration">
+<h3>Reloading JupyterHub to apply configuration<a class="headerlink" href="#reloading-jupyterhub-to-apply-configuration" title="Permalink to this headline">¶</a></h3>
+<p>After modifying the configuration, you need to reload JupyterHub for it to take effect. You can do so with:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sudo tljh-config reload
+</pre></div>
+</div>
+<p>This should not affect any running users. The JupyterHub will be restarted and loaded with the new configuration.</p>
+</div>
+<div class="section" id="comparison-with-kubernetes-deployment-config-yaml">
+<h3>Comparison with Kubernetes deployment: <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code><a class="headerlink" href="#comparison-with-kubernetes-deployment-config-yaml" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">tljh-config</span></code>  is a simple program that modifies the contents of the  <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code>  file located at  <code class="docutils literal notranslate"><span class="pre">/opt/tljh/config/config.yaml</span></code>.  <code class="docutils literal notranslate"><span class="pre">tljh-config</span></code>  is the recommended method of editing / viewing configuration since editing YAML by hand in a terminal text editor is a large source of errors.</p>
+</div>
+</div>
+<div class="section" id="customizing-your-hub-environment">
+<h2>Customizing your Hub environment<a class="headerlink" href="#customizing-your-hub-environment" title="Permalink to this headline">¶</a></h2>
+<p>The environment provided to your students is defined by the installer, which can be customized to fit your needs with packages and plugins. The installer can be customized with commandline parameters. The default installer is executed as:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>curl https://raw.githubusercontent.com/jupyterhub/the-littlest-jupyterhub/master/bootstrap/bootstrap.py \
+ | sudo python3 - \
+   &lt;parameters&gt;
+</pre></div>
+</div>
+<div class="section" id="installing-python-packages-in-the-user-environment">
+<h3>Installing Python packages in the user environment<a class="headerlink" href="#installing-python-packages-in-the-user-environment" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">--user-requirements-txt-url</span>&#160; <span class="pre">&lt;url-to-requirements.txt&gt;</span></code>  installs packages specified in the  <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>  located at the given URL into the user environment at install time. This is very useful when you want to set up a hub with a particular user environment in one go.</p>
+<p>For example, to install the latest requirements to run UC Berkeley’s data8 course in your new hub, you would run:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>curl https://raw.githubusercontent.com/jupyterhub/the-littlest-jupyterhub/master/bootstrap/bootstrap.py \
+ | sudo python3 - \
+   --user-requirements-txt-url https://raw.githubusercontent.com/data-8/materials-sp18/master/requirements.txt
+</pre></div>
+</div>
+<p>The URL  <strong>must</strong>  point to a working requirements.txt. If there are any errors, the installation will fail.</p>
+</div>
+<div class="section" id="installing-tljh-plugins">
+<h3>Installing TLJH plugins<a class="headerlink" href="#installing-tljh-plugins" title="Permalink to this headline">¶</a></h3>
+<p>The Littlest JupyterHub can install additional  <em>plugins</em>  that provide additional features. They are most commonly used to install a particular  <em>stack</em>  - such as the  <a class="reference external" href="https://github.com/yuvipanda/tljh-pangeo">PANGEO Stack</a>  for earth sciences research, a stack for a particular class, etc.</p>
+<p><code class="docutils literal notranslate"><span class="pre">--plugin</span>&#160; <span class="pre">&lt;plugin-to-install&gt;</span></code>  installs and activates a plugin. You can pass it however many times you want. Since plugins are distributed as python packages,  <code class="docutils literal notranslate"><span class="pre">&lt;plugin-to-install&gt;</span></code>  can be anything that can be passed to  <code class="docutils literal notranslate"><span class="pre">pip</span>&#160; <span class="pre">install</span></code>  -  <code class="docutils literal notranslate"><span class="pre">plugin-name-on-pypi==&lt;version&gt;</span></code>  and  <code class="docutils literal notranslate"><span class="pre">git+https://github.com/user/repo&#64;tag</span></code>  are the most popular ones. Specifying a version or tag is highly recommended.</p>
+<p>For example, to install the PANGEO Plugin version 0.1 in your new TLJH install, you would use:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>curl https://raw.githubusercontent.com/jupyterhub/the-littlest-jupyterhub/master/bootstrap/bootstrap.py \
+ | sudo python3 - \
+   --plugin git+https://github.com/yuvipanda/tljh-pangeo@v0.1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="modify-the-resources-available-to-your-users">
+<h2>Modify the resources available to your users<a class="headerlink" href="#modify-the-resources-available-to-your-users" title="Permalink to this headline">¶</a></h2>
+<p>To configure the resources that are available to your users (such as RAM, CPU and Disk Space), see the section <strong>User Limits</strong>. For information on  <strong>resizing</strong>  the environment available to users  <em>after</em>  you’ve created your JupyterHub, see <strong>Resize the resources available to your JupyterHub</strong>.</p>
+<div class="section" id="user-server-limits">
+<h3>User Server Limits<a class="headerlink" href="#user-server-limits" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">limits.memory</span></code>  Specifies the maximum memory that can be used by each individual user. By default there is no memory limit. The limit can be specified as an absolute byte value. You can use the suffixes K, M, G or T to mean Kilobyte, Megabyte, Gigabyte or Terabyte respectively. Setting it to  <code class="docutils literal notranslate"><span class="pre">None</span></code>  disables memory limits.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sudo tljh-config set limits.memory 4G`
+</pre></div>
+</div>
+<p>Even if you want individual users to use as much memory as possible, it is still good practice to set a memory limit of 80-90% of total physical memory. This prevents one user from being able to single handedly take down the machine accidentally by OOMing it.</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">limits.cpu</span></code>  A float representing the total CPU-cores each user can use. By default there is no CPU limit. 1 represents one full CPU, 4 represents 4 full CPUs, 0.5 represents half of one CPU, etc. This value is ultimately converted to a percentage and rounded down to the nearest integer percentage, i.e. 1.5 is converted to 150%, 0.125 is converted to 12%, etc. Setting it to  <code class="docutils literal notranslate"><span class="pre">None</span></code>  disables CPU limits.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sudo tljh-config set limits.cpu 2
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="resize-the-resources-available-to-your-jupyterhub">
+<h3>Resize the resources available to your JupyterHub<a class="headerlink" href="#resize-the-resources-available-to-your-jupyterhub" title="Permalink to this headline">¶</a></h3>
+<p>As you are using your JupyterHub, you may need to increase or decrease the amount of resources allocated to your TLJH install. The kinds of resources that can be allocated, as well as the process to do so, will depend on the provider / interface for your VM. We recommend consulting the installation page for your provider for more information. This page covers the steps your should take on your JupyterHub  <em>after</em>  you’ve reallocated resources on the cloud provider of your choice.</p>
+<p>Currently there are instructions to resize your resources on the following providers:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://tljh.jupyter.org/en/latest/howto/providers/digitalocean.html#howto-providers-digitalocean-resize">Digital Ocean</a>.</p></li>
+</ul>
+<p>Once resources have been reallocated, you must tell TLJH to make use of these resources, and verify that the resources have become available.</p>
+<div class="section" id="verifying-a-resize">
+<h4>Verifying a Resize<a class="headerlink" href="#verifying-a-resize" title="Permalink to this headline">¶</a></h4>
+<ol>
+<li><p>Once you have resized your server, tell the JupyterHub to make use of these new resources. To accomplish this, follow the instructions in  <a class="reference external" href="https://tljh.jupyter.org/en/latest/topic/tljh-config.html#topic-tljh-config">Configuring TLJH with tljh-config</a>  to set new memory or CPU limits and reload the hub. This can be completed using the terminal in the JupyterHub (or via SSH-ing into your VM and using this terminal).</p></li>
+<li><p>TLJH configuration options can be verified by viewing the tljh-config output.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>sudo tljh-config show
+</pre></div>
+</div>
+<p>Double-check that your changes are reflected in the output.</p>
+</li>
+<li><p><strong>To verify changes to memory</strong>, confirm that it worked by starting a new server (if you had one previously running, click “Control Panel -&gt; Stop My Server” to shut down your active server first), opening a notebook, and checking the value of the  <a class="reference external" href="https://github.com/yuvipanda/nbresuse">nbresuse</a>  extension in the upper-right.
+<img alt="nbresuse demonstration" src="https://tljh.jupyter.org/en/latest/_images/nbresuse.png" /></p></li>
+<li><p><strong>To verify changes to CPU</strong>, use the  <code class="docutils literal notranslate"><span class="pre">nproc</span></code>  from a terminal. This command displays the number of available cores, and should be equal to the number of cores you selected in your provider’s interface.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> nproc --all
+</pre></div>
+</div>
+</li>
+<li><p><strong>To verify currently-available disk space</strong>, use the  <code class="docutils literal notranslate"><span class="pre">df</span></code>  command in a terminal. This shows how much disk space is available. The  <code class="docutils literal notranslate"><span class="pre">-hT</span></code>  argument allows us to have this printed in a human readable format, and condenses the output to show one storage volume. Note that currently you cannot change the disk space on a per-user basis.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> df -hT /home
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="authorization-for-your-hub">
+<h2>Authorization for your hub<a class="headerlink" href="#authorization-for-your-hub" title="Permalink to this headline">¶</a></h2>
+<p>Authorization allows you to control who has access to your JupyterHub, as well as keep track of who is accessing the hub.</p>
+<p>There are many options for authorization with JupyterHub. The Data 8 deployment uses the Berkeley CalNet authentication system, which is part of the Google “G Suite”. Your authentication approach depends on how your university authenticates. You can also choose authentication with popular services like GitHub.</p>
+<p>See the  <a class="reference external" href="http://tljh.jupyter.org/en/latest/topic/authenticator-configuration.html#topic-authenticator-configuration">TLJH Authentication Guide</a>  for information about various authentication options and how to enable them.</p>
+<p>For this guide, we’ll show you how to authenticate using GitHub usernames, as this is a free service that is more widely-accessible than the particular authentication system that any one university uses.</p>
+<div class="section" id="authenticating-with-github">
+<h3>Authenticating with GitHub<a class="headerlink" href="#authenticating-with-github" title="Permalink to this headline">¶</a></h3>
+<p>To authenticate with GitHub, take the following the steps outlined in the  <a class="reference external" href="http://tljh.jupyter.org/en/latest/howto/auth/github.html">TLJH Github Authentication Guide</a>.</p>
+<p>Note: The DSEP authorization configuration  <a class="reference external" href="https://github.com/berkeley-dsep-infra/datahub/blob/staging/datahub/config.yaml#L65">can be found here</a>.</p>
+</div>
+<div class="section" id="adding-admin-users">
+<h3>Adding admin users<a class="headerlink" href="#adding-admin-users" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">--admin</span>&#160; <span class="pre">&lt;username&gt;:&lt;password&gt;</span></code>  adds user  <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code>  to JupyterHub as an admin user and sets its password to be  <code class="docutils literal notranslate"><span class="pre">&lt;password&gt;</span></code>. Although it is not recommended, it is possible to only set the admin username at this point and set the admin password after the installation.</p>
+<p>Also, the  <code class="docutils literal notranslate"><span class="pre">--admin</span></code>  flag can be repeated multiple times. For example, to add  <code class="docutils literal notranslate"><span class="pre">admin-user1</span></code>  and  <code class="docutils literal notranslate"><span class="pre">admin-user2</span></code>  as admins when installing, depending if you would like to set their passwords during install you would:</p>
+<ul>
+<li><p>set  <code class="docutils literal notranslate"><span class="pre">admin-user1</span></code>  with password  <code class="docutils literal notranslate"><span class="pre">password-user1</span></code>  and  <code class="docutils literal notranslate"><span class="pre">admin-user2</span></code>  with  <code class="docutils literal notranslate"><span class="pre">password-user2</span></code>  using:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>curl https://raw.githubusercontent.com/jupyterhub/the-littlest-jupyterhub/master/bootstrap/bootstrap.py \
+ | sudo python3 - \
+   --admin admin-user1:password-user1 --admin admin-user2:password-user2
+</pre></div>
+</div>
+</li>
+<li><p>set  <code class="docutils literal notranslate"><span class="pre">admin-user1</span></code>  and  <code class="docutils literal notranslate"><span class="pre">admin-user2</span></code>  to be admins, without any passwords at this stage, using:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>curl https://raw.githubusercontent.com/jupyterhub/the-littlest-jupyterhub/master/bootstrap/bootstrap.py \
+ | sudo python3 - \
+   --admin admin-user1 --admin admin-user2
+</pre></div>
+</div>
+</li>
+<li><p>set  <code class="docutils literal notranslate"><span class="pre">admin-user1</span></code>  with password  <code class="docutils literal notranslate"><span class="pre">password-user1</span></code>  and  <code class="docutils literal notranslate"><span class="pre">admin-user2</span></code>  with no password at this stage using:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>curl https://raw.githubusercontent.com/jupyterhub/the-littlest-jupyterhub/master/bootstrap/bootstrap.py \
+ | sudo python3 - \
+   --admin admin-user1:password-user1 --admin admin-user2
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="confirm-that-your-environment-works">
+<h2>Confirm that your environment works<a class="headerlink" href="#confirm-that-your-environment-works" title="Permalink to this headline">¶</a></h2>
+<p>To confirm that you’re running the correct environment needed for Data 8, take the following steps:</p>
+<ol>
+<li><p>Go to your JupyterHub’s public IP address.</p></li>
+<li><p>Log in with your username/password (if you haven’t logged in yet, use whatever username/password you’d like)</p></li>
+<li><p>Click “Start My Server”, then create a new Jupyter Notebook.</p></li>
+<li><p>Run the following Python code</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datascience</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">datascience</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</li>
+</ol>
+<p>You should see the version for the  <code class="docutils literal notranslate"><span class="pre">datascience</span></code>  package printed below the cell. If this worked, then congratulations! Your JupyterHub is ready to go.</p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Berkeley Division of Data Sciences<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../../../_static/js/index.js"></script>
+    
+  </body>
+</html>

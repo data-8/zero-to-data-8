@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>An Educator’s Guide to Data 8 &#8212; Zero to Data 8</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <link rel="canonical" href="zero-to-data-8/content/v1/intro.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Deploy Data 8 for your course" href="deploy/README.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="zero-to-data-8/content/v1/intro.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="An Educator’s Guide to Data 8" />
+<meta property="og:description" content="An Educator’s Guide to Data 8  Data 8 is a “Foundations in Data Science” course taught for first year students at UC Berkeley. It combines principles/skills in " />
+<meta property="og:image"       content="zero-to-data-8/_static/data8.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/data8.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Zero to Data 8</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="active">
+    <a href="#">An Educator’s Guide to Data 8</a>
+  </li>
+  <li class="">
+    <a href="deploy/README.html">Deploying Data 8</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="deploy/choose_cloud.html">Choose where to deploy your JupyterHub</a>
+    </li>
+    <li class="">
+      <a href="deploy/setup_jupyterhub.html">Deploy your JupyterHub</a>
+    </li>
+    <li class="">
+      <a href="deploy/customize_hub_environment.html">Customize the JupyterHub environment for Data 8</a>
+    </li>
+    <li class="">
+      <a href="deploy/connect_website_and_textbook.html">Set up your course website and textbook</a>
+    </li>
+    <li class="">
+      <a href="deploy/connect_labs_and_homework.html">Set up your course labs and homework</a>
+    </li>
+    <li class="">
+      <a href="deploy/course_logistics.html">Wisdom and tips for course logistics</a>
+    </li>
+    <li class="">
+      <a href="deploy/deploy_locally.html">Demo the textbook locally</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="tech/README.html">Technology stack</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="tech/considerations.html">General Technical Considerations</a>
+    </li>
+    <li class="">
+      <a href="tech/tech.html">Technical Needs and the Tools that Do Them</a>
+    </li>
+    <li class="">
+      <a href="tech/team.html">The Data 8 Tech Team Structure</a>
+    </li>
+    <li class="">
+      <a href="tech/process.html">The DataHub Deployment Process</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="teaching/README.html">Teaching and topics</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="teaching/inspiration.html">Inspiration for Data 8 Pedagogy</a>
+    </li>
+    <li class="">
+      <a href="teaching/syllabus.html">The Data 8 Course Syllabus</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="misc/README.html">Extra and miscellaneous information</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="misc/connectors.html">Connector Courses and Extending Beyond Data 8</a>
+    </li>
+    <li class="">
+      <a href="misc/links.html">Useful Links for Learning More</a>
+    </li>
+    <li class="">
+      <a href="misc/faq.html">Frequently Asked Questions (FAQ)</a>
+    </li>
+  </ul>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../_sources/content/v1/intro.md.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Source interaction buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+            <div class="dropdown-buttons sourcebuttons">
+                <a class="repository-button" href="https://github.com/data-8/zero-to-data-8"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Source repository"><i class="fab fa-github"></i>repository</button></a>
+                <a class="issues-button" href="https://github.com/data-8/zero-to-data-8/issues/new?title=Issue%20on%20page%20%2Fcontent/v1/intro.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                <a class="edit-button" href="https://github.com/data-8/zero-to-data-8/edit/master/content/v1/intro.md"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+            </div>
+        </div>
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#this-book-s-structure" class="nav-link">This book’s structure</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#deploying-your-own-data-8-course-from-scratch" class="nav-link">Deploying your own Data 8 course from scratch</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#technical-and-pedagogical-decisions-for-data-8" class="nav-link">Technical and pedagogical decisions for Data 8</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#other-data-8-information" class="nav-link">Other Data 8 information</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#other-resources" class="nav-link">Other resources</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#contacting-us" class="nav-link">Contacting Us</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/data-8/zero-to-data-8/edit/master/content/v1/intro.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="an-educator-s-guide-to-data-8">
+<h1>An Educator’s Guide to Data 8<a class="headerlink" href="#an-educator-s-guide-to-data-8" title="Permalink to this headline">¶</a></h1>
+<p>Data 8 is a “Foundations in Data Science” course taught for first year students at
+UC Berkeley. It combines principles/skills in statistics, programming, inference, modeling,
+hypothesis testing, visualization, and exploration. It provides a foundation in
+the many fields encompassed by “data science”, and gives students a practical introduction
+to the field.</p>
+<p>This online resource serves as a “snapshot” of the Data 8 stack, and a guide for others
+that wish to imitate the Data 8 model. It includes discussion of the
+pedagogical approach, concepts / topics covered, and technical pieces used in
+the class.</p>
+<p>All of the tools that Data 8 uses are <strong>open source</strong>, and available for the community to
+use (either as broader community-run projects, or as Berkeley projects). The Data 8 textbook
+is free to use at [https://inferentialthinking.com]. If you’d like to modify the textbook’s
+content for your own course, please shoot us an email!</p>
+<div class="section" id="this-book-s-structure">
+<h2>This book’s structure<a class="headerlink" href="#this-book-s-structure" title="Permalink to this headline">¶</a></h2>
+<p>See the chapters to the left to navigate this book. Below is a general structure
+of the material.</p>
+<div class="section" id="deploying-your-own-data-8-course-from-scratch">
+<h3>Deploying your own Data 8 course from scratch<a class="headerlink" href="#deploying-your-own-data-8-course-from-scratch" title="Permalink to this headline">¶</a></h3>
+<p>The first section of this guide is a step-by-step guide to deploy your
+own version of Data 8. It explains how to create a JupyterHub running in the cloud that students
+can access, how to connect this JupyterHub with the coding environment that Data 8 students use,
+and how to incorporate course materials into your class. Check it out here:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="deploy/README.html"><span class="doc">Deploying Data 8</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="technical-and-pedagogical-decisions-for-data-8">
+<h3>Technical and pedagogical decisions for Data 8<a class="headerlink" href="#technical-and-pedagogical-decisions-for-data-8" title="Permalink to this headline">¶</a></h3>
+<p>These sections are an overview of
+the technical and pedagogical pieces that make up Data 8. They are a high-level reference
+for running your own Data 8 course, or for taking a similar technical approach to teaching data science.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="teaching/README.html"><span class="doc">Teaching and Pedagogy</span></a> covers the unique blend of computational, coding, and conceptual information taught in Data 8.</p></li>
+<li><p><a class="reference internal" href="tech/README.html"><span class="doc">The Data 8 Tech Stack</span></a> describes the technical pieces of Data 8, including hosting
+student environments, grading, and managing the course.</p></li>
+</ul>
+</div>
+<div class="section" id="other-data-8-information">
+<h3>Other Data 8 information<a class="headerlink" href="#other-data-8-information" title="Permalink to this headline">¶</a></h3>
+<p>All Data 8 materials are freely available online. The course material in full can be accessed
+at the following online resources:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.data8.org">The Data 8 Course Site</a></p></li>
+<li><p><a class="reference external" href="https://www.inferentialthinking.com/">The Data 8 Course Textbook</a></p></li>
+</ul>
+<p>To explore the guide, select a section to the left!</p>
+</div>
+</div>
+<div class="section" id="other-resources">
+<h2>Other resources<a class="headerlink" href="#other-resources" title="Permalink to this headline">¶</a></h2>
+<p>There are many other resources out there for using open technology to facilitate
+data analytics pedagogy. Here are a few notable resources:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.datahub.berkeley.edu/en/latest/">The UC Berkeley JupyterHubs guide</a> contains
+information about all of the JupyterHubs at UC Berkeley, and is a good reference for how
+our teams coordinate technical infrastructure across classes and resources.</p></li>
+<li><p><a class="reference external" href="https://jupyter4edu.github.io/jupyter-edu-book/">The Jupyter for Education Handbook</a>
+is a more general resource for teaching using tools in the Jupyter ecosystem, and has several
+best-practices and tips.</p></li>
+</ul>
+</div>
+<div class="section" id="contacting-us">
+<h2>Contacting Us<a class="headerlink" href="#contacting-us" title="Permalink to this headline">¶</a></h2>
+<p>If you would like to learn more about any of the tools used in Data 8 or are interested in deploying your own data 8 course,
+please fill out our <a class="reference external" href="https://forms.gle/maRqsceCvTNnqQ3w9">Data 8 Instructor Interest form</a> or shoot us an email at <code class="docutils literal notranslate"><span class="pre">ds-help&#64;berkeley.edu</span></code>.</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='right-next' id="next-link" href="deploy/README.html" title="next page">Deploy Data 8 for your course</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Berkeley Division of Data Sciences<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

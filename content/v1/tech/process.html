@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>The DataHub Deployment Process &#8212; Zero to Data 8</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/sphinx-book-theme.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mystnb.js"></script>
+    <script src="../../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <link rel="canonical" href="zero-to-data-8/content/v1/tech/process.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="The Data 8 Teaching Philosophy" href="../teaching/README.html" />
+    <link rel="prev" title="Data 8 Technical Team Structure" href="team.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="zero-to-data-8/content/v1/tech/process.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="The DataHub Deployment Process" />
+<meta property="og:description" content="The DataHub Deployment Process  The DataHub is a JupyterHub that provides the environment in which all Data 8 students will work. JupyterHub has made great impr" />
+<meta property="og:image"       content="zero-to-data-8/_static/data8.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/data8.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Zero to Data 8</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../intro.html">An Educator’s Guide to Data 8</a>
+  </li>
+  <li class="">
+    <a href="../deploy/README.html">Deploying Data 8</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../deploy/choose_cloud.html">Choose where to deploy your JupyterHub</a>
+    </li>
+    <li class="">
+      <a href="../deploy/setup_jupyterhub.html">Deploy your JupyterHub</a>
+    </li>
+    <li class="">
+      <a href="../deploy/customize_hub_environment.html">Customize the JupyterHub environment for Data 8</a>
+    </li>
+    <li class="">
+      <a href="../deploy/connect_website_and_textbook.html">Set up your course website and textbook</a>
+    </li>
+    <li class="">
+      <a href="../deploy/connect_labs_and_homework.html">Set up your course labs and homework</a>
+    </li>
+    <li class="">
+      <a href="../deploy/course_logistics.html">Wisdom and tips for course logistics</a>
+    </li>
+    <li class="">
+      <a href="../deploy/deploy_locally.html">Demo the textbook locally</a>
+    </li>
+  </ul>
+  </li>
+  <li class="active">
+    <a href="README.html">Technology stack</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="considerations.html">General Technical Considerations</a>
+    </li>
+    <li class="">
+      <a href="tech.html">Technical Needs and the Tools that Do Them</a>
+    </li>
+    <li class="">
+      <a href="team.html">The Data 8 Tech Team Structure</a>
+    </li>
+    <li class="active">
+      <a href="">The DataHub Deployment Process</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../teaching/README.html">Teaching and topics</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../teaching/inspiration.html">Inspiration for Data 8 Pedagogy</a>
+    </li>
+    <li class="">
+      <a href="../teaching/syllabus.html">The Data 8 Course Syllabus</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../misc/README.html">Extra and miscellaneous information</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../misc/connectors.html">Connector Courses and Extending Beyond Data 8</a>
+    </li>
+    <li class="">
+      <a href="../misc/links.html">Useful Links for Learning More</a>
+    </li>
+    <li class="">
+      <a href="../misc/faq.html">Frequently Asked Questions (FAQ)</a>
+    </li>
+  </ul>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../../_sources/content/v1/tech/process.md.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Source interaction buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+            <div class="dropdown-buttons sourcebuttons">
+                <a class="repository-button" href="https://github.com/data-8/zero-to-data-8"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Source repository"><i class="fab fa-github"></i>repository</button></a>
+                <a class="issues-button" href="https://github.com/data-8/zero-to-data-8/issues/new?title=Issue%20on%20page%20%2Fcontent/v1/tech/process.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                <a class="edit-button" href="https://github.com/data-8/zero-to-data-8/edit/master/content/v1/tech/process.md"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+            </div>
+        </div>
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#the-datahub-deployment-repository" class="nav-link">The DataHub deployment repository</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#modifying-the-datahub-deployment" class="nav-link">Modifying the DataHub deployment</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/data-8/zero-to-data-8/edit/master/content/v1/tech/process.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="the-datahub-deployment-process">
+<h1>The DataHub Deployment Process<a class="headerlink" href="#the-datahub-deployment-process" title="Permalink to this headline">¶</a></h1>
+<p>The DataHub is a JupyterHub that provides the environment in which all
+Data 8 students will work. JupyterHub has made great improvements to
+scalability and reliability in recent years, and has adopted modern-day
+cloud deployment technology such as Kubernetes.</p>
+<p>This page details the process that the Data 8 tech team uses in order to
+maintain and upgrade the DataHub.</p>
+<div class="section" id="the-datahub-deployment-repository">
+<h2>The DataHub deployment repository<a class="headerlink" href="#the-datahub-deployment-repository" title="Permalink to this headline">¶</a></h2>
+<p>The current deployment configuration for the DataHub is hosted as a
+<a class="reference external" href="https://github.com/berkeley-dsep-infra/datahub">GitHub repository</a>. Any
+changes made to this repository should immediately be reflected in the
+live DataHub.</p>
+<p>There are <strong>two branches</strong> for the DataHub repository - one for <code class="docutils literal notranslate"><span class="pre">staging</span></code>, and
+another for <code class="docutils literal notranslate"><span class="pre">prod</span></code> (short for “production”). Each branch controls a
+different JupyterHub deployment.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">staging</span></code> lives at <code class="xref any docutils literal notranslate"><span class="pre">staging.datahub.berkeley.edu</span></code>.
+It is used by the Data 8 development team to test modifications before they’re
+deployed to the production environment. Students do not use this JupyterHub.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prod</span></code> lives at <code class="xref any docutils literal notranslate"><span class="pre">datahub.berkeley.edu</span></code>. It is the
+JupyterHub that students use, and as such has  higher standards for stability.</p></li>
+</ul>
+<p>The DataHub uses <a class="reference external" href="https://travis-ci.org/">Travis CI</a> (short for
+“continuous integration”) to automatically run tests and code every
+time a change is made to the DataHub master repository. This is
+also used to automatically deploy these changes to the <code class="docutils literal notranslate"><span class="pre">staging</span></code>
+and <code class="docutils literal notranslate"><span class="pre">prod</span></code> DataHub deployments when new changes are made.</p>
+</div>
+<div class="section" id="modifying-the-datahub-deployment">
+<h2>Modifying the DataHub deployment<a class="headerlink" href="#modifying-the-datahub-deployment" title="Permalink to this headline">¶</a></h2>
+<p>The following steps are followed by the Data 8 tech team any time
+a modification must be made to the DataHub.</p>
+<ul class="simple">
+<li><p>Create a fork of the <a class="reference external" href="https://github.com/berkeley-dsep-infra/datahub">DataHub repository</a>, always work from this fork.</p></li>
+<li><p>Pull the latest changes from the DataHub repository into your fork.</p></li>
+<li><p>Create a new branch for your changes.</p></li>
+<li><p>Make the modifications necessary to this branch (this is
+usually something like modifying the <a class="reference external" href="https://github.com/berkeley-dsep-infra/datahub/blob/staging/datahub/config.yaml">DataHub helm chart</a> or editing the <a class="reference external" href="https://hub.docker.com/u/berkeleydsep/">DataHub Docker Image</a>).</p></li>
+<li><p>Commit your changes and create a pull request. The pull request
+should be against <strong><code class="docutils literal notranslate"><span class="pre">staging</span></code></strong>, not against <code class="docutils literal notranslate"><span class="pre">prod</span></code>.</p></li>
+<li><p>The pull request will trigger a Travis CI process, and
+potentially a rebuild of docker images depending on what
+modifications have been proposed.</p></li>
+<li><p>Once the CI process is complete and if there are no problems, the committer requests that someone review the PR before merging.</p></li>
+<li><p>If all looks well, merge the PR into <code class="docutils literal notranslate"><span class="pre">staging</span></code>. This will trigger
+another Travis step which automatically upgrades the
+DataHub deployment at <code class="docutils literal notranslate"><span class="pre">staging.datahub.berkeley.edu</span></code>.</p></li>
+<li><p>After this upgrade finishes (per the logs in Travis CI), the team
+tests the changes by performing actions on
+<code class="docutils literal notranslate"><span class="pre">staging.datahub.berkeley.edu</span></code> (e.g., trying to import
+a package that was added)</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">staging</span></code> tests fail, or if there are any problems during the
+live user testing, <strong>never update <code class="docutils literal notranslate"><span class="pre">prod</span></code></strong>. Revert the change via
+the GitHub UI and debug before submitting another PR to <code class="docutils literal notranslate"><span class="pre">staging</span></code>.</p></li>
+<li><p>If the change passes tests and looks successful on <code class="docutils literal notranslate"><span class="pre">staging</span></code>, create
+a <strong>new PR</strong> to merge <code class="docutils literal notranslate"><span class="pre">staging</span></code> into <code class="docutils literal notranslate"><span class="pre">prod</span></code>. This will trigger
+a similar Travis process to deploy to <code class="docutils literal notranslate"><span class="pre">prod</span></code> at
+<code class="xref any docutils literal notranslate"><span class="pre">datahub.berkeley.edu</span></code>.
+Test your change on production for good measure.</p></li>
+<li><p>Celebrate!</p></li>
+</ul>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="team.html" title="previous page">Data 8 Technical Team Structure</a>
+    <a class='right-next' id="next-link" href="../teaching/README.html" title="next page">The Data 8 Teaching Philosophy</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Berkeley Division of Data Sciences<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../../_static/js/index.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,402 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Choosing where your JupyterHub will run &#8212; Zero to Data 8</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/sphinx-book-theme.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/mystnb.js"></script>
+    <script src="../../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <link rel="canonical" href="zero-to-data-8/content/v1/deploy/choose_cloud.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Deploying JupyterHub" href="setup_jupyterhub.html" />
+    <link rel="prev" title="Deploy Data 8 for your course" href="README.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="zero-to-data-8/content/v1/deploy/choose_cloud.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Choosing where your JupyterHub will run" />
+<meta property="og:description" content="Choosing where your JupyterHub will run  Should I deploy on my hardware or in the cloud?  The first thing you’ll decide is where your JupyterHub will run. The f" />
+<meta property="og:image"       content="zero-to-data-8/_static/data8.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/data8.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Zero to Data 8</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../intro.html">An Educator’s Guide to Data 8</a>
+  </li>
+  <li class="active">
+    <a href="README.html">Deploying Data 8</a>
+  <ul class="nav sidenav_l2">
+    <li class="active">
+      <a href="">Choose where to deploy your JupyterHub</a>
+    </li>
+    <li class="">
+      <a href="setup_jupyterhub.html">Deploy your JupyterHub</a>
+    </li>
+    <li class="">
+      <a href="customize_hub_environment.html">Customize the JupyterHub environment for Data 8</a>
+    </li>
+    <li class="">
+      <a href="connect_website_and_textbook.html">Set up your course website and textbook</a>
+    </li>
+    <li class="">
+      <a href="connect_labs_and_homework.html">Set up your course labs and homework</a>
+    </li>
+    <li class="">
+      <a href="course_logistics.html">Wisdom and tips for course logistics</a>
+    </li>
+    <li class="">
+      <a href="deploy_locally.html">Demo the textbook locally</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../tech/README.html">Technology stack</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../tech/considerations.html">General Technical Considerations</a>
+    </li>
+    <li class="">
+      <a href="../tech/tech.html">Technical Needs and the Tools that Do Them</a>
+    </li>
+    <li class="">
+      <a href="../tech/team.html">The Data 8 Tech Team Structure</a>
+    </li>
+    <li class="">
+      <a href="../tech/process.html">The DataHub Deployment Process</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../teaching/README.html">Teaching and topics</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../teaching/inspiration.html">Inspiration for Data 8 Pedagogy</a>
+    </li>
+    <li class="">
+      <a href="../teaching/syllabus.html">The Data 8 Course Syllabus</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../misc/README.html">Extra and miscellaneous information</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../misc/connectors.html">Connector Courses and Extending Beyond Data 8</a>
+    </li>
+    <li class="">
+      <a href="../misc/links.html">Useful Links for Learning More</a>
+    </li>
+    <li class="">
+      <a href="../misc/faq.html">Frequently Asked Questions (FAQ)</a>
+    </li>
+  </ul>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../../_sources/content/v1/deploy/choose_cloud.md.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Source interaction buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+            <div class="dropdown-buttons sourcebuttons">
+                <a class="repository-button" href="https://github.com/data-8/zero-to-data-8"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Source repository"><i class="fab fa-github"></i>repository</button></a>
+                <a class="issues-button" href="https://github.com/data-8/zero-to-data-8/issues/new?title=Issue%20on%20page%20%2Fcontent/v1/deploy/choose_cloud.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                <a class="edit-button" href="https://github.com/data-8/zero-to-data-8/edit/master/content/v1/deploy/choose_cloud.md"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+            </div>
+        </div>
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#should-i-deploy-on-my-hardware-or-in-the-cloud" class="nav-link">Should I deploy on my hardware or in the cloud?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#choosing-a-cloud-provider-and-service" class="nav-link">Choosing a cloud provider and service</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#is-there-a-particular-cloud-provider-that-you-recommend" class="nav-link">Is there a particular cloud provider that you recommend?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#where-to-get-help" class="nav-link">Where to get help?</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/data-8/zero-to-data-8/edit/master/content/v1/deploy/choose_cloud.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="choosing-where-your-jupyterhub-will-run">
+<h1>Choosing where your JupyterHub will run<a class="headerlink" href="#choosing-where-your-jupyterhub-will-run" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="should-i-deploy-on-my-hardware-or-in-the-cloud">
+<h2>Should I deploy on my hardware or in the cloud?<a class="headerlink" href="#should-i-deploy-on-my-hardware-or-in-the-cloud" title="Permalink to this headline">¶</a></h2>
+<p>The first thing you’ll decide is <em>where</em> your JupyterHub will run. The first
+question to ask is “will I run my JupyterHub on my own hardware, or will I
+run it in the cloud?” Running a JupyterHub in the cloud is usually simpler,
+particularly if you’re working with limited technical resources. Managing
+infrastructure (especially in a reliable, performant way) is a lot of work,
+and best-left to people who are experts at this.</p>
+<p>Fortunately, there are an increasing number of options to use infrastructure that <em>other</em> people manage.
+The trick is in deciding <em>how much</em> they manage to give yourself the right
+balance of control and flexibility. We’ll cover this in the following
+sections.</p>
+<p>(however, note that you can still <code class="xref any docutils literal notranslate"><span class="pre">demo</span> <span class="pre">the</span> <span class="pre">course</span> <span class="pre">environment</span> <span class="pre">locally</span></code>)</p>
+</div>
+<div class="section" id="choosing-a-cloud-provider-and-service">
+<h2>Choosing a cloud provider and service<a class="headerlink" href="#choosing-a-cloud-provider-and-service" title="Permalink to this headline">¶</a></h2>
+<p>Cloud providers (e.g. Microsoft Azure, Google Cloud, Amazon Web Services, or Digital Ocean) are where you’ll
+run your JupyterHub. These companies basically own really large computers, and what
+you do is purchase some resources on those computers to run whatever you’d like (in this
+case, a JupyterHub). Data 8 chooses to use cloud infrastructure and tools that are open-source
+and that are not specific to any one cloud provider. For information on why Data 8
+uses an open-source strategy, check out <a class="reference external" href="../tech/considerations.html#open-source-strategy">Data 8’s approach to open source</a>.</p>
+<p>However, you’ll have a few different options for deploying infrastructure in the cloud, and this page
+aims to disambiguate these options.</p>
+<p>With that in mind, here are a few of the most-common options for choosing your cloud resources.</p>
+<ul class="simple">
+<li><p><strong>Use vanilla computational resources and run JupyterHub yourself</strong>. In this case, you ask the
+cloud provider for some resources, and they give you a blank slate that you can do anything
+with. This is the most-common approach to deploying JupyterHub (and the approach that this
+guide assumes).</p>
+<ul>
+<li><p><strong>Pros</strong>: You have flexibility in customizing your JupyterHub exactly as you wish. You also
+have the ability to easily switch to other cloud providers because the setup process will
+be very similar for each, and the workflows that you share with your students are most-likely
+to be portable to other data science environments.</p></li>
+<li><p><strong>Cons</strong>: There is more manual setup and maintenance for you to perform. Because the resources
+are a blank slate, you’ll need to take the steps to set everything up.</p></li>
+</ul>
+</li>
+<li><p><strong>Use a “template” deployment to deploy a vanilla JupyterHub</strong>. Another possibility is that
+the cloud provider has given you a single-button option to automatically deploy a JupyterHub
+that you can then customize. In this case you still need to set up the JupyterHub with the
+environment and services you want, but the initial JupyterHub creation and some degree of
+cloud resource management has been done for you.</p>
+<ul>
+<li><p><strong>Pros</strong>: The pros for this are similar to the “vanilla computational resources” point above, with
+the tradeoff that your JupyterHub will be faster and easier to initially deploy.</p></li>
+<li><p><strong>Cons</strong>: You’ll be more dependent on the cloud vendor for their templatized solution
+(however, as the JupyterHub is relatively vanilla, you’ll likely be able to deploy the same
+setup somewhere else with minimal extra effort). You’ll also still need to maintain the JupyterHub
+over time.</p></li>
+</ul>
+</li>
+<li><p><strong>Use a “template” deployment to deploy a more complex JupyterHub setup</strong>. In addition to deploying
+a vanilla JupyterHub, some cloud vendors give you a “push-button” option to deploy a specific
+customization of a JupyterHub for a particular use-case (like education). These are more complex
+deployments than a “vanilla” templatized JupyterHub, and often come with integrations with
+vendor-specific services.</p>
+<ul>
+<li><p><strong>Pros</strong>: You can get to a running JupyterHub for your specific use-case more quickly.</p></li>
+<li><p><strong>Cons</strong>: You have less flexibility over deploying and customizing this JupyterHub. In addition,
+you can less-easily move your infrastructure to a different cloud provider because you are
+used to a vendor-specific workflow, especially if the deployment uses vendor-specific services.</p></li>
+</ul>
+</li>
+<li><p><strong>Use a cloud provider’s hosted notebook service</strong>. The final option is that you
+use a fully-managed service of a cloud provider, such as the Google Collaboratory or Microsoft
+Azure Notebooks. These often look and behave like Jupyter Notebooks, though they are often
+built on some proprietary technology from these companies.</p>
+<ul>
+<li><p><strong>Pros</strong>: You can get a Jupyter-like experience extremely quickly. In addition, these services are
+often “free” (at least initially).</p></li>
+<li><p><strong>Cons</strong>: This greatly increases your dependence on a single cloud provider, and the interface +
+infrastructure that they provide. These environments are generally less-customizable and don’t
+integrate as easily into services, tools, and course infrastructure that you use.
+Depending on how customized the interface is, it may not be the same as the default open-source
+software in the Jupyter ecosystem, which may confuse students. Finally, although these
+services may be free now at basic usage, they may not continue this way in the future, and
+will often ask you to pay once you need more resources (at which point you may wish you could
+switch to a different cloud provider that may be cheaper).</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="is-there-a-particular-cloud-provider-that-you-recommend">
+<h2>Is there a particular cloud provider that you recommend?<a class="headerlink" href="#is-there-a-particular-cloud-provider-that-you-recommend" title="Permalink to this headline">¶</a></h2>
+<p>Not really - ultimately, the choice of cloud infrastructure is your own, and different options will be appropriate
+for different situations. We recommend using the following rubric to decide which cloud provider to
+use: <strong>Which provider makes it the easiest and cheapest to get a vanilla JupyterHub that
+is highly customizable?</strong> Data 8 has been run on every major cloud provider, and we intentionally
+switch providers every few semesters in order to avoid depending too much on a single vendor’s services.</p>
+</div>
+<div class="section" id="where-to-get-help">
+<h2>Where to get help?<a class="headerlink" href="#where-to-get-help" title="Permalink to this headline">¶</a></h2>
+<p>If all of this sounds daunting to you, there are a few places that you can try to get help. Here
+are a few suggestions.</p>
+<ul class="simple">
+<li><p><strong>Find a community around you who is interested in these topics</strong>. Many universities either have
+technical support or individuals who know about these kinds of things. Try reaching out to them,
+ask if they’re willing to help you deploy a JupyterHub for your course, or to help teach you
+how to do this.</p></li>
+<li><p><strong>Connect with the JupyterHub community</strong>. Because Jupyter is an open project and community,
+it’s quite friendly to interact with! There are several places where you can connect with members
+of the Jupyter community, such as <a class="reference external" href="https://discourse.jupyter.org">the Jupyter Community Forum</a>
+or the <a class="reference external" href="https://github.com/jupyterhub/team-compass">JupyterHub team repository</a>.</p></li>
+<li><p><strong>Don’t hesitate to ask</strong>. Ultimately, deploying your own Data 8 infrastructure is likely
+a new undertaking. If you have questions, or are unsure of the best approach, don’t hesitate
+to ask questions of those around you, or those in the broader Jupyter community.</p></li>
+</ul>
+<p>Once you’ve chosen a cloud provider, your next step is to deploy your own JupyterHub! We’ll
+cover how to do this in the next section.</p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="README.html" title="previous page">Deploy Data 8 for your course</a>
+    <a class='right-next' id="next-link" href="setup_jupyterhub.html" title="next page">Deploying JupyterHub</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Berkeley Division of Data Sciences<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../../_static/js/index.js"></script>
+    
+  </body>
+</html>

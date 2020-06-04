@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Data 8 at Berkeley &#8212; Zero to Data 8</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/sphinx-book-theme.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/mystnb.js"></script>
+    <script src="../../../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .secondtoggle, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <link rel="canonical" href="zero-to-data-8/content/v2/tech/jupyterhub/data8.html" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="zero-to-data-8/content/v2/tech/jupyterhub/data8.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Data 8 at Berkeley" />
+<meta property="og:description" content="Data 8 at Berkeley  Creating a data science course from first-principles requires considerable advances in the technology available to instructors. In creating " />
+<meta property="og:image"       content="zero-to-data-8/_static/data8.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../../index.html">
+  
+  <img src="../../../../_static/data8.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Zero to Data 8</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../../../v1/intro.html">An Educator’s Guide to Data 8</a>
+  </li>
+  <li class="">
+    <a href="../../../v1/deploy/README.html">Deploying Data 8</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../../../v1/deploy/choose_cloud.html">Choose where to deploy your JupyterHub</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/deploy/setup_jupyterhub.html">Deploy your JupyterHub</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/deploy/customize_hub_environment.html">Customize the JupyterHub environment for Data 8</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/deploy/connect_website_and_textbook.html">Set up your course website and textbook</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/deploy/connect_labs_and_homework.html">Set up your course labs and homework</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/deploy/course_logistics.html">Wisdom and tips for course logistics</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/deploy/deploy_locally.html">Demo the textbook locally</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../../../v1/tech/README.html">Technology stack</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../../../v1/tech/considerations.html">General Technical Considerations</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/tech/tech.html">Technical Needs and the Tools that Do Them</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/tech/team.html">The Data 8 Tech Team Structure</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/tech/process.html">The DataHub Deployment Process</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../../../v1/teaching/README.html">Teaching and topics</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../../../v1/teaching/inspiration.html">Inspiration for Data 8 Pedagogy</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/teaching/syllabus.html">The Data 8 Course Syllabus</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="../../../v1/misc/README.html">Extra and miscellaneous information</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="../../../v1/misc/connectors.html">Connector Courses and Extending Beyond Data 8</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/misc/links.html">Useful Links for Learning More</a>
+    </li>
+    <li class="">
+      <a href="../../../v1/misc/faq.html">Frequently Asked Questions (FAQ)</a>
+    </li>
+  </ul>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse" data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu" aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation" title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i class="fas fa-download"></i></button>
+
+            
+            <div class="dropdown-buttons">
+                <!-- ipynb file if we had a myst markdown file -->
+                
+                <!-- Download raw file -->
+                <a class="dropdown-buttons" href="../../../../_sources/content/v2/tech/jupyterhub/data8.md.txt"><button type="button" class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip" data-placement="left">.md</button></a>
+                <!-- Download PDF via print -->
+                <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF" onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+            </div>
+            
+        </div>
+
+        <!-- Source interaction buttons -->
+        
+        <div class="dropdown-buttons-trigger">
+            <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+            <div class="dropdown-buttons sourcebuttons">
+                <a class="repository-button" href="https://github.com/data-8/zero-to-data-8"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Source repository"><i class="fab fa-github"></i>repository</button></a>
+                <a class="issues-button" href="https://github.com/data-8/zero-to-data-8/issues/new?title=Issue%20on%20page%20%2Fcontent/v2/tech/jupyterhub/data8.html&body=Your%20issue%20content%20here."><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                <a class="edit-button" href="https://github.com/data-8/zero-to-data-8/edit/master/content/v2/tech/jupyterhub/data8.md"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left" title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+            </div>
+        </div>
+        
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+        
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#open-source-strategy" class="nav-link">Open source strategy</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#desired-workflow" class="nav-link">Desired Workflow</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#technical-priorities-in-data-8" class="nav-link">Technical Priorities in Data 8</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#technologies-implemented-in-data-8" class="nav-link">Technologies Implemented in Data 8</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#managing-cloud-resources" class="nav-link">Managing cloud resources</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#administering-and-managing-the-cluster" class="nav-link">Administering and managing the cluster</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#software-used-in-code" class="nav-link">Software used in code</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/data-8/zero-to-data-8/edit/master/content/v2/tech/jupyterhub/data8.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="data-8-at-berkeley">
+<h1>Data 8 at Berkeley<a class="headerlink" href="#data-8-at-berkeley" title="Permalink to this headline">¶</a></h1>
+<p>Creating a data science course from first-principles requires considerable
+advances in the technology available to instructors. In creating Data 8, the
+development team has worked closely with members of the open-source community,
+and has contributed to or spun off many open source projects. The goal driving
+development of technology for Data 8 is to <em>develop an open platform of which
+Berkeley happens to be the first user.</em></p>
+<p>Managing a class of 1400 students doing non-trivial computational work is a big technical challenge. This page details many of
+the technical guiding principles and solutions that the Data 8 team has adhered to and implemented.</p>
+<div class="section" id="open-source-strategy">
+<h2>Open source strategy<a class="headerlink" href="#open-source-strategy" title="Permalink to this headline">¶</a></h2>
+<p>A core goal of the Data 8 project is to use an entirely open stack to use in our course. As such, most of these components are freely available to the educational community, and we welcome
+others to adopt these tools for their own uses and become contributors to
+these projects over time. We
+chose this approach for a few main reasons:</p>
+<ul class="simple">
+<li><p><strong>Using an open stack gives us freedom to deploy Data 8 anywhere.</strong> By running on entirely open
+tools we can ensure that Data 8 is not tied to a specific proprietary tool, or a single
+vendor’s offering. We believe that this flexibility and choice benefits us (even if it
+occasionally means passing on vendor-specific options that would save us time in the short-term).</p></li>
+<li><p><strong>Using an open stack means we don’t have to re-invent the wheel.</strong> One of the benefits
+of using open tools is that many useful tools <em>already exist</em> and we would rather piggy-back
+off of the work of others than re-invent the wheel ourselves. For this reason, we prefer to
+find open source tools and leverage them in data 8, rather than start from scratch.</p></li>
+<li><p><strong>Using an open stack lets us contribute back.</strong> Finally, Data 8 also uses its resources to
+<em>contribute back</em> to the open source projects that we utilize. For example, many improvements
+to JupyterHub, Jupyter Notebooks, and JupyterLab have been made by the team working on
+Data 8. As many of these projects are already developed by universities and other organizations
+dedicated to the public good, this is an opportunity for us to give back to the community
+that makes courses like data 8 possible.</p></li>
+</ul>
+</div>
+<div class="section" id="desired-workflow">
+<h2>Desired Workflow<a class="headerlink" href="#desired-workflow" title="Permalink to this headline">¶</a></h2>
+<p>The instructor first creates a piece of course material they want students to be able to use.
+They push the latest version of this material to GitHub, then send students a link that
+they can click in order to interact with the material.</p>
+<p>The student then clicks on the link, which triggers the following actions:</p>
+<ul class="simple">
+<li><p>The DataHub authenticates the user (either asking them to sign in, or discovering that their local computer already has credentials to proceed).</p></li>
+<li><p>The DataHub creates and starts a Jupyter instance for the user (or directs the user to a pre-existing environment from a previous session)</p></li>
+<li><p>The student’s persistent storage volume is linked to their Jupyter instance</p></li>
+<li><p>The DataHub clones or pulls the content specified by the link into student’s instance</p></li>
+<li><p>The student is then directed to a live notebook instance in the browser. It contains the content specified in the link and can be immediately interacted with.</p></li>
+<li><p>While doing the assignment, the student is able to check their answers against public autograder tests.</p></li>
+<li><p>After completing the assignment, the student submits their notebook to an autograder for grading.</p></li>
+</ul>
+</div>
+<div class="section" id="technical-priorities-in-data-8">
+<h2>Technical Priorities in Data 8<a class="headerlink" href="#technical-priorities-in-data-8" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Standardize student environments</strong> - Anyone who has taught a bootcamp knows the pain involved in getting a room of 20 students with the same functioning environment. Data 8 has nearly two orders of magnitude more students. For an introduction class, requiring students to set up their own environment is a huge distraction and dis-equalizer.</p></li>
+<li><p><strong>Use the cloud</strong> - By utilizing cloud resources, the course material is available to all students regardless of the hardware available to them.</p></li>
+<li><p><strong>Be cloud agnostic</strong> - There are many options for interacting with the cloud, but most are bespoke interfaces that pair with a <em>product</em> you eventually pay for (e.g. https://aws.amazon.com/education/). We didn’t want Data 8 to depend on a specific provider, interface, or other set of packages. We want to give students and instructors the ability to work on whatever platform they like. As such, we chose tools that were open-source and cloud-agnostic.</p></li>
+<li><p><strong>Keep costs down</strong> - Broader adoption of the course at Berkeley and beyond will only happen if costs are reasonably low. We shoot for a few dollars per student, per month.</p></li>
+<li><p><strong>Handle dynamic activity</strong> - Students tend to operate in bursts of activity (e.g., during class or 30 minutes before the homework is due). We needed dynamic cloud infrastructure that could handle many patterns of activity.</p></li>
+<li><p><strong>Meet peak demand</strong> - Moments of maximal cloud usage (e.g., during lecture) are moments when the cloud <em>must be functional</em>.</p></li>
+<li><p><strong>Do all of the above with a small team</strong> - The Data 8 model is not scalable if it requires a dedicated team of tech-savvy staff. While some technical skills are required, we wanted most course operations to be handled by a small team of undergraduates (usually Data 8 alumni).</p></li>
+</ul>
+</div>
+<div class="section" id="technologies-implemented-in-data-8">
+<h2>Technologies Implemented in Data 8<a class="headerlink" href="#technologies-implemented-in-data-8" title="Permalink to this headline">¶</a></h2>
+<p>The following is an outline of the technical pieces that go into running Data 8.
+It is broken down by activity / need so that it might be most useful for others
+hoping to accomplish the same goals.</p>
+<div class="section" id="managing-cloud-resources">
+<h3>Managing cloud resources<a class="headerlink" href="#managing-cloud-resources" title="Permalink to this headline">¶</a></h3>
+<p>The core technical piece of Data 8 is the <strong>DataHub</strong>, a server running in the cloud
+that serves live computational environments for all of the students in the class.
+In Data 8, <em>students can work entirely from the DataHub</em>, running in the cloud.</p>
+<p>Managing these resources primarily utilizes the following pieces of open-source technology:</p>
+<ul class="simple">
+<li><p><strong>Managing cloud resources</strong> - <a class="reference external" href="https://kubernetes.io/">Kubernetes</a> is the underlying technology that manages the resources on our cloud provider. It is open-source, and is supported by most major cloud providers (it also works on your own hardware). By relying on Kubernetes, Data 8 has been able to switch cloud providers nearly each semester with minimal disruption to the class.</p></li>
+<li><p><strong>Managing user sessions</strong> - <a class="reference external" href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> is used to manage user sessions in the cloud. It manages user authentication and serves them an environment in which they can do their work. JupyterHub also integrates nicely with Kubernetes via the <strong>JupyterHub Helm Chart</strong>. To learn more about deploying JupyterHub on Kubernetes, see the <a class="reference external" href="https://z2jh.jupyter.org">Zero to JupyterHub Guide</a></p></li>
+<li><p><strong>Authentication</strong> - <strong>Canvas OAuth</strong> is used by DataHub to handle the actual authentication process. JupyterHub supports a number of options for authentication, and because Berkeley uses Canvas as its LMS, this was the simplest way to authenticate users. Previously, DataHub used Google OAuth for authentication.</p></li>
+<li><p><strong>Managing the user’s software</strong> - We use <strong>Docker images</strong> created specifically for Data 8. They contain all of the software dependencies needed to run all of the course material as well as to interact with JupyterHub. JupyterHub can be configured to serve users a Docker image from the cloud, and any updates to this image will automatically propagate to new user sessions. <a class="reference external" href="https://hub.docker.com/u/berkeleydsep/">Here is a list of all DSEP Docker Images</a>.</p></li>
+<li><p><strong>User Long-term Storage</strong> - Students need their work to persist over time, and the storage options for students depend on the cloud provider that is being used for a given semester. JupyterHub for Kubernetes can be configured to plug in to many different kinds of file systems. The authentication process will determine whether a long-term file storage system already exists for a user and, if so, will automatically mount it to a user’s session when they connect.</p></li>
+</ul>
+</div>
+<div class="section" id="administering-and-managing-the-cluster">
+<h3>Administering and managing the cluster<a class="headerlink" href="#administering-and-managing-the-cluster" title="Permalink to this headline">¶</a></h3>
+<!--- Link admin Access page -->
+<ul class="simple">
+<li><p><strong>Admin access to the DataHub</strong> - The Data 8 team often required access to a high-level view of the DataHub, as well as access to commands that created/destroyed user sessions. This is provided by the <strong>Admin Panel</strong> of JupyterHub, which allows a subset of users to control operations of the DataHub resources.</p></li>
+</ul>
+<!--- Link updating JH page-->
+<ul class="simple">
+<li><p><strong>Deploying and updating the DataHub</strong> - While the DataHub is a complicated piece of technology, running it, maintaining it, and updating it should be doable by people without strong technical operations skills. Data 8 uses GitHub repositories to store all configuration scripts for the DataHub, and uses Travis Continuous Integration to automatically-deploy changes to the configuration. As a result, updating the cluster is as simple as changing a configuration file and waiting for the changes to propagate.</p></li>
+</ul>
+<!--- Update?-->
+<ul class="simple">
+<li><p><strong>Scaling cloud resources</strong> - An <strong>autoscaler</strong> is used to ensure that Data 8 is only requesting the cloud resources that it needs. Kubernetes makes it easy to scale up/down relatively quickly. This is configured with a script that is cloud-specific for now, but will become possible using only Kubernetes in the future.</p></li>
+<li><p><strong>Versioning and reproducibility</strong> - It is important that we know the <em>exact</em> state of the DataHub at any moment in time, and can recreate that state in the future. We use Git and best-practices in package management (e.g., explicitly versioning all components) to ensure that the DataHub configuration can be deployed elsewhere without difficulty.</p></li>
+</ul>
+</div>
+<div class="section" id="software-used-in-code">
+<h3>Software used in code<a class="headerlink" href="#software-used-in-code" title="Permalink to this headline">¶</a></h3>
+<!--- Link Otter page-->
+<ul class="simple">
+<li><p><strong>Grading</strong> - Grading in Data 8 is carried out with a service called <a class="reference external" href="https://okpy.org/">OKpy</a>, but we typically recommend using Otter Grader due to its ease of adoptability. This is a collection of scripts and services that allow students to check their work within the Jupyter Notebook. Students also submit their assignment to a centralized server for grading or to a Learning Management System.</p></li>
+<li><p><strong>Programming language</strong> - The programming language of choice for Data 8 is Python 3. This is because Python is a generic, user-friendly, and well-designed language that is broadly useful in data science. It is the most popular language for high-level data analytics, and has a rich ecosystem of packages for interactive data analysis. Additionally, Python is also open source.</p></li>
+<li><p><strong>The SciPy staack and handling the Python environment</strong> - On top of the Python language is a thriving community of libraries and tools for scientific
+computing. The <code class="docutils literal notranslate"><span class="pre">datascience</span></code> package utilizes functions in NumPy (a tool for linear algebra), SciPy (a set of tools for scientific tasks), Pandas (a tool for dealing with tabular data), and Matplotlib (a tool for visualization). Student environments in Python are managed with <code class="docutils literal notranslate"><span class="pre">miniconda</span></code>, a package from Anaconda that makes it easy to create user environments, as well as install / remove / update particular Python packages.</p></li>
+<li><p><strong>Jupyter Notebooks</strong> - are a de-facto
+standard across both academic research as well as industry in data science. We wanted to use notebooks both because
+they were quite useful for interactive computing and as a tool for communication, but also because
+they are free, usable by anybody, and developed by an open community.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Berkeley Division of Data Sciences<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../../../_static/js/index.js"></script>
+    
+  </body>
+</html>
