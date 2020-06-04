@@ -4,7 +4,7 @@ The following is a general description of the course structure for Data 8.
 It covers how to build your course syllabus and is a reflection of the content that is covered in the Data 8
 textbook, which is freely available at the following link:
 
-https://www.inferentialthinking.com/
+<https://www.inferentialthinking.com/>
 
 The following sections describe some of the major takeaways that students
 should learn in the class. Data 8 assumes *no programming*,
@@ -42,9 +42,8 @@ Below are some programming fundamentals that students come away with:
 * Data types, structures, functions, tables, etc
 * Programming fundamentals *in the context of data*.
 * How to answer data science questions with the tables you have.
-* Complex operations with tables (grouping, joining, etc). 
+* Complex operations with tables (grouping, joining, etc).
 * How to create visualizations (charts, histograms, etc) and understand what is being represented.
-
 
 ## Statistics, sampling, and hypothesis testing
 
@@ -58,7 +57,7 @@ of data points.
 Below are some statistics fundamentals that students come away with:
 
 * Iteration in the context of probability of an event (e.g probability when flipping a coin)
-   * "for" loops etc are covered in the context of a coin flipping simulation
+  * "for" loops etc are covered in the context of a coin flipping simulation
 * How to manipulate tables to calculate probability.
 * Sampling and empirical distributions - how to make conclusions based on random samples?
 * How to compare two samples.
@@ -80,7 +79,7 @@ as well as classification (models with qualitative outputs).
 
 Below are some inference, prediction, and modeling fundamentals that students come away with:
 
-* Correlation in the context of modeling. 
+* Correlation in the context of modeling.
 * Linear regression and least squares.
 * Regression inference - what does a regression line really mean?
 * How to compute confidence integrals of regression lines.
@@ -98,19 +97,18 @@ as an advanced case of the material that has been covered above.
 Below are some fundamentals for comparing two distributions that students come away with:
 
 * A/B testing - with what confidence can we say if two numerical samples come from the same underlying distribution or not?
-* Bootstrapping and confidence intervals 
+* Bootstrapping and confidence intervals
 * Importance of bias and variance of the sample mean
-* Statistics about statistics (e.g. variability of sample mean) 
+* Statistics about statistics (e.g. variability of sample mean)
 * How to use sample means effectively for inference?
 * How to design experiments and intrepret the distributions with Central Limit Theorem, Chebyshev's, etc.
 
-
-# Building a Course syllabus page
+## Building a Course syllabus page
 
 You may use whatever technology you prefer for managing your course and
 distributing content. However, we recommend setting up a syllabus page that
 is used for distributing interact links and course materials. For an example,
-see the structure of the Spring 2020 course syllabus: http://data8.org/sp20/
+see the structure of the Spring 2020 course syllabus: <http://data8.org/sp20/>
 
 The syllabus has the following structure:
 
@@ -124,8 +122,7 @@ Each row is a lecture, and each column is a type of material you can distribute.
 The links in the columns either point to pages on the [course textbook](https://inferentialthinking.com).
 or interact links that connect students with the course JupyterHub for distribution of homeworks and labs.
 
-The videos and slides listed above and on the [Data 8 website](http://data8.org/sp20/) are restricted to berkeley.edu addresses. 
-
+The videos and slides listed above and on the [Data 8 website](http://data8.org/sp20/) are restricted to berkeley.edu addresses.
 
 ## Assignments
 
@@ -134,7 +131,4 @@ ideas covered in class. They can all be run interactively in the Data 8 environm
 
 These homework, labs, and project materials are freely available on the semester course repository.
 There is a new repository created for each semester of the course, as the materials
-tend to evolve over time. For example, here is the repository for the Spring 2020 course: https://github.com/data-8/materials-sp20
-
-
-
+tend to evolve over time. For example, here is the repository for the Spring 2020 course: <https://github.com/data-8/materials-sp20>
