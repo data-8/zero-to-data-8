@@ -4,7 +4,7 @@ This repository hosts the content and website for Zero to Data 8,
 the guide to deploying your own Data 8 course infrastructure.
 
 All of the content resides in `content/` and is hosted online
-at `data8.github.io/zero-to-data-8`.
+at `data8.org/zero-to-data-8`.
 
 ## To make changes to this book
 
