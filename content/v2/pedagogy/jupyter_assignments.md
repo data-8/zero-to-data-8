@@ -19,6 +19,6 @@ tend to evolve over time. For example, here is the repository for the [Spring 20
 
 To customize the Data 8 homework for your course, take the following steps:
 1. Fork and clone the Data 8 materials for the semester of your choice (see above section on labs).
-2. Ensure that you have a JupyterHub running the Data 8 environment (if not, [follow these instructions](setup_jupyterhub.html))  ##can't find the right link
+2. Ensure that you have a JupyterHub running the Data 8 environment (if not, [follow these instructions](setup_jupyterhub.md)) 
 3. Create your interact links so they point to *your* version of the homeworks. For example,
-       http://<< YOUR-HUB-URL >>/hub/user-redirect/git-sync?repo=https://github.com/<< YOUR-USERNAME >>/materials-sp18/materials/sp18/hw/hw07/hw07.ipynb
+   http://<< YOUR-HUB-URL >>/hub/user-redirect/git-sync?repo=https://github.com/<< YOUR-USERNAME >>/materials-   sp18/materials/sp18/hw/hw07/hw07.ipynb
