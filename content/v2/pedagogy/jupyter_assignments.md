@@ -13,12 +13,3 @@ semester. For example, the Spring 2020 course can be found [here.](http://data8.
 These materials are freely available on the semester course repository.
 There is a new repository created for each semester of the course, as the materials
 tend to evolve over time. For example, here is the repository for the [Spring 2020 course](https://github.com/data-8/materials-sp20) and you can find the homeworks for this repository [here.](https://github.com/data-8/materials-sp20/tree/master/materials/sp20/hw)
-
-
-## Customizing your own copies of the homework
-
-To customize the Data 8 homework for your course, take the following steps:
-1. Fork and clone the Data 8 materials for the semester of your choice (see above section on labs).
-2. Ensure that you have a JupyterHub running the Data 8 environment (if not, [follow these instructions.](setup_jupyterhub.md)) 
-3. Create your interact links so they point to *your* version of the homeworks. For example,
-   http://<< YOUR-HUB-URL >>/hub/user-redirect/git-sync?repo=https://github.com/<< YOUR-USERNAME >>/materials-   sp18/materials/sp18/hw/hw07/hw07.ipynb
