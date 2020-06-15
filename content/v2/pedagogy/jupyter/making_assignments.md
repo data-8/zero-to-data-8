@@ -6,16 +6,15 @@ Assignments in Data 8 are created in OK format using a tool called [jAssign](htt
 
 jAssign makes writing your own assignments very easy by providing a simple format for a master notebook. Writing narrative/filler cells is as normal. To create a question, add a YAML-formatted metadata block to the end of the Markdown cell for that question to define some configurations for it. An example question cell might contain:
 
-````
+```{text}
 Question 1.1: Fill in the infinite generator `fib` below that yields the Fibonacci sequence.
 
-```
+
 BEGIN QUESTION
 name: q1_1
 manual: false
 points: 1
 ```
-````
 
 The `BEGIN QUESTION` block contains the mandatory parameter `name` and two optional parameters, `manual` and `points`, whose default values are in the block above. Immediately after the question cell should be a solution cell. Using specially-formatted Python comments, jAssign can parse the solution cell and replace lines with ellipsis or other user-defined prompts (this behavior is described in more detail in the jAssign docs, linked below). After the solution cell come zero or more test cells, denoted by a `# TEST` or `# HIDDEN TEST` line at the top of the cell. These cells will have their outputs parsed by jAssign to generate the ok-formatted test files needed for autograding. jAssigns [getting started guide](https://github.com/okpy/jassign#getting-started) describes how to call jAssign to parse the notebook.
 
