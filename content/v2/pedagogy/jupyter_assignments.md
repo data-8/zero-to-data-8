@@ -8,7 +8,7 @@ The assignments in Data 8 consist of **Labs**, **Homeworks**, and **Group Projec
    used by Data 8 to handle "official" grades for the course.
    
 The latest links to the homeworks can be found in the course page for the current
-semester. For example, the Spring 20202 course can be found [here.](http://data8.org/sp20/)
+semester. For example, the Spring 2020 course can be found [here.](http://data8.org/sp20/)
 
 These materials are freely available on the semester course repository.
 There is a new repository created for each semester of the course, as the materials
