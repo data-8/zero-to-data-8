@@ -1,52 +1,53 @@
 # Top-level page
 - title: Home
-  file: content/v1/intro
+  file: content/v2/intro
 
-- title: Deploying Data 8
-  file: content/v1/deploy/README
+- title: Syllabus & Lectures
+  file: content/v2/syllabus/intro
   expand_sections: true
   sections:
-    - title: Choose where to deploy your JupyterHub
-      file: content/v1/deploy/choose_cloud
-    - title: Deploy your JupyterHub
-      file: content/v1/deploy/setup_jupyterhub
-    - title: Customize the JupyterHub environment for Data 8
-      file: content/v1/deploy/customize_hub_environment
-    - title: Set up your course website and textbook
-      file: content/v1/deploy/connect_website_and_textbook
-    - title: Set up your course labs and homework
-      file: content/v1/deploy/connect_labs_and_homework
-    - title: Wisdom and tips for course logistics
-      file: content/v1/deploy/course_logistics
-    - title: Demo the textbook locally
-      file: content/v1/deploy/deploy_locally
-- title: Technology stack
-  file: content/v1/tech/README
+    - title: Course Inspiration
+      file: content/v2/syllabus/inspiration
+    - title: Syllabus Structure
+      file: content/v2/syllabus/syllabus
+    - title: Lecture Slides & Videos
+      file: content/v2/syllabus/slides
+
+- title: Textbook
+  file: content/v2/textbook
+
+- title: The datascience Python Package
+  file: content/v2/datascience
+
+- title: Course Staff
+  file: content/v2/staff/intro
   expand_sections: true
   sections:
-    - title: General Technical Considerations
-      file: content/v1/tech/considerations
-    - title: Technical Needs and the Tools that Do Them
-      file: content/v1/tech/tech
-    - title: The Data 8 Tech Team Structure
-      file: content/v1/tech/team
-    - title: The DataHub Deployment Process
-      file: content/v1/tech/process
-- title: Teaching and topics
-  file: content/v1/teaching/README
+    - title: Roles and Responsibilities
+      file: content/v2/staff/roles
+
+- title: Jupyter Notebook Assignments
+  file: content/v2/jupyter/intro
   expand_sections: true
   sections:
-    - title: Inspiration for Data 8 Pedagogy
-      file: content/v1/teaching/inspiration
-    - title: The Data 8 Course Syllabus
-      file: content/v1/teaching/syllabus
-- title: Extra and miscellaneous information
-  file: content/v1/misc/README
+    - title: Assignments in Data 8
+      file: content/v2/jupyter/jupyter_assignments
+    - title: Distributing Assignments
+      file: content/v2/jupyter/distribution
+    - title: Writing Your Own Assignments
+      file: content/v2/jupyter/making_assignments
+
+- title: Labs, Worksheets, and Discussions
+  file: content/v2/labs/intro
   expand_sections: true
   sections:
-    - title: Connector Courses and Extending Beyond Data 8
-      file: content/v1/misc/connectors
-    - title: Useful Links for Learning More
-      file: content/v1/misc/links
-    - title: Frequently Asked Questions (FAQ)
-      file: content/v1/misc/faq
+    - title: Lab Sections
+      file: content/v2/labs/labs
+    - title: Tutor Sections
+      file: content/v2/labs/tutors
+
+- title: Connectors and Modules
+  file: content/v2/connectors_modules
+
+- title: Appendix
+  file: content/v2/useful_links
