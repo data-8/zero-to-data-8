@@ -1,53 +1,53 @@
 # Top-level page
 - title: Home
-  file: content/v2/intro
+  file: content/intro
 
 - title: Syllabus & Lectures
-  file: content/v2/syllabus/intro
+  file: content/syllabus/intro
   expand_sections: true
   sections:
     - title: Course Inspiration
-      file: content/v2/syllabus/inspiration
+      file: content/syllabus/inspiration
     - title: Syllabus Structure
-      file: content/v2/syllabus/syllabus
+      file: content/syllabus/syllabus
     - title: Lecture Slides & Videos
-      file: content/v2/syllabus/slides
+      file: content/syllabus/slides
 
 - title: Textbook
-  file: content/v2/textbook
+  file: content/textbook
 
 - title: The datascience Python Package
-  file: content/v2/datascience
+  file: content/datascience
 
 - title: Course Staff
-  file: content/v2/staff/intro
+  file: content/staff/intro
   expand_sections: true
   sections:
     - title: Roles and Responsibilities
-      file: content/v2/staff/roles
+      file: content/staff/roles
 
 - title: Jupyter Notebook Assignments
-  file: content/v2/jupyter/intro
+  file: content/jupyter/intro
   expand_sections: true
   sections:
     - title: Assignments in Data 8
-      file: content/v2/jupyter/jupyter_assignments
+      file: content/jupyter/jupyter_assignments
     - title: Distributing Assignments
-      file: content/v2/jupyter/distribution
+      file: content/jupyter/distribution
     - title: Writing Your Own Assignments
-      file: content/v2/jupyter/making_assignments
+      file: content/jupyter/making_assignments
 
 - title: Labs, Worksheets, and Discussions
-  file: content/v2/labs/intro
+  file: content/labs/intro
   expand_sections: true
   sections:
     - title: Lab Sections
-      file: content/v2/labs/labs
+      file: content/labs/labs
     - title: Tutor Sections
-      file: content/v2/labs/tutors
+      file: content/labs/tutors
 
 - title: Connectors and Modules
-  file: content/v2/connectors_modules
+  file: content/connectors_modules
 
 - title: Appendix
-  file: content/v2/useful_links
+  file: content/useful_links
