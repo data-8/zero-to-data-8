@@ -14,6 +14,10 @@ All of the tools that Data 8 uses are open source, and available for the communi
 
 To explore the guide, select a section to the left!
 
+## Technology Guide
+
+If you are looking for a more technical overview of the infrastructure required to create a data science course at your institution, there is a new guide titled ["The Data Science Educator's Guide to Technical Infrastructure"](https://ucbds-infra.github.io/ds-course-infra-guide/intro.html).
+
 ## Contacting Us
 
 If you woud like to learn more about any of the tools used in Data 8 or are interested in deploying your own data 8 course, please fill out our Data 8 [Instructor Interest form](https://forms.gle/y5aQBi816xDXKe7r7) or shoot us an email at [ds-help@berkeley.edu](mailto:ds-help@berkeley.edu).
