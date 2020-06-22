@@ -1,6 +1,6 @@
 title: Zero to Data 8
-author: The Berkeley Division of Data Sciences
-logo: content/v1/images/data8.png
+author: UC Berkeley Division of Computing, Data Science, and Information
+logo: content/data8.png
 exclude_patterns: ["content/v1/deploy/scripts/tests"]
 html:
   baseurl: zero-to-data-8 # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
