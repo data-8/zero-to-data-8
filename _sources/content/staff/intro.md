@@ -22,4 +22,4 @@ The scale of staffing for these support resources is only possible through the e
 
 **Tutors** assist with grading written responses on assignments, holding office hours, and conducting small group tutoring sections. Experienced tutors can eventually advance to positions as **Undergraduate Student Instructors (uGSIs)**, holding a weekly lab section and helping out with various pedagogical and logistical aspects of running the course. This hierarchical course staff structure is enabled by the careful leadership of Head GSIs and course instructors.
 
-You can read more about the [Roles and Responsibilities here](roles_data8).
+You can read more about the [Roles and Responsibilities here](./roles).

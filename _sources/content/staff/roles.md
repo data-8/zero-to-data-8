@@ -6,7 +6,7 @@ Each semester, around 45 teaching assistants (TAs), 45 tutors, and 150 academic 
 
 ### Lab assisting (2 hrs/week)
 
-- 10 out of the 13 weeks (20 hours) → required for P
+- 10 out of the 13 weeks (20 hours) → required for Pass (P) Grade
 - Actively participating in the worksheet discussion time and answering questions during the lab notebook time
 
 ### Lab prep (0.5 hr/week)
