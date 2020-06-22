@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>&lt;no title&gt; &#8212; Zero to Data 8</title>
+    <title>The datascience Package &#8212; Zero to Data 8</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -28,19 +28,21 @@
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
-    <link rel="canonical" href="zero-to-data-8/content/LICENSE.html" />
+    <link rel="canonical" href="zero-to-data-8/content/datascience.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Data 8 Course Staff Structure" href="staff/intro.html" />
+    <link rel="prev" title="Supplement Classroom Learning with Open Source Textbooks" href="textbook.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="zero-to-data-8/content/LICENSE.html" />
+<meta property="og:url"         content="zero-to-data-8/content/datascience.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="&lt;no title&gt;" />
-<meta property="og:description" content="" />
+<meta property="og:title"       content="The <code class="docutils literal notranslate"><span class="pre">datascience</span></code> Package" />
+<meta property="og:description" content="The datascience Package  The datascience package is an open source Python package that helps make programming more accessible to all students, regardless of bac" />
 
 
 <meta name="twitter:card" content="summary">
@@ -89,8 +91,8 @@
   <li class="">
     <a href="textbook.html">Textbook</a>
   </li>
-  <li class="">
-    <a href="datascience.html">The datascience Python Package</a>
+  <li class="active">
+    <a href="">The datascience Python Package</a>
   </li>
   <li class="">
     <a href="staff/intro.html">Course Staff</a>
@@ -168,7 +170,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/content/LICENSE.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/content/datascience.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -188,10 +190,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/data-8/zero-to-data-8/issues/new?title=Issue%20on%20page%20%2Fcontent/LICENSE.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/data-8/zero-to-data-8/issues/new?title=Issue%20on%20page%20%2Fcontent/datascience.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/data-8/zero-to-data-8/edit/master/content/LICENSE.md"><button
+        <a class="edit-button" href="https://github.com/data-8/zero-to-data-8/edit/master/content/datascience.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -207,9 +209,20 @@
 
     </div>
     <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#technical-details" class="nav-link">Technical details</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#pedagogical-choices" class="nav-link">Pedagogical Choices</a>
+        </li>
     
     </ul>
 </nav>
@@ -217,7 +230,7 @@
 
 
 <div class="tocsection editthispage">
-    <a href="https://github.com/data-8/zero-to-data-8/edit/master/content/LICENSE.md">
+    <a href="https://github.com/data-8/zero-to-data-8/edit/master/content/datascience.md">
         <i class="fas fa-pencil-alt"></i> Edit this page
     </a>
 </div>
@@ -229,23 +242,28 @@
         
               <div>
                 
-  <p>MIT License</p>
-<p>Copyright (c) 2018 Chris Holdgraf</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the “Software”), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.</p>
+  <div class="section" id="the-datascience-package">
+<h1>The <code class="docutils literal notranslate"><span class="pre">datascience</span></code> Package<a class="headerlink" href="#the-datascience-package" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">datascience</span></code> package is an open source Python package that helps make programming more accessible to all students, regardless of background. As a pedagogical aid, the package is designed to help students more intuitively conduct data science techniques without first spending considerable time directly learning more complex tools such as <code class="docutils literal notranslate"><span class="pre">pandas</span></code> or <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>. At Berkeley, these other packages are introduced in further upper-division coursework such as Data 100.</p>
+<div class="section" id="technical-details">
+<h2>Technical details<a class="headerlink" href="#technical-details" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">datascience</span></code> package was built with the main goal to teach students about working with tables and visualizations in an introductory data science setting. It was inspired by techniques in SQL, <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, and R data frames, and follows a more natural langauge programming design to have a more intuitive way in syntax.</p>
+<p>The package is built on built-in Python data structures, with several dependencies:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">NumPy</span></code>: a tool for numerical computing and linear algebra. The <code class="docutils literal notranslate"><span class="pre">datascience</span></code> package relies on <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays as its primary data structure; for example, each column in <code class="docutils literal notranslate"><span class="pre">datascience</span></code> Table objects are <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays. Often, many <code class="docutils literal notranslate"><span class="pre">numpy</span></code> functions are also separtely introduced in the course, such as <code class="docutils literal notranslate"><span class="pre">np.mean</span></code> or <code class="docutils literal notranslate"><span class="pre">np.append</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SciPy</span></code>: a set of tools for scientific computing.  The <code class="docutils literal notranslate"><span class="pre">minimize</span></code> function, used to minimize RMSE, uses the <code class="docutils literal notranslate"><span class="pre">optimize</span></code> module from <code class="docutils literal notranslate"><span class="pre">scipy</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code>: a tool for visualization. Plotting is directly done in <code class="docutils literal notranslate"><span class="pre">datascience</span></code> by calling plotting functions on Table objects. Notably, tweaking plots such as renaming titles or adjusting axis shape are abstracted away from students.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code>: the more industry standard tool for data manipulation and analysis. Although <code class="docutils literal notranslate"><span class="pre">pandas</span></code> is not a significant dependency, <code class="docutils literal notranslate"><span class="pre">datascience</span></code> supports conversion between its Table objects and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> dataframes.</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">datascience</span></code> python package was written by Berkeley professors John DeNero and David Culler, as well as students Sam Lau and Alvin Wan. The full documentation to the <code class="docutils literal notranslate"><span class="pre">datascience</span></code> package can be found <a class="reference external" href="http://data8.org/datascience/">here</a>, but students typically only need the <a class="reference external" href="http://data8.org/sp20/python-reference.html">Python Reference Guide</a> for all the functions that are used widely in Data 8.</p>
+</div>
+<div class="section" id="pedagogical-choices">
+<h2>Pedagogical Choices<a class="headerlink" href="#pedagogical-choices" title="Permalink to this headline">¶</a></h2>
+<p>One large barrier to entry in doing data science for many students is the coding knowledge required. Since Data 8 was designed to be highly accessible to students of all backgrounds, the <code class="docutils literal notranslate"><span class="pre">datascience</span></code> package was thus created to help make the programming part of the course more accessible to students with no coding background by removing syntax complexities. However, this decision comes with a profound trade-off: the package loses computational flexibility and power for increased ease of understanding and usage compared to industry-standard tools such as <code class="docutils literal notranslate"><span class="pre">pandas</span></code>. This trade-off was acceptable for teaching Data 8, as datasets and their associated computation are typically not too large (&lt;100 MB), and the computational flexibility required is limited to within the scope of the course.</p>
+<p>Overall, Data 8 emphasizes developing computational thinking skills over details in the specific syntax. This training allows students to more seamlessly transition to other more complex packages after Data 8.</p>
+<p>One limitation from using the <code class="docutils literal notranslate"><span class="pre">datascience</span></code> package is that it does not support a wide range of data cleaning procedures. Data 8 abstracts away methods in data cleaning, which will instead be taught in Data 100. As such, students typically receive well-formed data without missing values in Data 8. However, if you plan on placing a larger focus data cleaning or more advanced data manipulation procedures in your course, using <code class="docutils literal notranslate"><span class="pre">pandas</span></code> may perhaps be more appropriate.</p>
+</div>
+</div>
 
 
               </div>
@@ -256,6 +274,8 @@ SOFTWARE.</p>
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="textbook.html" title="previous page">Supplement Classroom Learning with Open Source Textbooks</a>
+    <a class='right-next' id="next-link" href="staff/intro.html" title="next page">Data 8 Course Staff Structure</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
