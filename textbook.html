@@ -1,0 +1,478 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Supplement Classroom Learning with Open Source Textbooks &#8212; Zero to Data 8</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/mystnb.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <link rel="canonical" href="zero-to-data-8/textbook.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The datascience Package" href="datascience.html" />
+    <link rel="prev" title="Slides &amp; Lecture Videos" href="syllabus/slides.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="zero-to-data-8/textbook.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Supplement Classroom Learning with Open Source Textbooks" />
+<meta property="og:description" content="Supplement Classroom Learning with Open Source Textbooks  The Data 8 course supplements every lecture with a corresponding few chapters in it’s open source text" />
+<meta property="og:image"       content="zero-to-data-8/_static/data8.png" />
+
+<meta name="twitter:card" content="summary">
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/data8.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Zero to Data 8</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="syllabus/intro.html">Syllabus & Lectures</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="syllabus/inspiration.html">Course Inspiration</a>
+    </li>
+    <li class="">
+      <a href="syllabus/syllabus.html">Syllabus Structure</a>
+    </li>
+    <li class="">
+      <a href="syllabus/slides.html">Lecture Slides & Videos</a>
+    </li>
+  </ul>
+  </li>
+  <li class="active">
+    <a href="">Textbook</a>
+  </li>
+  <li class="">
+    <a href="datascience.html">The datascience Python Package</a>
+  </li>
+  <li class="">
+    <a href="staff/intro.html">Course Staff</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="staff/roles.html">Roles and Responsibilities</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="jupyter/intro.html">Jupyter Notebook Assignments</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="jupyter/jupyter_assignments.html">Assignments in Data 8</a>
+    </li>
+    <li class="">
+      <a href="jupyter/distribution.html">Distributing Assignments</a>
+    </li>
+    <li class="">
+      <a href="jupyter/making_assignments.html">Writing Your Own Assignments</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="labs/intro.html">Labs, Worksheets, and Discussions</a>
+  <ul class="nav sidenav_l2">
+    <li class="">
+      <a href="labs/labs.html">Lab Sections</a>
+    </li>
+    <li class="">
+      <a href="labs/tutors.html">Tutor Sections</a>
+    </li>
+  </ul>
+  </li>
+  <li class="">
+    <a href="connectors_modules.html">Connector courses</a>
+  </li>
+  <li class="">
+    <a href="useful_links.html">Appendix</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/textbook.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/data-8/zero-to-data-8"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/data-8/zero-to-data-8/issues/new?title=Issue%20on%20page%20%2Ftextbook.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/data-8/zero-to-data-8/edit/master/textbook.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#the-book-s-software" class="nav-link">The Book’s Software</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#customizing-your-own-data-8-textbook" class="nav-link">Customizing your own Data 8 textbook</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#message-the-data-8-textbook-instructors" class="nav-link">Message the Data 8 textbook instructors</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#prepare-your-computer" class="nav-link">Prepare your computer</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#prepare-your-textbook-repository" class="nav-link">Prepare your textbook repository</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#configure-your-textbook-site-for-your-jupyterhub" class="nav-link">Configure your textbook site for your JupyterHub</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#push-changes-to-your-site" class="nav-link">Push changes to your site</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#preview-your-built-site-optional" class="nav-link">Preview your built site (optional)</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#update-your-textbook-with-the-latest-version" class="nav-link">Update your textbook with the latest version</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+
+<div class="tocsection editthispage">
+    <a href="https://github.com/data-8/zero-to-data-8/edit/master/textbook.md">
+        <i class="fas fa-pencil-alt"></i> Edit this page
+    </a>
+</div>
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="supplement-classroom-learning-with-open-source-textbooks">
+<h1>Supplement Classroom Learning with Open Source Textbooks<a class="headerlink" href="#supplement-classroom-learning-with-open-source-textbooks" title="Permalink to this headline">¶</a></h1>
+<p>The Data 8 course supplements every lecture with a corresponding few chapters in it’s open source textbook, <a class="reference external" href="https://inferentialthinking.com">Inferential Thinking</a>. Written by <a class="reference external" href="https://statistics.berkeley.edu/people/ani-adhikari">Ani Adhikari</a> and <a class="reference external" href="http://denero.org/">John Denero</a>, every new semester of Data 8 utilizes its interactive capabilities to help cement topics of the class for all students. The decision to make the book open-source was a conscious choice made by the founders of the course to provide it as a resource to each and every student. This message of diversity and inclusion is a prevalent message spread across the data science program at UC Berkeley.</p>
+<div class="section" id="the-book-s-software">
+<h2>The Book’s Software<a class="headerlink" href="#the-book-s-software" title="Permalink to this headline">¶</a></h2>
+<p>Inferential Thinking is built upon several software libraries which are actively maintained. The main library used to build the book is called <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyter Book</a>, which is also the same software used to create this Zero-to-Data-8 guide! The language used to teach the course is Python, and is supplemented using a library called <code class="docutils literal notranslate"><span class="pre">datascience</span></code>, which is a library authored by <a class="reference external" href="http://denero.org/">John Denero</a>, David Culler, Alvin Wan, and Sam Lau. The library’s source code can be found at the attached link <a class="reference external" href="https://pypi.org/project/datascience/">here</a>.</p>
+</div>
+<div class="section" id="customizing-your-own-data-8-textbook">
+<h2>Customizing your own Data 8 textbook<a class="headerlink" href="#customizing-your-own-data-8-textbook" title="Permalink to this headline">¶</a></h2>
+<p>The Data 8 textbook should be suitable for most courses. However, in the event that you wish to customize
+some parts of the textbook for your own course, follow the instructions on this page.</p>
+<div class="section" id="message-the-data-8-textbook-instructors">
+<h3>Message the Data 8 textbook instructors<a class="headerlink" href="#message-the-data-8-textbook-instructors" title="Permalink to this headline">¶</a></h3>
+<p>The Data 8 textbook is licensed CC-BY-ND. The last clause means “No Derivatives” unless
+you are given approval. If you’d like to make any edits to the textbook, please contact
+the Data 8 team first. You can find contact information at
+<a class="reference external" href="https://data.berkeley.edu/education/courses/data-8">the Data 8 course information page</a>.</p>
+</div>
+<div class="section" id="prepare-your-computer">
+<h3>Prepare your computer<a class="headerlink" href="#prepare-your-computer" title="Permalink to this headline">¶</a></h3>
+<p>First off, take these step to prepare your computer for adapting the Data 8
+materials:</p>
+<ol>
+<li><p>Create a folder for your data 8 deployment. We’ll deal with a few repositories
+for textbook content, so it’s easiest if they all exist under one folder. Change
+directories into this folder. e.g.:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd data8/
+</pre></div>
+</div>
+</li>
+<li><p>Make sure that you have <code class="docutils literal notranslate"><span class="pre">git</span></code> installed on your computer.</p></li>
+<li><p>If you’d like to preview changes to your site locally before pushing to GitHub,
+install Ruby and Jekyll by <a class="reference external" href="https://jekyllrb.com/docs/installation/">following the Jekyll install instructions</a></p></li>
+</ol>
+<p>Now you’re ready to set up your textbook!</p>
+<div class="section" id="prepare-your-textbook-repository">
+<h4>Prepare your textbook repository<a class="headerlink" href="#prepare-your-textbook-repository" title="Permalink to this headline">¶</a></h4>
+<p>You’ll use a tool called Jekyll to host your textbook content. Jekyll is a static
+website generator - meaning that you can use static files (like markdown) to
+generate the HTML needed for a website. Jekyll is used by GitHub pages, which
+means that you can automatically host a website online using GitHub and Jekyll.</p>
+<p>To get your own version of this textbook site, take the following steps:</p>
+<ol>
+<li><p>Fork the <a class="reference external" href="https://github.com/data-8/textbook/">data-8 textbook repository</a> on github.</p></li>
+<li><p>Clone this fork to your computer.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/&lt;YOUR-USERNAME&gt;/textbook/
+</pre></div>
+</div>
+</li>
+<li><p>Change directories to the root of your data 8 template repository</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd textbook
+</pre></div>
+</div>
+</li>
+<li><p>(optional) If you’d like to build the site locally before pushing to github,
+install the dependencies needed to build the site.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>bundle install
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="configure-your-textbook-site-for-your-jupyterhub">
+<h4>Configure your textbook site for your JupyterHub<a class="headerlink" href="#configure-your-textbook-site-for-your-jupyterhub" title="Permalink to this headline">¶</a></h4>
+<p>You should now have all of the dependencies needed to build your textbook site.</p>
+<ol class="simple">
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">textbook/</span></code> repository, there is a file called <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>.
+This contains the configuration for your textbook site. You can modify many things
+in here, such as the name and URL of your textbook website. Update all of
+the relevant fields for your textbook. In particular, see the following step…</p></li>
+<li><p>Update the fields for your JupyterHub and textbook repository. These are the
+following fields:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hub_url</span></code> is the URL for your JupyterHub. It should be a string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">textbook_repo_org</span></code> is the organization for the textbook you’ll be using. You should
+update this to <code class="docutils literal notranslate"><span class="pre">&lt;YOUR-USERNAME&gt;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hub_type</span></code> determines whether interact links point to <code class="docutils literal notranslate"><span class="pre">mybinder.org</span></code>, a free web
+service to host temporary user sessions, or to the URL of a JupyterHub.
+Since you’re hosting your textbook with a JupyterHub, set this parameter to “jupyterhub”</p></li>
+</ul>
+</li>
+</ol>
+<p>Update these fields, and you should then be ready to build the site.</p>
+<p><em>For more information on options for configuring your Data 8 website, see
+the <a class="reference external" href="https://predictablynoisy.com/jupyter-book">Jupyter Books</a> guide</em></p>
+</div>
+<div class="section" id="push-changes-to-your-site">
+<h4>Push changes to your site<a class="headerlink" href="#push-changes-to-your-site" title="Permalink to this headline">¶</a></h4>
+<p>Now that you’ve configured the site, take the following steps to see your changes in action.</p>
+<ol>
+<li><p>Commit and push your changes to your fork of the repository.</p></li>
+<li><p>Confirm that <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> site-building is enabled.</p>
+<p>From your GitHub repository, click <code class="docutils literal notranslate"><span class="pre">Settings</span></code> then scroll down to the
+<code class="docutils literal notranslate"><span class="pre">GitHub</span> <span class="pre">Pages</span></code> section. You should see the message <code class="docutils literal notranslate"><span class="pre">Your</span> <span class="pre">site</span> <span class="pre">is</span> <span class="pre">published</span> <span class="pre">at</span> <span class="pre">&lt;YOUR-URL&gt;</span></code>.</p>
+</li>
+<li><p>Go to the URL listed at <code class="docutils literal notranslate"><span class="pre">&lt;YOUR-URL&gt;</span></code> and you should see your live site.</p></li>
+</ol>
+</div>
+<div class="section" id="preview-your-built-site-optional">
+<h4>Preview your built site (optional)<a class="headerlink" href="#preview-your-built-site-optional" title="Permalink to this headline">¶</a></h4>
+<p>You can also preview your built site using Jekyll on your computer.
+To do this, take the following steps:</p>
+<ol>
+<li><p>Ensure that Jekyll and Ruby are installed.</p></li>
+<li><p>Ensure that your notebooks have been converted to markdown, there should be a
+collection of them in <code class="docutils literal notranslate"><span class="pre">_chapters</span></code></p></li>
+<li><p>Run the Jekyll site preview command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>bundle exec jekyll serve
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Jekyll will then build your textbook, and start a server that runs its
+content. Wait for the following text to appear:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Server address: http://127.0.0.1:4000/
+</pre></div>
+</div>
+<p>This is the location of your local demo for the textbook. Go to that URL in the
+browser, and you should see a functioning textbook website. The textbook interact
+links should point to the JupyterHub URL you’ve specified in <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>.</p>
+</div>
+<div class="section" id="update-your-textbook-with-the-latest-version">
+<h4>Update your textbook with the latest version<a class="headerlink" href="#update-your-textbook-with-the-latest-version" title="Permalink to this headline">¶</a></h4>
+<p>If you believe that the Data 8 textbook has been modified, and you’d like to incorporate
+these changes into your own version of the textbook, take the following steps:</p>
+<ol>
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">data-8</span></code> repository as a “remote” on your local git repo:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git remote add upstream https://github.com/data-8/textbook
+</pre></div>
+</div>
+<p>This will fetch the latest version of the <code class="docutils literal notranslate"><span class="pre">data-8</span></code> copy of the textbook.
+To update your local copy, you have two options:</p>
+<ul>
+<li><p><strong>Pull in the latest changes from the remote repository</strong> into your local <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch:</p>
+<p>git pull upstream gh-pages</p>
+</li>
+</ul>
+<p>This will attempt to pull in all changes from the remote repository, and shouldn’t be
+a problem as long as you haven’t changed too much in your local repo.</p>
+<p>You might get merge conflicts, in which case you should address them if possible!
+In general, the only files that you should need
+to update are those in <code class="docutils literal notranslate"><span class="pre">_chapters/</span></code> and <code class="docutils literal notranslate"><span class="pre">notebooks/</span></code>.  If there is too much
+in the merge conflict, try the following step:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">cherry-pick</span></code> new changes</strong>. If you know exactly which changes you want to
+incorporate from the “master” version of the textbook, you can use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">cherry-pick</span></code> to
+only apply the changes from a specific commit into your repo.</p></li>
+</ul>
+<p>Once you know the commit hash that you want to apply, simply run the following command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> git cherry-pick &lt;COMMIT-HASH&gt;
+</pre></div>
+</div>
+<p><a class="reference external" href="https://github.com/data-8/textbook/commits/gh-pages">Here’s a list of the latest commits in the textbook</a> for reference.</p>
+</li>
+<li><p>Push changes to your github repository:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git push
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Note that the branch on which the textbook exists is <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>, not <code class="docutils literal notranslate"><span class="pre">master</span></code>. This should
+be the same for your copy of the textbook as well.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="syllabus/slides.html" title="previous page">Slides &amp; Lecture Videos</a>
+    <a class='right-next' id="next-link" href="datascience.html" title="next page">The <code class="docutils literal notranslate"><span class="pre">datascience</span></code> Package</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By UC Berkeley Division of Computing, Data Science, and Information<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>
