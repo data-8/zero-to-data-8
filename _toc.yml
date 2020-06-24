@@ -1,53 +1,53 @@
 # Top-level page
 - title: Home
-  file: content/intro
+  file: intro
 
 - title: Syllabus & Lectures
-  file: content/syllabus/intro
+  file: syllabus/intro
   expand_sections: true
   sections:
     - title: Course Inspiration
-      file: content/syllabus/inspiration
+      file: syllabus/inspiration
     - title: Syllabus Structure
-      file: content/syllabus/syllabus
+      file: syllabus/syllabus
     - title: Lecture Slides & Videos
-      file: content/syllabus/slides
+      file: syllabus/slides
 
 - title: Textbook
-  file: content/textbook
+  file: textbook
 
 - title: The datascience Python Package
-  file: content/datascience
+  file: datascience
 
 - title: Course Staff
-  file: content/staff/intro
+  file: staff/intro
   expand_sections: true
   sections:
     - title: Roles and Responsibilities
-      file: content/staff/roles
+      file: staff/roles
 
 - title: Jupyter Notebook Assignments
-  file: content/jupyter/intro
+  file: jupyter/intro
   expand_sections: true
   sections:
     - title: Assignments in Data 8
-      file: content/jupyter/jupyter_assignments
+      file: jupyter/jupyter_assignments
     - title: Distributing Assignments
-      file: content/jupyter/distribution
+      file: jupyter/distribution
     - title: Writing Your Own Assignments
-      file: content/jupyter/making_assignments
+      file: jupyter/making_assignments
 
 - title: Labs, Worksheets, and Discussions
-  file: content/labs/intro
+  file: labs/intro
   expand_sections: true
   sections:
     - title: Lab Sections
-      file: content/labs/labs
+      file: labs/labs
     - title: Tutor Sections
-      file: content/labs/tutors
+      file: labs/tutors
 
 - title: Connectors and Modules
-  file: content/connectors_modules
+  file: connectors_modules
 
 - title: Appendix
-  file: content/useful_links
+  file: useful_links
