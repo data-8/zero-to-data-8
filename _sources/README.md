@@ -12,7 +12,7 @@ Building this book requires the latest beta version of Jupyter Book. You can
 install it locally here:
 
 ```
-pip install -U "jupyter-book>=0.7.0b"
+pip install -U "jupyter-book>=0.7.0"
 ```
 
 See [the jupyter book documentation](https://jupyterbook.org) for more information.
