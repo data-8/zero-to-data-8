@@ -1,21 +1,42 @@
 
-
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab Sections &#8212; Zero to Data 8</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/sphinx-book-theme.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -23,19 +44,23 @@
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/mystnb.js"></script>
-    <script src="../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="zero-to-data-8/labs/labs.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Tutor Sessions and Office Hours" href="tutors.html" />
     <link rel="prev" title="Worksheets and Discussions" href="intro.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
@@ -45,7 +70,7 @@
 <meta property="og:description" content="Lab Sections  Lab sections provide an opportunity for students to apply the current week’s lecture topics and gain first-exposure to the technical coding requir" />
 <meta property="og:image"       content="zero-to-data-8/_static/data8.png" />
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary" />
 
 
   </head>
@@ -66,79 +91,137 @@
   <h1 class="site-logo" id="site-title">Zero to Data 8</h1>
   
 </a>
-</div>
-
-<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
-
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  
-  <ul class="nav sidenav_l1">
-  <li class="">
-    <a href="../syllabus/intro.html">Syllabus & Lectures</a>
-  <ul class="nav sidenav_l2">
-    <li class="">
-      <a href="../syllabus/inspiration.html">Course Inspiration</a>
-    </li>
-    <li class="">
-      <a href="../syllabus/syllabus.html">Syllabus Structure</a>
-    </li>
-    <li class="">
-      <a href="../syllabus/slides.html">Lecture Slides & Videos</a>
-    </li>
-  </ul>
-  </li>
-  <li class="">
-    <a href="../textbook.html">Textbook</a>
-  </li>
-  <li class="">
-    <a href="../datascience.html">The datascience Python Package</a>
-  </li>
-  <li class="">
-    <a href="../staff/intro.html">Course Staff</a>
-  <ul class="nav sidenav_l2">
-    <li class="">
-      <a href="../staff/roles.html">Roles and Responsibilities</a>
-    </li>
-  </ul>
-  </li>
-  <li class="">
-    <a href="../jupyter/intro.html">Jupyter Notebook Assignments</a>
-  <ul class="nav sidenav_l2">
-    <li class="">
-      <a href="../jupyter/jupyter_assignments.html">Assignments in Data 8</a>
-    </li>
-    <li class="">
-      <a href="../jupyter/distribution.html">Distributing Assignments</a>
-    </li>
-    <li class="">
-      <a href="../jupyter/making_assignments.html">Writing Your Own Assignments</a>
-    </li>
-  </ul>
-  </li>
-  <li class="active">
-    <a href="intro.html">Labs, Worksheets, and Discussions</a>
-  <ul class="nav sidenav_l2">
-    <li class="active">
-      <a href="">Lab Sections</a>
-    </li>
-    <li class="">
-      <a href="tutors.html">Tutor Sections</a>
-    </li>
-  </ul>
-  </li>
-  <li class="">
-    <a href="../connectors_modules.html">Connector courses</a>
-  </li>
-  <li class="">
-    <a href="../useful_links.html">Appendix</a>
-  </li>
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   The Data 8 Pedagogy Guide
+  </a>
+ </li>
 </ul>
-</nav>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../syllabus/intro.html">
+   Syllabus &amp; Lectures
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../syllabus/inspiration.html">
+     Course Inspiration
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../syllabus/syllabus.html">
+     Syllabus Structure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../syllabus/slides.html">
+     Lecture Slides &amp; Videos
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../textbook.html">
+   Textbook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../datascience.html">
+   The datascience Python Package
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../staff/intro.html">
+   Course Staff
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../staff/roles.html">
+     Roles and Responsibilities
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../jupyter/intro.html">
+   Jupyter Notebook Assignments
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jupyter/jupyter_assignments.html">
+     Assignments in Data 8
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jupyter/distribution.html">
+     Distributing Assignments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../jupyter/making_assignments.html">
+     Writing Your Own Assignments
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="intro.html">
+   Labs, Worksheets, and Discussions
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Lab Sections
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tutors.html">
+     Tutor Sections
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../connectors_modules.html">
+   Connector courses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../connectors_modules.html#modules">
+   Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../connectors_modules.html#creating-your-own-module-or-connector">
+   Creating Your Own Module or Connector
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../useful_links.html">
+   Appendix
+  </a>
+ </li>
+</ul>
 
- <!-- To handle the deprecated key -->
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
 
 </div>
 
@@ -163,11 +246,11 @@
             <i class="fas fa-arrow-up"></i>
         </button>
         
-        <div class="dropdown-buttons-trigger">
+        
+<div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
-    
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         
@@ -179,8 +262,8 @@
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
-    
 </div>
+
         <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -204,43 +287,41 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
 
     </div>
+
+    <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#announcements">
+   Announcements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mini-discussion-lecture-and-worksheet">
+   Mini-Discussion Lecture and Worksheet
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-assignment">
+   Lab Assignment
+  </a>
+ </li>
+</ul>
 
-<nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#announcements" class="nav-link">Announcements</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#mini-discussion-lecture-and-worksheet" class="nav-link">Mini-Discussion Lecture and Worksheet</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#lab-assignment" class="nav-link">Lab Assignment</a>
-        </li>
-    
-    </ul>
-</nav>
-
-
-
-<div class="tocsection editthispage">
-    <a href="https://github.com/data-8/zero-to-data-8/edit/master/labs/labs.md">
-        <i class="fas fa-pencil-alt"></i> Edit this page
-    </a>
-</div>
-
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -269,6 +350,25 @@
 </div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./labs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
@@ -298,7 +398,10 @@
       </div>
     </div>
 
-    <script src="../_static/js/index.js"></script>
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
     
   </body>
 </html>
