@@ -11,3 +11,6 @@ html:
 repository:
   url: https://github.com/data-8/zero-to-data-8
 
+config:
+    html_theme_options:
+      show_navbar_depth: 1
