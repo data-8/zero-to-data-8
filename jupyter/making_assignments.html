@@ -1,355 +1,473 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Creating Data 8 Assignments &#8212; Zero to Data 8</title>
-    
-  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'jupyter/making_assignments';</script>
     <link rel="canonical" href="zero-to-data-8/jupyter/making_assignments.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Worksheets and Discussions" href="../labs/intro.html" />
     <link rel="prev" title="Distributing Notebooks" href="distribution.html" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
-
-
-<!-- Opengraph tags -->
-<meta property="og:url"         content="zero-to-data-8/jupyter/making_assignments.html" />
-<meta property="og:type"        content="article" />
-<meta property="og:title"       content="Creating Data 8 Assignments" />
-<meta property="og:description" content="Creating Data 8 Assignments  Assignments in Data 8 are created in OK format using a tool called jAssign. jAssign parses a master notebook containing questions, " />
-<meta property="og:image"       content="zero-to-data-8/_static/data8.png" />
-
-<meta name="twitter:card" content="summary" />
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-        <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
+    
+    
+    
+  </div>
   
-  <img src="../_static/data8.png" class="logo" alt="logo">
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
   
   
-  <h1 class="site-logo" id="site-title">Zero to Data 8</h1>
   
+  
+    
+    
+      
+    
+    
+    <img src="../_static/data8.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/data8.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    The Data 8 Pedagogy Guide
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../syllabus/intro.html">Syllabus &amp; Lectures</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../syllabus/inspiration.html">Course Inspiration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../syllabus/syllabus.html">Syllabus Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../syllabus/slides.html">Lecture Slides &amp; Videos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../textbook.html">Textbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datascience.html">The datascience Python Package</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../staff/intro.html">Course Staff</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../staff/roles.html">Roles and Responsibilities</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Jupyter Notebook Assignments</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="jupyter_assignments.html">Assignments in Data 8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distribution.html">Distributing Assignments</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Writing Your Own Assignments</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../labs/intro.html">Labs, Worksheets, and Discussions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../labs/labs.html">Lab Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../labs/tutors.html">Tutor Sections</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../connectors_modules.html">Connector courses</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../useful_links.html">Appendix</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/data-8/zero-to-data-8" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
 </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   The Data 8 Pedagogy Guide
-  </a>
- </li>
-</ul>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../syllabus/intro.html">
-   Syllabus &amp; Lectures
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../syllabus/inspiration.html">
-     Course Inspiration
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../syllabus/syllabus.html">
-     Syllabus Structure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../syllabus/slides.html">
-     Lecture Slides &amp; Videos
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../textbook.html">
-   Textbook
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../datascience.html">
-   The datascience Python Package
-  </a>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../staff/intro.html">
-   Course Staff
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../staff/roles.html">
-     Roles and Responsibilities
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="intro.html">
-   Jupyter Notebook Assignments
-  </a>
-  <ul class="current collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="jupyter_assignments.html">
-     Assignments in Data 8
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="distribution.html">
-     Distributing Assignments
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Writing Your Own Assignments
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="../labs/intro.html">
-   Labs, Worksheets, and Discussions
-  </a>
-  <ul class="collapse-ul">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../labs/labs.html">
-     Lab Sections
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../labs/tutors.html">
-     Tutor Sections
-    </a>
-   </li>
-  </ul>
-  <i class="fas fa-chevron-down">
-  </i>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../connectors_modules.html">
-   Connector courses
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../connectors_modules.html#modules">
-   Modules
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../connectors_modules.html#creating-your-own-module-or-connector">
-   Creating Your Own Module or Connector
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../useful_links.html">
-   Appendix
-  </a>
- </li>
-</ul>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/data-8/zero-to-data-8/edit/master/jupyter/making_assignments.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
 
-</nav> <!-- To handle the deprecated key -->
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/data-8/zero-to-data-8/issues/new?title=Issue%20on%20page%20%2Fjupyter/making_assignments.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
 
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
 
-          
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
 
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/jupyter/making_assignments.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
 
-        <!-- Source interaction buttons -->
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/jupyter/making_assignments.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/data-8/zero-to-data-8"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/data-8/zero-to-data-8/issues/new?title=Issue%20on%20page%20%2Fjupyter/making_assignments.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/data-8/zero-to-data-8/edit/master/jupyter/making_assignments.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
 
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
+</div>
+</div>
+              
+              
 
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Creating Data 8 Assignments</h1>
     <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#writing-your-own-assignments">
-   Writing Your Own Assignments
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#best-practices-for-autograder-tests">
-     Best Practices for Autograder Tests
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#other-assignment-development-tools">
-   Other Assignment Development Tools
-  </a>
- </li>
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-your-own-assignments">Writing Your Own Assignments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-for-autograder-tests">Best Practices for Autograder Tests</a></li>
 </ul>
-
-        </nav>
-        
+</li>
+</ul>
+            </nav>
+        </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
+
+              
                 
-  <div class="section" id="creating-data-8-assignments">
-<h1>Creating Data 8 Assignments<a class="headerlink" href="#creating-data-8-assignments" title="Permalink to this headline">¶</a></h1>
-<p>Assignments in Data 8 are created in OK format using a tool called <a class="reference external" href="https://github.com/okpy/jassign">jAssign</a>. jAssign parses a master notebook containing questions, solutions, and tests and creates two disribution directories: one with solutions and all tests for autograders and a second with no solutions and only public tests for students. jAssign also includes utilities to generate filtered LaTeX PDFs of students’ notebooks to ease the process of manually grading written questions.</p>
-<div class="section" id="writing-your-own-assignments">
-<h2>Writing Your Own Assignments<a class="headerlink" href="#writing-your-own-assignments" title="Permalink to this headline">¶</a></h2>
-<p>jAssign makes writing your own assignments very easy by providing a simple format for a master notebook. Writing narrative/filler cells is as normal. To create a question, add a YAML-formatted metadata block to the end of the Markdown cell for that question to define some configurations for it. An example question cell might contain:</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">BEGIN</span> <span class="pre">QUESTION</span></code> block contains the mandatory parameter <code class="docutils literal notranslate"><span class="pre">name</span></code> and two optional parameters, <code class="docutils literal notranslate"><span class="pre">manual</span></code> and <code class="docutils literal notranslate"><span class="pre">points</span></code>, whose default values are in the block above. Immediately after the question cell should be a solution cell. Using specially-formatted Python comments, jAssign can parse the solution cell and replace lines with ellipsis or other user-defined prompts (this behavior is described in more detail in the jAssign docs, linked below). After the solution cell come zero or more test cells, denoted by a <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">TEST</span></code> or <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">HIDDEN</span> <span class="pre">TEST</span></code> line at the top of the cell. These cells will have their outputs parsed by jAssign to generate the ok-formatted test files needed for autograding. jAssigns <a class="reference external" href="https://github.com/okpy/jassign#getting-started">getting started guide</a> describes how to call jAssign to parse the notebook.</p>
-<p>Once you have run jAssign, you’re ready to distribute your assignment to students! The <code class="docutils literal notranslate"><span class="pre">student</span></code> subdirectoy of your output directory will contain the version of the notebook for students (with solutions removed and only public tests) and the <code class="docutils literal notranslate"><span class="pre">autograder</span></code> subdirectory the version <em>with</em> solutions and hidden tests.</p>
-<p>For more information, check out the <a class="reference external" href="https://github.com/okpy/jassign/tree/master/docs">jAssign documentation</a>.</p>
-<div class="section" id="best-practices-for-autograder-tests">
-<h3>Best Practices for Autograder Tests<a class="headerlink" href="#best-practices-for-autograder-tests" title="Permalink to this headline">¶</a></h3>
-<p>There are several nuances to writing good autograder tests. While jAssign does abstract away the doctest format required for writing them from scratch, there are some details that shouldn’t be overlooked. <a class="reference external" href="https://autograder-tests.rtfd.io">Writing Autograder Tests</a> is a guide on best practices for writing Pythonic autograder tests and will help you think through the best ways to write tests in your notebook.</p>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="creating-data-8-assignments">
+<h1>Creating Data 8 Assignments<a class="headerlink" href="#creating-data-8-assignments" title="Permalink to this heading">#</a></h1>
+<p>Assignments in Data 8 are created in <a class="reference external" href="https://otter-grader.readthedocs.io/en/latest/">Otter-Grader-based</a> format. Otter-Grader parses a parent notebook containing questions, solutions, and tests to creates two disribution directories: one with solutions and all tests for autograders and a second with no solutions and only public tests for students. Otter-Grader also includes utilities to generate filtered LaTeX PDFs of students’ notebooks to ease the process of manually grading written questions.</p>
+<section id="writing-your-own-assignments">
+<h2>Writing Your Own Assignments<a class="headerlink" href="#writing-your-own-assignments" title="Permalink to this heading">#</a></h2>
+<p>Otter-Grader makes writing your own assignments very easy by providing tools to parse simple markdown yaml-format in a parent notebook. To create a question, add a YAML-formatted metadata block to the end of the Markdown cell for that question to define some configurations for it. An example question cell might contain:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">BEGIN</span> <span class="pre">QUESTION</span></code> block contains the mandatory parameter <code class="docutils literal notranslate"><span class="pre">name</span></code> and two optional parameters, <code class="docutils literal notranslate"><span class="pre">manual</span></code> and <code class="docutils literal notranslate"><span class="pre">points</span></code>.</p>
+<p>Immediately after the question cell should be a solution cell.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># BEGIN SOLUTION</span>
+<span class="k">def</span> <span class="nf">sieve</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate a set of prime numbers less than or equal to a positive integer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># BEGIN SOLUTION</span>
+    <span class="n">is_prime</span> <span class="o">=</span> <span class="p">[</span><span class="kc">True</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">while</span> <span class="n">p</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">is_prime</span><span class="p">[</span><span class="n">p</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">p</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+                <span class="n">is_prime</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">p</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="n">is_prime</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span> <span class="kc">False</span>
+    <span class="n">is_prime</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">is_prime</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="c1"># END SOLUTION</span>
+<span class="c1"># END SOLUTION</span>
+</pre></div>
 </div>
+<p>Using specially-formatted Python comments, otter-grader can parse the solution cell and replace lines with ellipsis or other user-defined prompts (this behavior is described in more detail in the otter-grader docs, linked below).</p>
+<p>After the solution cell comes zero or more test cells, denoted by a beginning <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">BEGIN</span> <span class="pre">TESTS</span></code> annotation, finishing with an ending <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">END</span> <span class="pre">TESTS</span></code> annotation, and between these two lines functions that test the code. These functions’ names begin with <code class="docutils literal notranslate"><span class="pre">test_</span></code> and are marked as  <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">HIDDEN</span></code> if appropriate. The <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">IGNORE</span></code> lines provide funcationality for the grader to call the test funcions appropriately.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># BEGIN TESTS</span>
+<span class="k">def</span> <span class="nf">test_low_primes</span><span class="p">(</span><span class="n">sieve</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">sieve</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="n">sieve</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span><span class="mi">2</span><span class="p">}</span>
+    <span class="k">assert</span> <span class="n">sieve</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+
+<span class="n">test_low_primes</span><span class="p">(</span><span class="n">sieve</span><span class="p">)</span>  <span class="c1"># IGNORE</span>
+<span class="c1"># HIDDEN</span>
+<span class="k">def</span> <span class="nf">test_higher_primes</span><span class="p">(</span><span class="n">sieve</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">sieve</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">}</span>
+    <span class="k">assert</span> <span class="n">sieve</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">83</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">97</span><span class="p">}</span>
+
+<span class="n">test_higher_primes</span><span class="p">(</span><span class="n">sieve</span><span class="p">)</span>  <span class="c1"># IGNORE</span>
+<span class="c1"># END TESTS</span>
+<span class="c1"># END QUESTION</span>
+</pre></div>
 </div>
-<div class="section" id="other-assignment-development-tools">
-<h2>Other Assignment Development Tools<a class="headerlink" href="#other-assignment-development-tools" title="Permalink to this headline">¶</a></h2>
-<p>While Data 8 makes us of OkPy and jAssign, there are other autograding tools that UC Berkeley uses, including <span class="xref myst">Otter Grader</span>. Otter includes a forked version of jAssign called Otter Assign that functions similar to jAssign (and is even backwards-compatible with its notebook format). For more information about Otter Assign, see the <a class="reference external" href="https://otter-grader.rtfd.io">Otter documentation</a>.</p>
-</div>
-</div>
+<p>These cells will have their outputs parsed by otter-grader to generate the otter-formatted test files needed for autograding. The otter-grader docs <a class="reference external" href="https://otter-grader.readthedocs.io/en/latest/tutorial.html">tutorial</a> describes how to call otter-grader to parse the notebook.</p>
+<p>Once you have run otter-grader, you’re ready to distribute your assignment to students! The <code class="docutils literal notranslate"><span class="pre">student</span></code> subdirectoy of your output directory will contain the version of the notebook for students (with solutions removed and only public tests) and the <code class="docutils literal notranslate"><span class="pre">autograder</span></code> subdirectory the version <em>with</em> solutions and hidden tests.</p>
+<p>For more information, check out the <a class="reference external" href="https://otter-grader.readthedocs.io/en/latest/">otter-grader documentation</a>.</p>
+<section id="best-practices-for-autograder-tests">
+<h3>Best Practices for Autograder Tests<a class="headerlink" href="#best-practices-for-autograder-tests" title="Permalink to this heading">#</a></h3>
+<p>There are several nuances to writing good autograder tests. While Otter-Grader does abstract away the doctest format required for writing them from scratch, there are some details that shouldn’t be overlooked. <a class="reference external" href="https://autograder-tests.rtfd.io">Writing Autograder Tests</a> is a guide on best practices for writing Pythonic autograder tests and will help you think through the best ways to write tests in your notebook.</p>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -363,7 +481,7 @@
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./jupyter"
         },
         predefinedOutput: true
@@ -371,38 +489,108 @@
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
-        
-    <a class='left-prev' id="prev-link" href="distribution.html" title="previous page">Distributing Notebooks</a>
-    <a class='right-next' id="next-link" href="../labs/intro.html" title="next page">Worksheets and Discussions</a>
 
-    </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By UC Berkeley Division of Computing, Data Science, and Information<br/>
-        
-            &copy; Copyright 2020.<br/>
-      </p>
-    </div>
-  </footer>
-</main>
-
-
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="distribution.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Distributing Notebooks</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../labs/intro.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Worksheets and Discussions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-your-own-assignments">Writing Your Own Assignments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-for-autograder-tests">Best Practices for Autograder Tests</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By UC Berkeley Division of Computing, Data Science, and Information
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-    
-  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
-    
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
