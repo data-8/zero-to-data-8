@@ -1,53 +1,42 @@
-# Top-level page
-- title: Home
-  file: intro
-
-- title: Syllabus & Lectures
-  file: syllabus/intro
-  expand_sections: true
+format: jb-article
+root: intro
+title: Home
+sections:
+- file: syllabus/intro
+  title: Syllabus & Lectures
   sections:
-    - title: Course Inspiration
-      file: syllabus/inspiration
-    - title: Syllabus Structure
-      file: syllabus/syllabus
-    - title: Lecture Slides & Videos
-      file: syllabus/slides
-
-- title: Textbook
-  file: textbook
-
-- title: The datascience Python Package
-  file: datascience
-
-- title: Course Staff
-  file: staff/intro
-  expand_sections: true
+  - file: syllabus/inspiration
+    title: Course Inspiration
+  - file: syllabus/syllabus
+    title: Syllabus Structure
+  - file: syllabus/slides
+    title: Lecture Slides & Videos
+- file: textbook
+  title: Textbook
+- file: datascience
+  title: The datascience Python Package
+- file: staff/intro
+  title: Course Staff
   sections:
-    - title: Roles and Responsibilities
-      file: staff/roles
-
-- title: Jupyter Notebook Assignments
-  file: jupyter/intro
-  expand_sections: true
+  - file: staff/roles
+    title: Roles and Responsibilities
+- file: jupyter/intro
+  title: Jupyter Notebook Assignments
   sections:
-    - title: Assignments in Data 8
-      file: jupyter/jupyter_assignments
-    - title: Distributing Assignments
-      file: jupyter/distribution
-    - title: Writing Your Own Assignments
-      file: jupyter/making_assignments
-
-- title: Labs, Worksheets, and Discussions
-  file: labs/intro
-  expand_sections: true
+  - file: jupyter/jupyter_assignments
+    title: Assignments in Data 8
+  - file: jupyter/distribution
+    title: Distributing Assignments
+  - file: jupyter/making_assignments
+    title: Writing Your Own Assignments
+- file: labs/intro
+  title: Labs, Worksheets, and Discussions
   sections:
-    - title: Lab Sections
-      file: labs/labs
-    - title: Tutor Sections
-      file: labs/tutors
-
-- title: Connectors and Modules
-  file: connectors_modules
-
-- title: Appendix
-  file: useful_links
+  - file: labs/labs
+    title: Lab Sections
+  - file: labs/tutors
+    title: Tutor Sections
+- file: connectors_modules
+  title: Connectors and Modules
+- file: useful_links
+  title: Appendix
