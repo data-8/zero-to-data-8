@@ -1,6 +1,6 @@
 # Creating Data 8 Assignments
 
-Assignments in Data 8 are created in [Otter-Grader-based](https://otter-grader.readthedocs.io/en/latest/) format. Otter-Grader parses a parent notebook containing questions, solutions, and tests to creates two disribution directories: one with solutions and all tests for autograders and a second with no solutions and only public tests for students. Otter-Grader also includes utilities to generate filtered LaTeX PDFs of students' notebooks to ease the process of manually grading written questions.
+Assignments in Data 8 are created in [Otter-Grader-based](https://otter-grader.readthedocs.io/en/v4.4.1/) format. Otter-Grader parses a parent notebook containing questions, solutions, and tests to creates two distribution directories: one with solutions and all tests for automatic grading and a second with no solutions and only public tests for students. Otter-Grader also includes utilities to generate filtered LaTeX PDFs of students' notebooks to ease the process of manually grading written questions.
 
 ## Writing Your Own Assignments
 
@@ -65,7 +65,7 @@ test_higher_primes(sieve)  # IGNORE
 
 Once you have run otter-grader, you're ready to distribute your assignment to students! The `student` subdirectoy of your output directory will contain the version of the notebook for students (with solutions removed and only public tests) and the `autograder` subdirectory the version *with* solutions and hidden tests.
 
-For more information, check out the [otter-grader documentation](https://otter-grader.readthedocs.io/en/latest/).
+For more information, check out the [otter-grader documentation](https://otter-grader.readthedocs.io/en/v4.4.1/).
 
 ### Best Practices for Autograder Tests
 
