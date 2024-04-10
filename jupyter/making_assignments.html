@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -77,6 +78,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -130,9 +140,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../intro.html">
+  
   
   
   
@@ -142,8 +154,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/data8.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/data8.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/data8.png" class="logo__image only-light" alt="Zero to Data 8 - Home"/>
+    <script>document.write(`<img src="../_static/data8.png" class="logo__image only-dark" alt="Zero to Data 8 - Home"/>`);</script>
   
   
 </a></div>
@@ -170,6 +182,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../staff/roles.html">Roles and Responsibilities</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../authoring/authoring_screen_recordings.html">Authoring: Start-to-Finish</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Jupyter Notebook Assignments</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="jupyter_assignments.html">Assignments in Data 8</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distribution.html">Distributing Assignments</a></li>
@@ -355,20 +368,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -412,7 +427,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="creating-data-8-assignments">
 <h1>Creating Data 8 Assignments<a class="headerlink" href="#creating-data-8-assignments" title="Permalink to this heading">#</a></h1>
-<p>Assignments in Data 8 are created in <a class="reference external" href="https://otter-grader.readthedocs.io/en/latest/">Otter-Grader-based</a> format. Otter-Grader parses a parent notebook containing questions, solutions, and tests to creates two disribution directories: one with solutions and all tests for autograders and a second with no solutions and only public tests for students. Otter-Grader also includes utilities to generate filtered LaTeX PDFs of students’ notebooks to ease the process of manually grading written questions.</p>
+<p>Assignments in Data 8 are created in <a class="reference external" href="https://otter-grader.readthedocs.io/en/v4.4.1/">Otter-Grader-based</a> format. Otter-Grader parses a parent notebook containing questions, solutions, and tests to creates two distribution directories: one with solutions and all tests for automatic grading and a second with no solutions and only public tests for students. Otter-Grader also includes utilities to generate filtered LaTeX PDFs of students’ notebooks to ease the process of manually grading written questions.</p>
 <section id="writing-your-own-assignments">
 <h2>Writing Your Own Assignments<a class="headerlink" href="#writing-your-own-assignments" title="Permalink to this heading">#</a></h2>
 <p>Otter-Grader makes writing your own assignments very easy by providing tools to parse simple markdown yaml-format in a parent notebook. To create a question, add a YAML-formatted metadata block to the end of the Markdown cell for that question to define some configurations for it. An example question cell might contain:</p>
@@ -461,7 +476,7 @@ document.write(`
 </div>
 <p>These cells will have their outputs parsed by otter-grader to generate the otter-formatted test files needed for autograding. The otter-grader docs <a class="reference external" href="https://otter-grader.readthedocs.io/en/latest/tutorial.html">tutorial</a> describes how to call otter-grader to parse the notebook.</p>
 <p>Once you have run otter-grader, you’re ready to distribute your assignment to students! The <code class="docutils literal notranslate"><span class="pre">student</span></code> subdirectoy of your output directory will contain the version of the notebook for students (with solutions removed and only public tests) and the <code class="docutils literal notranslate"><span class="pre">autograder</span></code> subdirectory the version <em>with</em> solutions and hidden tests.</p>
-<p>For more information, check out the <a class="reference external" href="https://otter-grader.readthedocs.io/en/latest/">otter-grader documentation</a>.</p>
+<p>For more information, check out the <a class="reference external" href="https://otter-grader.readthedocs.io/en/v4.4.1/">otter-grader documentation</a>.</p>
 <section id="best-practices-for-autograder-tests">
 <h3>Best Practices for Autograder Tests<a class="headerlink" href="#best-practices-for-autograder-tests" title="Permalink to this heading">#</a></h3>
 <p>There are several nuances to writing good autograder tests. While Otter-Grader does abstract away the doctest format required for writing them from scratch, there are some details that shouldn’t be overlooked. <a class="reference external" href="https://autograder-tests.rtfd.io">Writing Autograder Tests</a> is a guide on best practices for writing Pythonic autograder tests and will help you think through the best ways to write tests in your notebook.</p>
@@ -494,11 +509,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="distribution.html"
@@ -518,10 +532,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -561,6 +572,7 @@ By UC Berkeley Division of Computing, Data Science, and Information
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2022.
@@ -587,8 +599,8 @@ By UC Berkeley Division of Computing, Data Science, and Information
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
   </footer>
