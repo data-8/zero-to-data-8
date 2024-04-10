@@ -104,3 +104,4 @@ ENV/
 .sass-cache
 _site
 _build
+jupyter/.DS_Store
