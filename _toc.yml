@@ -20,8 +20,13 @@ sections:
   sections:
   - file: staff/roles
     title: Roles and Responsibilities
-- file: authoring/authoring_screen_recordings
-  title: "Authoring: Start-to-Finish"
+- file: authoring/intro
+  title: "Authoring Notebooks"
+  sections:
+  - file:  authoring/minor_changes_screen_recordings
+    title:   "Minor Changes"
+  - file:  authoring/authoring_screen_recordings
+    title:   "Authoring: Start-to-Finish"
 - file: jupyter/intro
   title: Jupyter Notebook Assignments
   sections:
