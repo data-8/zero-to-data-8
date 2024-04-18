@@ -27,6 +27,15 @@ sections:
     title:   "Minor Changes"
   - file:  authoring/authoring_screen_recordings
     title:   "Authoring: Start-to-Finish"
+- file: grading/intro
+  title: Grading
+  sections:
+  - file:  grading/otter_service_standalone
+    title:   "Otter Service Standalone"
+  - file:  grading/gradescope
+    title:   "GradeScope"
+  - file:  grading/local
+    title:   "Grading on Your Machine"
 - file: jupyter/intro
   title: Jupyter Notebook Assignments
   sections:
