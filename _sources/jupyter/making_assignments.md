@@ -1,5 +1,7 @@
 # Creating Data 8 Assignments
 
+Screen recordings with examples and more details on the process of creating and editing notebooks is found in the [Authoring Notebook](../authoring/intro) seciton.
+
 Assignments in Data 8 are created in [Otter-Grader-based](https://otter-grader.readthedocs.io/en/v4.4.1/) format. Otter-Grader parses a parent notebook containing questions, solutions, and tests to creates two distribution directories: one with solutions and all tests for automatic grading and a second with no solutions and only public tests for students. Otter-Grader also includes utilities to generate filtered LaTeX PDFs of students' notebooks to ease the process of manually grading written questions.
 
 ## Writing Your Own Assignments

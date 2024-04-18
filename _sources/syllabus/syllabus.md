@@ -108,7 +108,7 @@ Below are some fundamentals for comparing two distributions that students come a
 You may use whatever technology you prefer for managing your course and
 distributing content. However, we recommend setting up a syllabus page that
 is used for distributing interact links and course materials. For an example,
-see the structure of the Spring 2020 course syllabus: <http://data8.org/sp20/>
+see the structure of the Spring 2022 course syllabus: <http://data8.org/sp22/>
 
 The syllabus has the following structure:
 
@@ -122,7 +122,7 @@ Each row is a lecture, and each column is a type of material you can distribute.
 The links in the columns either point to pages on the [course textbook](https://inferentialthinking.com).
 or interact links that connect students with the course JupyterHub for distribution of homeworks and labs.
 
-The videos and slides listed above and on the [Data 8 website](http://data8.org/sp20/) are restricted to berkeley.edu addresses.
+The videos and slides listed above and on the [Data 8 website](http://data8.org/sp22/) are restricted to berkeley.edu addresses.
 
 ## Assignments
 
@@ -131,4 +131,4 @@ ideas covered in class. They can all be run interactively in the Data 8 environm
 
 These homework, labs, and project materials are freely available on the semester course repository.
 There is a new repository created for each semester of the course, as the materials
-tend to evolve over time. For example, here is the repository for the Spring 2020 course: <https://github.com/data-8/materials-sp20>
+tend to evolve over time. For example, here is the repository for the Spring 2022 course: <https://github.com/data-8/materials-sp22>
