@@ -4,8 +4,10 @@ on:
   push:
     branches:
       - main
+
 permissions:
-  id-token: write
+  id-token: write-all
+
 jobs:
   publish:
     runs-on: ubuntu-latest
