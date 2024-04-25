@@ -26,4 +26,4 @@ This recording also reviews uploading your notebooks(Part 2) and associated file
 
 **Part 5:** Authoring Jupyter Notebooks with Otter-Graded Content [Screen Recording (13 min)](https://drive.google.com/file/d/1DFjz5R9uyKyhNxq9NhYWNz1SrIYH47ao/view?usp=sharing)
 
-This adds onto Part 4, by including examples of Markdown to create otter-graded self-check questions as well as instructor grading questions. This includes assigning points as well as exploring how we might create questions that require students to code, answer short-answer or free-form questions or respond Multiple Choice prompts. The example notebook used in this video can be downloaded [here](./otter-examples.ipynb).
+This adds onto Part 4, by including examples of Markdown to create otter-graded self-check questions as well as instructor grading questions. This includes assigning points as well as exploring how we might create questions that require students to code, answer short-answer or free-form questions or respond Multiple Choice prompts. The example notebook used in this video can be viewed on this [page](./otter-examples.ipynb).
