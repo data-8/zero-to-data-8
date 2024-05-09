@@ -20,6 +20,8 @@ sections:
   sections:
   - file: staff/roles
     title: Roles and Responsibilities
+- file: cc-adoption/intro
+  title: Smaller Institution Adoption
 - file: authoring/intro
   title: "Authoring Notebooks"
   sections:
