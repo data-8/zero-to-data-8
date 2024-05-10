@@ -23,7 +23,7 @@ sections:
 - file: cc-adoption/intro
   title: Smaller Institution Adoption
 - file: notebooks-platforms/intro
-  title: Data 8 Notebooks: Alternative Platforms
+  title: Data 8 Notebooks - Alternative Platforms
 - file: authoring/intro
   title: "Authoring Notebooks"
   sections:
