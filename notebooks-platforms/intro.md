@@ -2,6 +2,11 @@
 
 The following are the notebooks used in Data 8 but created for different platforms in the case you are not using a JupyterHub instance. The first line contains a normal set of notebooks with all the data files in the distribution. The second set, marked "-no-footprint", is the exact same notebooks but the data files used in the notebooks are loaded via a URL instead of being stored with the notebooks themselves.
 
+**CodeSpaces:** 
+[CodeSpaces](https://github.com/features/codespaces/) is a GitHub programming environment that can be used for Jupyter Notebook rendering.  We have links set up to open in CodeSpace on the demonstration page of the materials-sp22 repository.
+- [materials-sp22 Demo Page](https://www.data8.org/materials-sp22/demo.html)
+
+
 **Colab:** 
 [Colab](https://colab.research.google.com/) is the Google-created Jupyter Notebook rendering platform. In order to use Otter Grader with Colab, you need to have the student mount their Google Drive; these notebooks mount the Google Drive for the student.
 - [materials-sp22-colab](https://github.com/data-8/materials-sp22-colab)

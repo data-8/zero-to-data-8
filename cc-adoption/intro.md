@@ -38,13 +38,15 @@ You can accept the invitations by clicking each of these links:
 - Solutions Repository: [materials-sp22-private](https://github.com/data-8/materials-sp22-private)
 - Automatic Grading System(Otter Service Standalone): [otter-service-stdalone](https://github.com/orgs/otter-service-stdalone)
 
-**Step 5:** Canvas Shell
+**Step 5:** Canvas Shell and Course Website
 
 Here is a [screen recording](https://drive.google.com/file/d/1rBG97FUwMdV3QQas7znuH8pud-KC8yPM/view?usp=drive_link) of what you need to do to configure the Canvas shell we have set up for you.
 
 You can download the Canvas template [here](https://drive.google.com/file/d/1u1OUAPWy3UachL-82qJgABABA--RIHj5/view?usp=sharing)
 
 We can help you with this process as well.
+
+This [week-to-week layout](https://www.data8.org/materials-sp22/demo.html) mirrors the Canvas Course layout as well. It is a good resource to get an overview of the course as well explore alternative platforms to render Jupyter Notebooks.
 
 **Step 6:** The Student Workflow
 
