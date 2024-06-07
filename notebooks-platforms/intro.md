@@ -24,3 +24,7 @@ Instructions for using Jupyterlite are in the README file for each repository.
 
 - [materials-sp22-binder](https://github.com/data-8/materials-sp22-binder)
 - [materials-sp22-binder-no-footprint](https://github.com/data-8/materials-sp22-binder-no-footprint)
+
+**Otterless (No autograding - just clean Jupyter Notebooks)**
+We removed all the otter-grader cells from the notebooks for those who are not interested in automatic grading.
+- [materials-sp22-otterless](https://github.com/data-8/materials-sp22-otterless/)
