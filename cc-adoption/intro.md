@@ -66,4 +66,7 @@ Here is a summary of the student workflow depicted in the recording:
 
 - Student Assignments: After the students have submitted their work, you download all the assignments onto your machine
 - Solutions: Log into the GitHub repo, [materials-sp22-private](https://github.com/data-8/materials-sp22-private), navigate to the autograder_zips folder and find the autograder.zip file of the assignment you are grading, download it.
-- Automatic Grading: Log into [grader.datahub.berkeley.edu](grader.datahub.berkeley.edu) with your GitHub username, and follow instructions in the screen recording above.
+- Automatic Grading: Log into [grader.datahub.berkeley.edu](https://grader.datahub.berkeley.edu) with your GitHub username, and follow instructions in the screen recording above.
+- If you would like to test run the grader you can use these archives:
+    - [Sample HW 08 Submissions (hw-8-submissions.zip)](hw-8-submissions.zip)
+    - [HW 08 Solution file (autograder.zip)](autograder.zip)
