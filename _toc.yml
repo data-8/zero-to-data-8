@@ -31,6 +31,8 @@ sections:
     title:   "Minor Changes"
   - file:  authoring/authoring_screen_recordings
     title:   "Authoring: Start-to-Finish"
+  - file:  authoring/otter-examples.ipynb
+    title:   "Otter Question Samples"
 - file: grading/intro
   title: Grading
   sections:
