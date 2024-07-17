@@ -13,6 +13,12 @@ You can expect the following:
 - Access to a JupyterHub instance for your institution configured to your campus Single Sign-on or options
 - Access to a grading service that will grade your students notebooks and return the grades in an CSV file
 
+Your institution may need documentation related to privacy(HECVAT) and accessibility(VPAT):
+- Here is a [HECVAT](https://docs.google.com/spreadsheets/d/18_Q1b0tisNkQeyj1ibEuvq2Nq7DIF99v/edit?gid=1214776280#gid=1214776280) outlining what student information is needed(just an email address) and how it is protected.
+- Accessibility is on-going effort at UC Berkeley and within the Jupyter Community:
+    - This [document](https://jupyter-accessibility.readthedocs.io/en/latest/resources/JupyterLab-a11y-statement.html) outlines the current state of Jupyter with regards to accessibility
+    - An [extension](https://a11y.datahub.berkeley.edu/) to JupyterHub is being created assess the accessibility of notebooks
+
 **Step 1:**  Privacy Agreement and General Information
 
 We ask that anyone using these materials do not distribute solutions. We also need a GitHub username in order to give you access to the solutions, if you do not have one please create one [here](https://github.com)
