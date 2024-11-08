@@ -48,7 +48,7 @@ You can accept the invitations by clicking each of these links:
 
 Here is a [screen recording](https://drive.google.com/file/d/1rBG97FUwMdV3QQas7znuH8pud-KC8yPM/view?usp=drive_link) of what you need to do to configure the Canvas shell we have set up for you.
 
-You can download the Canvas template [here](https://drive.google.com/file/d/1u1OUAPWy3UachL-82qJgABABA--RIHj5/view?usp=sharing)
+You can download the Canvas template [here](https://drive.google.com/file/d/167mhYuq3msva3TO3agFr2jVlPMuzcusw/view?usp=drive_link)
 
 We can help you with this process as well.
 
