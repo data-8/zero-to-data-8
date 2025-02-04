@@ -68,7 +68,7 @@ Here is a summary of the student workflow depicted in the recording:
 
 **Step 7:** Instructor Grading Workflow
 
-[Screen Recording](https://drive.google.com/drive/u/1/folders/1pQ78moc2b9Cl7NXD49N_HJIrwZjXHnt8)
+[Screen Recording](https://drive.google.com/file/d/1-r1kuUutn7ZXl3lSUgBbZAxLFuHoeFPp/view?usp=drive_link)
 
 - Student Assignments: After the students have submitted their work, you download all the assignments onto your machine
 - Solutions: Log into the GitHub repo, [materials-sp22-private](https://github.com/data-8/materials-sp22-private), navigate to the autograder_zips folder and find the autograder.zip file of the assignment you are grading, download it.
