@@ -25,18 +25,15 @@ We ask that anyone using these materials do not distribute solutions. We also ne
 
 Then, complete this [form](https://forms.gle/3gbJQcQNKkYfbW2S7)
 
+We need a few pieces of information about your institution in order to configure the computing environment for your students. Please complete this [form](https://forms.gle/aj2KVirKRFMcQGzd6) as well.
+
 **Step 2:** Create a copy of the student materials for yourself
 
 [Screen Recording](https://drive.google.com/file/d/1OODEHdngTajW_kRKTMrVZw9nS4_iiZrq/view?usp=drive_link)
 
 After you have created a GitHub username, please login and then "Fork" this [repo](https://github.com/data-8/materials-sp22)
 
-
-**Step 3:** Institutional Information for Jupyterhub
-
-We need a few pieces of information about your institution in order to configure the computing environment for your students. Please complete this [form](https://forms.gle/aj2KVirKRFMcQGzd6)
-
-**Step 4:** Accepting the GitHub Repository Invitations
+**Step 3:** Accepting the GitHub Repository Invitations
 
 You are going to be added to the materials-sp22-private solutions and resources repository as well as the Otter Service Standalone GitHub Organization used to grade your students notebooks.
 
@@ -44,7 +41,7 @@ You can accept the invitations by clicking each of these links:
 - Solutions Repository: [materials-sp22-private](https://github.com/data-8/materials-sp22-private)
 - Automatic Grading System(Otter Service Standalone): [otter-service-stdalone](https://github.com/orgs/otter-service-stdalone)
 
-**Step 5:** Canvas Shell and Course Website
+**Step 4:** Canvas Shell and Course Website
 
 Here is a [screen recording](https://drive.google.com/file/d/1rBG97FUwMdV3QQas7znuH8pud-KC8yPM/view?usp=drive_link) of what you need to do to configure the Canvas shell we have set up for you.
 
@@ -54,7 +51,7 @@ We can help you with this process as well.
 
 This [week-to-week layout](https://www.data8.org/materials-sp22/demo.html) mirrors the Canvas Course layout as well. It is a good resource to get an overview of the course as well explore alternative platforms to render Jupyter Notebooks.
 
-**Step 6:** The Student Workflow
+**Step 5:** The Student Workflow
 
 [Screen Recording](https://drive.google.com/file/d/1flQlOZ6ViM0S7S0k0-ZLFZsFNY5ZXMON/view?usp=drive_link)
 
@@ -66,9 +63,9 @@ Here is a summary of the student workflow depicted in the recording:
 - When finished, the student downloads the notebook using the "export" cell at the bottom.
 - The downloaded files are uploaded to the correct Canvas assignment or where ever you normally have work submitted.
 
-**Step 7:** Instructor Grading Workflow
+**Step 6:** Instructor Grading Workflow
 
-[Screen Recording](https://drive.google.com/drive/u/1/folders/1pQ78moc2b9Cl7NXD49N_HJIrwZjXHnt8)
+[Screen Recording](https://drive.google.com/file/d/1-r1kuUutn7ZXl3lSUgBbZAxLFuHoeFPp/view?usp=drive_link)
 
 - Student Assignments: After the students have submitted their work, you download all the assignments onto your machine
 - Solutions: Log into the GitHub repo, [materials-sp22-private](https://github.com/data-8/materials-sp22-private), navigate to the autograder_zips folder and find the autograder.zip file of the assignment you are grading, download it.
