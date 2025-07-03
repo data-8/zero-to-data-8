@@ -31,14 +31,14 @@ We need a few pieces of information about your institution in order to configure
 
 [Screen Recording](https://drive.google.com/file/d/1OODEHdngTajW_kRKTMrVZw9nS4_iiZrq/view?usp=drive_link)
 
-After you have created a GitHub username, please login and then "Fork" this [repo](https://github.com/data-8/materials-sp22)
+After you have created a GitHub username, please login and then "Fork" this [repo](https://github.com/data-8/materials-fds)
 
 **Step 3:** Accepting the GitHub Repository Invitations
 
-You are going to be added to the materials-sp22-private solutions and resources repository as well as the Otter Service Standalone GitHub Organization used to grade your students notebooks.
+You are going to be added to the materials-fds-private solutions and resources repository as well as the Otter Service Standalone GitHub Organization used to grade your students notebooks.
 
 You can accept the invitations by clicking each of these links:
-- Solutions Repository: [materials-sp22-private](https://github.com/data-8/materials-sp22-private)
+- Solutions Repository: [materials-fds-private](https://github.com/data-8/materials-fds-private)
 - Automatic Grading System(Otter Service Standalone): [otter-service-stdalone](https://github.com/orgs/otter-service-stdalone)
 
 **Step 4:** Canvas Shell and Course Website
@@ -49,7 +49,7 @@ You can download the Canvas template [here](https://drive.google.com/file/d/167m
 
 We can help you with this process as well.
 
-This [week-to-week layout](https://www.data8.org/materials-sp22/demo.html) mirrors the Canvas Course layout as well. It is a good resource to get an overview of the course as well explore alternative platforms to render Jupyter Notebooks.
+This [week-to-week layout](https://www.data8.org/materials-fds/demo.html) mirrors the Canvas Course layout as well. It is a good resource to get an overview of the course as well explore alternative platforms to render Jupyter Notebooks.
 
 **Step 5:** The Student Workflow
 
@@ -68,7 +68,7 @@ Here is a summary of the student workflow depicted in the recording:
 [Screen Recording](https://drive.google.com/file/d/1-r1kuUutn7ZXl3lSUgBbZAxLFuHoeFPp/view?usp=drive_link)
 
 - Student Assignments: After the students have submitted their work, you download all the assignments onto your machine
-- Solutions: Log into the GitHub repo, [materials-sp22-private](https://github.com/data-8/materials-sp22-private), navigate to the autograder_zips folder and find the autograder.zip file of the assignment you are grading, download it.
+- Solutions: Log into the GitHub repo, [materials-fds-private](https://github.com/data-8/materials-fds-private), navigate to the autograder_zips folder and find the autograder.zip file of the assignment you are grading, download it.
 - Automatic Grading: Log into [grader.datahub.berkeley.edu](https://grader.datahub.berkeley.edu) with your GitHub username, and follow instructions in the screen recording above.
 - If you would like to test run the grader you can use these archives:
     - [Sample HW 08 Submissions (hw-8-submissions.zip)](hw-8-submissions.zip)
