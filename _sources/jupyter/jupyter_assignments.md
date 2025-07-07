@@ -6,8 +6,6 @@ The assignments in Data 8 consist of **Labs**, **Homeworks**, and **Group Projec
 2. Grading is performed using a suite of public and private tests in order to assign points. This can be done from the command-line of an instructors computer, online at [otter-grader-standalone](https://grader.datahub.berkeley.edu) or using a paid services like [GradeScope](https://gradescope.com).
 
 The latest links to the homeworks can be found in the course page for the current
-semester. For example, the Spring 2022 course can be found [here.](http://data8.org/sp22/)
+semester. For example, the Spring 2025 course can be found [here.](http://data8.org/sp25/)
 
-These materials are freely available on the semester course repository.
-There is a new repository created for each semester of the course, as the materials
-tend to evolve over time. For example, here is the repository for the [Spring 2022 course](https://github.com/data-8/materials-sp22) and you can find the homeworks for this repository [here.](https://github.com/data-8/materials-sp22/tree/master/hw)
+These materials are freely available [here](https://github.com/data-8/materials-fds) and you can find the homeworks for this repository [here.](https://github.com/data-8/materials-fds/tree/master/hw)

@@ -14,7 +14,7 @@ You can grade a folder of notebooks by compressing the folder into a zip file an
 
 **Step 3:** Download solution files(autograder.zip)
 
-If you visit our GitHub repository, [materials-sp22-private](https://github.com/data-8/materials-sp22-private), and browse to the folder, autograder_zips, you will find the solutions to your assignment. Download the autograder.zip.
+If you visit our GitHub repository, [materials-fds-private](https://github.com/data-8/materials-fds-private), and browse to the folder, autograder_zips, you will find the solutions to your assignment. Download the autograder.zip.
 
 If you do not have access to this repository, please email us for access.
 

@@ -8,6 +8,6 @@ A tutor's main responsibility is to teach the students in each session. These se
 
 ## Office Hours
 
-Office hours are sessions, typically 1-2 hours long, in which questions from students on homeworks, projects, and conceptual lecture questions, are answered by the uGSIs, tutors, and professors. Each year, the weekly office hours schedule is listed as part of the official course webpage. The page for the [Spring 2020 is listed here](http://data8.org/sp20/office-hours.html).
+Office hours are sessions, typically 1-2 hours long, in which questions from students on homeworks, projects, and conceptual lecture questions, are answered by the uGSIs, tutors, and professors. Each year, the weekly office hours schedule is listed as part of the official course webpage. The page for the [Spring 2025 is listed here](http://data8.org/sp20/office-hours.html).
 
 Hosting office hours requires preparation, patience, efficiency, and understanding. The goal of office hours is not to get a student to the solution, but to give them a better understanding of the problem.

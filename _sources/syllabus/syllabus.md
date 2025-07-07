@@ -101,28 +101,28 @@ Below are some fundamentals for comparing two distributions that students come a
 * Importance of bias and variance of the sample mean
 * Statistics about statistics (e.g. variability of sample mean)
 * How to use sample means effectively for inference?
-* How to design experiments and intrepret the distributions with Central Limit Theorem, Chebyshev's, etc.
+* How to design experiments and interpret the distributions with Central Limit Theorem, Chebyshev's, etc.
 
 ## Building a Course syllabus page
 
 You may use whatever technology you prefer for managing your course and
 distributing content. However, we recommend setting up a syllabus page that
 is used for distributing interact links and course materials. For an example,
-see the structure of the Spring 2022 course syllabus: <http://data8.org/sp22/>
+see the structure of the Data 8 course syllabus: <http://data8.org/sp25/>
 
 The syllabus has the following structure:
 
 | Date          | Topic | Lecture  | Reading | Assignment
 | ------------- | ----- | -------  | ------- | ----------
-| Fri 01/24 | Cause and Effect | [Slides](https://docs.google.com/presentation/d/1lSwG_uGwQRL3oGQnmn7aphxYZlzX0G0KHeyNM-cNZb4/edit?usp=sharing) | [Chapter 2](https://www.inferentialthinking.com/chapters/02/causality-and-experiments.html) | [Homework 01](http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-sp20&subPath=materials/sp20/hw/hw01/hw01.ipynb)
-| Mon 01/27 | Tables | [Slides](https://docs.google.com/presentation/d/1jn2X5JtbOqOfiBa_QdV2ITw491dhRdxIvKR0bR1tWUk/edit?usp=sharing), [Demos](http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-sp20&subPath=lec/lec03.ipynb), [Video](https://www.youtube.com/watch?v=BW9XcOG8jag) | [Chapter 3](https://www.inferentialthinking.com/chapters/03/programming-in-python.html)| |
-| Wed 01/29 | Data Types |  [Slides](https://docs.google.com/presentation/d/1TjU8ismB9qSrWAivDq2HvuYy68sRTE_Q_V3gPcHP0qQ/edit?usp=sharing), [Demos](http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-sp20&subPath=lec/lec04.ipynb), [Video](http://youtube.com/watch?v=F3krVj7GkI0) | [Chapters 4](https://www.inferentialthinking.com/chapters/04/data-types.html), [5](https://www.inferentialthinking.com/chapters/05/sequences.html)| [Lab 02: Table Operations](http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-sp20&subPath=materials/sp20/lab/lab02/lab02.ipynb)
+| Fri 01/24 | Cause and Effect | [Slides](https://docs.google.com/presentation/d/1lSwG_uGwQRL3oGQnmn7aphxYZlzX0G0KHeyNM-cNZb4/edit?usp=sharing) | [Chapter 2](https://www.inferentialthinking.com/chapters/02/causality-and-experiments.html) | [Homework 01](http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-fds&subPath=materials-fds//hw/hw01/hw01.ipynb)
+| Mon 01/27 | Tables | [Slides](https://docs.google.com/presentation/d/1jn2X5JtbOqOfiBa_QdV2ITw491dhRdxIvKR0bR1tWUk/edit?usp=sharing), [Demos](http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-fds&subPath=lec/lec03.ipynb), [Video](https://www.youtube.com/watch?v=BW9XcOG8jag) | [Chapter 3](https://www.inferentialthinking.com/chapters/03/programming-in-python.html)| |
+| Wed 01/29 | Data Types |  [Slides](https://docs.google.com/presentation/d/1TjU8ismB9qSrWAivDq2HvuYy68sRTE_Q_V3gPcHP0qQ/edit?usp=sharing), [Demos](http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-fds&subPath=lec/lec04.ipynb), [Video](http://youtube.com/watch?v=F3krVj7GkI0) | [Chapters 4](https://www.inferentialthinking.com/chapters/04/data-types.html), [5](https://www.inferentialthinking.com/chapters/05/sequences.html)| [Lab 02: Table Operations](http://datahub.berkeley.edu/hub/user-redirect/git-sync?repo=https://github.com/data-8/materials-fds&subPath=materials-fds//lab/lab02/lab02.ipynb)
 
 Each row is a lecture, and each column is a type of material you can distribute.
 The links in the columns either point to pages on the [course textbook](https://inferentialthinking.com).
 or interact links that connect students with the course JupyterHub for distribution of homeworks and labs.
 
-The videos and slides listed above and on the [Data 8 website](http://data8.org/sp22/) are restricted to berkeley.edu addresses.
+The videos and slides listed above and on the [Data 8 website](http://data8.org/sp25/) are restricted to berkeley.edu addresses.
 
 ## Assignments
 
@@ -130,5 +130,4 @@ Alongside the textbook are several computational homeworks, labs, and projects t
 ideas covered in class. They can all be run interactively in the Data 8 environment.
 
 These homework, labs, and project materials are freely available on the semester course repository.
-There is a new repository created for each semester of the course, as the materials
-tend to evolve over time. For example, here is the repository for the Spring 2022 course: <https://github.com/data-8/materials-sp22>
+Here is the public repository for materials related to the course: <https://github.com/data-8/materials-fds>
