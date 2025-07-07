@@ -2,7 +2,7 @@
 
 ## Slides
 
-All of Data 8's lecture slides are available under the Creative Commons license, including all of the lecture's slides as a "view-only" document. To find the most recent version of the course, or a specific semester's slides, please visit the [official Data 8 website](http://data8.org/). We recommend adopting the [Spring 2022 version](http://data8.org/sp22/) of the slides.
+All of Data 8's lecture slides are available under the Creative Commons license, including all of the lecture's slides as a "view-only" document. To find the most recent version of the course, or a specific semester's slides, please visit the [official Data 8 website](http://data8.org/). We recommend adopting the [Spring 2022 version](http://data8.org/sp25/) of the slides.
 
 Once you are inside of the "view-only" Google Slides, follow these steps to save it to your own Google Account:
 
