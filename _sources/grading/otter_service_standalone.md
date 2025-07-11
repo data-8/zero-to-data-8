@@ -2,6 +2,8 @@
 
 The following screen recording illustrates how to use otter grader standalone to grade your notebooks.
 
+The service is at [https://grader.datahub.berkeley.edu/](https://grader.datahub.berkeley.edu/)
+
 [Screen Recording (5 min)](https://drive.google.com/file/d/1-r1kuUutn7ZXl3lSUgBbZAxLFuHoeFPp/view?usp=sharing)
 
 **Step 1:** Authorization
